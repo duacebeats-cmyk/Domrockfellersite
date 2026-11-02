@@ -13,6 +13,7 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
   const [priceRangeFilter, setPriceRangeFilter] = useState('TODOS');
   const [sortBy, setSortBy] = useState('PADRAO'); // 'PADRAO' | 'MENOR_PRECO' | 'MAIOR_PRECO' | 'MAIOR_ECONOMIA' | 'MAIS_NOVO'
   const [searchQuery, setSearchQuery] = useState('');
+  const [visibleCount, setVisibleCount] = useState(8);
   
   // Modals
   const [previewStory, setPreviewStory] = useState(null);
@@ -84,6 +85,8 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
     return a.id - b.id;
   });
 
+  const displayedCars = filteredAndSortedCars.slice(0, visibleCount);
+
   const generateWhatsappUrl = (car) => {
     const text = encodeURIComponent(
       `Olá! Estive na Vitrine da Dom RockFeller e tenho interesse na futura quitação do veículo:\n\n` +
@@ -92,7 +95,7 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
       `📊 *FIPE Estimada:* ${car.fipeFormatted || 'Consultar'}\n\n` +
       `Gostaria de agendar atendimento para entender a cessão de direitos e receber a perícia do contrato.`
     );
-    return `https://wa.me/5527998723344?text=${text}`;
+    return `https://wa.me/5548920049681?text=${text}`;
   };
 
   return (
@@ -395,12 +398,14 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                 Nenhum veículo encontrado para os filtros selecionados.
               </div>
             ) : (
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fill, minmax(330px, 1fr))',
-                gap: '26px'
-              }}>
-                {filteredAndSortedCars.map(car => (
+              <>
+                <div style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
+                  gap: '22px',
+                  width: '100%'
+                }}>
+                {displayedCars.map(car => (
                   <div
                     key={car.id}
                     style={{
@@ -639,7 +644,41 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                   </div>
                 ))}
               </div>
-            )}
+
+              {/* Action Buttons to View More or Collapse */}
+              {filteredAndSortedCars.length > visibleCount && (
+                <div style={{ textAlign: 'center', marginTop: '36px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
+                  <button
+                    onClick={() => setVisibleCount(prev => prev + 8)}
+                    className="btn btn-gold btn-lg"
+                    style={{ minWidth: 'min(100%, 280px)', fontWeight: 800, padding: '14px 28px' }}
+                  >
+                    <span>Ver Mais Veículos (+{filteredAndSortedCars.length - visibleCount} disponíveis)</span>
+                    <ChevronRight size={18} />
+                  </button>
+                  <div style={{ fontSize: '0.82rem', color: '#94A3B8' }}>
+                    Exibindo {displayedCars.length} de {filteredAndSortedCars.length} veículos no estoque
+                  </div>
+                </div>
+              )}
+
+              {visibleCount >= filteredAndSortedCars.length && filteredAndSortedCars.length > 8 && (
+                <div style={{ textAlign: 'center', marginTop: '28px' }}>
+                  <button
+                    onClick={() => {
+                      setVisibleCount(8);
+                      const el = document.getElementById('estoque');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="btn btn-secondary btn-sm"
+                    style={{ color: '#94A3B8', borderColor: 'rgba(255,255,255,0.1)' }}
+                  >
+                    <span>Mostrar Menos (Recolher para 8 Veículos)</span>
+                  </button>
+                </div>
+              )}
+            </>
+          )}
           </>
         )}
 

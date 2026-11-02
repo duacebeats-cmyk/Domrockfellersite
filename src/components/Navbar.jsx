@@ -36,51 +36,6 @@ export function Navbar({
       WebkitBackdropFilter: 'blur(16px)',
       borderBottom: '1px solid rgba(245, 158, 11, 0.2)'
     }}>
-      {/* Top Banner with Locations & Perfectly Centered Icons */}
-      <div style={{
-        background: 'linear-gradient(90deg, rgba(245, 158, 11, 0.12), rgba(10, 14, 22, 0.95))',
-        borderBottom: '1px solid rgba(245, 158, 11, 0.1)',
-        fontSize: '0.8rem',
-        padding: '7px 0',
-        color: '#94A3B8'
-      }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-          
-          <div style={{ display: 'flex', alignItems: 'center', gap: '18px', flexWrap: 'wrap' }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '7px' }}>
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#F59E0B', display: 'inline-block', boxShadow: '0 0 8px #F59E0B', flexShrink: 0 }}></span>
-              <span><strong style={{ color: '#FDE68A' }}>Sede Vitória - ES:</strong> Av. Américo Buaiz, 501 • Enseada do Suá</span>
-            </span>
-
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '7px' }}>
-              <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#FBBF24', display: 'inline-block', boxShadow: '0 0 8px #FBBF24', flexShrink: 0 }}></span>
-              <span><strong style={{ color: '#FDE68A' }}>Sede Florianópolis - SC:</strong> Av. Rio Branco, 847 • Centro</span>
-            </span>
-          </div>
-
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <a 
-              href="tel:2730994450" 
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#F8FAFC', textDecoration: 'none' }}
-            >
-              <Phone size={13} color="#FBBF24" />
-              <span>(27) 3099-4450</span>
-            </a>
-
-            <span style={{ color: 'rgba(245, 158, 11, 0.3)' }}>|</span>
-
-            <a 
-              href="tel:4832248890" 
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#F8FAFC', textDecoration: 'none' }}
-            >
-              <Phone size={13} color="#FBBF24" />
-              <span>(48) 3224-8890</span>
-            </a>
-          </div>
-
-        </div>
-      </div>
-
       {/* Main Nav Bar */}
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '72px' }}>
         
@@ -248,10 +203,10 @@ export function Navbar({
           flexDirection: 'column',
           gap: '14px'
         }}>
-          <a onClick={() => scrollTo('estoque')} style={{ fontSize: '1rem', color: '#FDE68A', fontWeight: 800, padding: '6px 0' }}>✨ Estoque (35 Carros)</a>
+          <a onClick={() => scrollTo('estoque')} style={{ fontSize: '1rem', color: '#FDE68A', fontWeight: 800, padding: '6px 0' }}>✨ Vitrine de Veículos</a>
           <a onClick={() => scrollTo('como-funciona')} style={{ fontSize: '1rem', color: '#F8FAFC', padding: '6px 0' }}>Como Funciona</a>
           <a onClick={() => scrollTo('simulador')} style={{ fontSize: '1rem', color: '#F8FAFC', padding: '6px 0' }}>Simulador de Desconto</a>
-          <a onClick={() => scrollTo('sedes')} style={{ fontSize: '1rem', color: '#F8FAFC', padding: '6px 0' }}>Sedes Vitória & Floripa</a>
+          <a onClick={() => scrollTo('sedes')} style={{ fontSize: '1rem', color: '#F8FAFC', padding: '6px 0' }}>Sedes &amp; Atendimento</a>
           <a onClick={() => scrollTo('casos')} style={{ fontSize: '1rem', color: '#F8FAFC', padding: '6px 0' }}>Casos de Sucesso</a>
           <a onClick={() => scrollTo('faq')} style={{ fontSize: '1rem', color: '#F8FAFC', padding: '6px 0' }}>Dúvidas Frequentes</a>
           <hr style={{ borderColor: 'rgba(245, 158, 11, 0.15)' }} />

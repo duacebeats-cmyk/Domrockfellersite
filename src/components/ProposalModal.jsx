@@ -194,8 +194,8 @@ Gostaria de formalizar o estudo pericial gratuito e entender os passos da ação
                   value={cityUnit}
                   onChange={(e) => setCityUnit(e.target.value)}
                 >
-                  <option value="Vitória - ES">Sede Vitória - ES (Enseada do Suá)</option>
-                  <option value="Florianópolis - SC">Sede Florianópolis - SC (Centro)</option>
+                  <option value="Florianópolis - SC">Sede Florianópolis - SC (Centro - Ativa)</option>
+                  <option value="Vitória - ES">Sede Vitória - ES (Inauguração em breve)</option>
                   <option value="Atendimento Digital">Atendimento 100% Digital Brasil</option>
                 </select>
               </div>

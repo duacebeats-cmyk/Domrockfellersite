@@ -676,10 +676,62 @@ button:active {
   gap: 20px;
 }
 
+/* 100% Mobile Regulatory & Overflow-Free System */
+img, video, canvas, svg {
+  max-width: 100%;
+  height: auto;
+}
+
 @media (max-width: 992px) {
   .grid-2, .grid-3, .grid-4 {
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  
+  .glass-card {
+    padding: 22px 16px !important;
+    border-radius: 16px !important;
+  }
+
+  /* Buttons on mobile adapt smoothly without overflow */
+  .btn-lg {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 13px 18px !important;
+    font-size: 0.96rem !important;
+  }
+
+  /* Modal responsive sizing */
+  .modal-content {
+    width: 94% !important;
+    max-width: 94% !important;
+    padding: 24px 16px !important;
+    margin: 12px auto !important;
+    max-height: 92vh !important;
+    overflow-y: auto !important;
+  }
+
+  /* Input fields full-width on mobile */
+  .form-input, .form-select, .form-textarea {
+    font-size: 16px !important; /* Prevents iOS auto-zoom on inputs */
+  }
+
+  /* Prevent text headers from breaking awkwardly */
+  h1 {
+    font-size: clamp(1.85rem, 6.8vw, 2.35rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 5.2vw, 1.95rem) !important;
+    line-height: 1.25 !important;
   }
 }
 

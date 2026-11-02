@@ -91,7 +91,7 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
                 <Sparkles size={14} color="#FBBF24" /> Ações Revisionais Legítimas na Justiça
               </span>
               <span className="badge badge-gold" style={{ background: 'rgba(245, 158, 11, 0.08)', borderColor: 'rgba(245, 158, 11, 0.35)' }}>
-                Vitória (ES) & Florianópolis (SC)
+                Florianópolis (SC) • Vitória (Inauguração em breve)
               </span>
             </div>
           </div>
@@ -123,7 +123,7 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
             <button
               onClick={() => scrollTo('simulador')}
               className="btn btn-primary btn-lg"
-              style={{ minWidth: '250px' }}
+              style={{ minWidth: 'min(100%, 250px)' }}
             >
               <Sparkles size={20} />
               <span>Simular Perícia do Meu Contrato</span>
@@ -132,7 +132,7 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
             <button
               onClick={onOpenChat}
               className="btn btn-secondary btn-lg"
-              style={{ minWidth: '230px', borderColor: 'rgba(245, 158, 11, 0.4)' }}
+              style={{ minWidth: 'min(100%, 230px)', borderColor: 'rgba(245, 158, 11, 0.4)' }}
             >
               <MessageSquare size={18} color="#FBBF24" />
               <span>Falar com Atendente Humano</span>
@@ -157,7 +157,7 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
               <CheckCircle2 size={18} color="#FBBF24" /> Defesa Técnica contra Busca e Apreensão
             </span>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-              <CheckCircle2 size={18} color="#FBBF24" /> Escritórios Físicos em Vitória (ES) e Florianópolis (SC)
+              <CheckCircle2 size={18} color="#FBBF24" /> Sede Florianópolis • Vitória (Inauguração em breve)
             </span>
           </div>
 
@@ -189,9 +189,9 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
 
           <div className="glass-card" style={{ padding: '24px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
             <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #F59E0B, #FFE58F)' }} />
-            <div style={{ fontSize: '2.1rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '6px' }}>2 Sedes</div>
-            <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#F8FAFC' }}>Vitória & Florianópolis</div>
-            <div style={{ fontSize: '0.78rem', color: '#94A3B8', marginTop: '4px' }}>Salas corporativas para atendimento presencial</div>
+            <div style={{ fontSize: '2.1rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '6px' }}>Sedes</div>
+            <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#F8FAFC' }}>Florianópolis &amp; Vitória (Em Breve)</div>
+            <div style={{ fontSize: '0.78rem', color: '#94A3B8', marginTop: '4px' }}>Atendimento presencial e suporte corporativo</div>
           </div>
 
         </div>

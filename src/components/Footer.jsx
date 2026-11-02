@@ -88,20 +88,20 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
             </button>
 
             <a
-              href="https://api.whatsapp.com/send?phone=552730994450&text=Ol%C3%A1!%20Gostaria%20de%20consultoria%20jur%C3%ADdica%20com%20a%20Dom%20RockFeller%20sobre%20juros%20abusivos%20e%20a%C3%A7%C3%A3o%20revisional."
+              href="https://api.whatsapp.com/send?phone=5548920049681&text=Ol%C3%A1!%20Gostaria%20de%20consultoria%20jur%C3%ADdica%20com%20a%20Dom%20RockFeller%20sobre%20juros%20abusivos%20e%20a%C3%A7%C3%A3o%20revisional."
               target="_blank"
               rel="noreferrer"
               className="btn btn-secondary"
               style={{ padding: '14px 22px', color: '#34D399', borderColor: 'rgba(16, 185, 129, 0.35)' }}
             >
               <Phone size={16} color="#34D399" />
-              <span>WhatsApp Jurídico</span>
+              <span>WhatsApp Oficial</span>
             </a>
           </div>
         </div>
 
         {/* 4 Main Footer Columns */}
-        <div className="grid-4" style={{ gap: '38px', marginBottom: '55px' }}>
+        <div className="grid-4" style={{ gap: '30px', marginBottom: '55px' }}>
           
           {/* Column 1: Brand & Credibility */}
           <div>
@@ -144,18 +144,18 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
                   </span>
                 </div>
                 <div style={{ fontSize: '0.72rem', color: '#94A3B8', fontWeight: 600, letterSpacing: '0.04em', marginTop: '2px' }}>
-                  Dom RockFeller Assessoria Jurídica & Financeira
+                  Dom RockFeller Assessoria Jurídica &amp; Financeira
                 </div>
               </div>
             </div>
 
             <p style={{ lineHeight: 1.65, color: '#94A3B8', marginBottom: '22px', fontSize: '0.88rem' }}>
-              Empresa de assessoria jurídica e consultoria financeira especializada em perícia contábil de juros abusivos e ajuizamento de ações revisionais legítimas na Justiça, mantendo o cliente plenamente ciente dos riscos de busca e apreensão.
+              Assessoria jurídica e consultoria financeira especializada em perícia contábil de juros abusivos e ajuizamento de ações revisionais legítimas na Justiça, com atendimento presencial e transparente.
             </p>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '9px', fontSize: '0.8rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#34D399', fontWeight: 600 }}>
-                <CheckCircle2 size={15} color="#34D399" /> <span>Sigilo Bancário & Proteção LGPD</span>
+                <CheckCircle2 size={15} color="#34D399" /> <span>Sigilo Bancário &amp; Proteção LGPD</span>
               </div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: '#FDE68A', fontWeight: 600 }}>
                 <Award size={15} color="#FBBF24" /> <span>Perícia Contábil Homologada</span>
@@ -166,91 +166,99 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
             </div>
           </div>
 
-          {/* Column 2: Sede Vitória - ES */}
+          {/* Column 2: Sede Florianópolis - SC (Ativa) */}
           <div 
             className="glass-card" 
             style={{ 
-              padding: '26px 22px', 
+              padding: '26px 20px', 
               borderRadius: '18px',
-              border: '1px solid rgba(245, 158, 11, 0.22)',
-              background: 'rgba(12, 16, 26, 0.7)'
+              border: '1px solid rgba(59, 130, 246, 0.35)',
+              background: 'rgba(12, 16, 26, 0.75)'
+            }}
+          >
+            <div style={{ fontWeight: 800, color: '#FFFFFF', fontSize: '1.02rem', marginBottom: '14px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: '#60A5FA', display: 'inline-block', boxShadow: '0 0 10px #60A5FA' }} />
+              <span>Sede Florianópolis - SC</span>
+              <span style={{ fontSize: '0.68rem', color: '#60A5FA', border: '1px solid #3B82F6', padding: '2px 6px', borderRadius: '4px', textTransform: 'uppercase', fontWeight: 700 }}>Ativa</span>
+            </div>
+
+            <p style={{ lineHeight: 1.55, color: '#CBD5E1', marginBottom: '16px', fontSize: '0.85rem' }}>
+              <strong style={{ color: '#FFFFFF' }}>Edifício Jerônimo Coelho</strong><br />
+              Rua Gerônimo Coelho, 280 • Sala 1103<br />
+              Centro, Florianópolis - SC<br />
+              <span style={{ color: '#94A3B8' }}>CEP: 88010-030</span>
+            </p>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '9px', marginBottom: '14px', fontSize: '0.85rem' }}>
+              <a 
+                href="tel:48920049681" 
+                style={{ color: '#F8FAFC', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 600 }}
+              >
+                <Phone size={14} color="#60A5FA" /> +55 48 92004-9681
+              </a>
+              <a 
+                href="https://api.whatsapp.com/send?phone=5548920049681&text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20pela%20sede%20de%20Florian%C3%B3polis%20da%20Dom%20RockFeller." 
+                target="_blank" 
+                rel="noreferrer" 
+                style={{ color: '#34D399', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 700 }}
+              >
+                <MessageSquare size={14} color="#34D399" /> WhatsApp: (48) 92004-9681
+              </a>
+              <a 
+                href="mailto:contato@domrockfeller.tech"
+                style={{ color: '#FDE68A', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 600 }}
+              >
+                <Mail size={14} color="#FBBF24" /> contato@domrockfeller.tech
+              </a>
+            </div>
+
+            <div style={{ fontSize: '0.78rem', color: '#94A3B8', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Clock size={13} /> Seg a Sex &bull; 08:30 às 18:00
+            </div>
+          </div>
+
+          {/* Column 3: Sede Vitória - ES (Inauguração em breve) */}
+          <div 
+            className="glass-card" 
+            style={{ 
+              padding: '26px 20px', 
+              borderRadius: '18px',
+              border: '1px solid rgba(245, 158, 11, 0.28)',
+              background: 'rgba(12, 16, 26, 0.75)'
             }}
           >
             <div style={{ fontWeight: 800, color: '#FFFFFF', fontSize: '1.02rem', marginBottom: '14px', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: '#F59E0B', display: 'inline-block', boxShadow: '0 0 10px #F59E0B' }} />
               <span>Sede Vitória - ES</span>
+              <span style={{ fontSize: '0.68rem', color: '#FDE68A', border: '1px solid #F59E0B', padding: '2px 6px', borderRadius: '4px', textTransform: 'uppercase', fontWeight: 700 }}>Em Breve</span>
             </div>
 
             <p style={{ lineHeight: 1.55, color: '#CBD5E1', marginBottom: '16px', fontSize: '0.85rem' }}>
               <strong style={{ color: '#FDE68A' }}>Centro Empresarial Vitória</strong><br />
-              Av. Américo Buaiz, 501 • Salas 804/805<br />
-              Enseada do Suá, Vitória - ES<br />
-              <span style={{ color: '#64748B' }}>CEP: 29050-911</span>
+              Av. Américo Buaiz, 501 • Enseada do Suá<br />
+              Vitória - ES • CEP: 29050-911<br />
+              <span style={{ color: '#FBBF24', fontSize: '0.78rem', fontWeight: 600 }}>✦ Inauguração em breve</span>
             </p>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '14px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '9px', marginBottom: '14px', fontSize: '0.85rem' }}>
               <a 
-                href="tel:2730994450" 
-                style={{ color: '#F8FAFC', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 600 }}
-              >
-                <Phone size={14} color="#FBBF24" /> (27) 3099-4450
-              </a>
-              <a 
-                href="https://api.whatsapp.com/send?phone=552730994450&text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20pela%20sede%20de%20Vit%C3%B3ria%20da%20Dom%20RockFeller." 
+                href="https://api.whatsapp.com/send?phone=5548920049681&text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20online%20para%20o%20Esp%C3%ADrito%20Santo." 
                 target="_blank" 
                 rel="noreferrer" 
                 style={{ color: '#34D399', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 700 }}
               >
-                <MessageSquare size={14} color="#34D399" /> WhatsApp Oficial Vitória
-              </a>
-            </div>
-
-            <div style={{ fontSize: '0.78rem', color: '#64748B', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Clock size={13} /> Seg a Sex &bull; 08:30 às 18:00
-            </div>
-          </div>
-
-          {/* Column 3: Sede Florianópolis - SC */}
-          <div 
-            className="glass-card" 
-            style={{ 
-              padding: '26px 22px', 
-              borderRadius: '18px',
-              border: '1px solid rgba(245, 158, 11, 0.22)',
-              background: 'rgba(12, 16, 26, 0.7)'
-            }}
-          >
-            <div style={{ fontWeight: 800, color: '#FFFFFF', fontSize: '1.02rem', marginBottom: '14px', display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: '#FBBF24', display: 'inline-block', boxShadow: '0 0 10px #FBBF24' }} />
-              <span>Sede Florianópolis - SC</span>
-            </div>
-
-            <p style={{ lineHeight: 1.55, color: '#CBD5E1', marginBottom: '16px', fontSize: '0.85rem' }}>
-              <strong style={{ color: '#FDE68A' }}>Premier Tower Corporate</strong><br />
-              Av. Rio Branco, 847 • Salas 601/602<br />
-              Centro, Florianópolis - SC<br />
-              <span style={{ color: '#64748B' }}>CEP: 88015-205</span>
-            </p>
-
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '14px' }}>
-              <a 
-                href="tel:4832248890" 
-                style={{ color: '#F8FAFC', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 600 }}
-              >
-                <Phone size={14} color="#FBBF24" /> (48) 3224-8890
+                <MessageSquare size={14} color="#34D399" /> Atendimento Online no ES
               </a>
               <a 
-                href="https://api.whatsapp.com/send?phone=554832248890&text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20pela%20sede%20de%20Florian%C3%B3polis%20da%20Dom%20RockFeller." 
-                target="_blank" 
-                rel="noreferrer" 
-                style={{ color: '#34D399', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 700 }}
+                href="mailto:contato@domrockfeller.tech"
+                style={{ color: '#FDE68A', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 600 }}
               >
-                <MessageSquare size={14} color="#34D399" /> WhatsApp Oficial Floripa
+                <Mail size={14} color="#FBBF24" /> contato@domrockfeller.tech
               </a>
             </div>
 
-            <div style={{ fontSize: '0.78rem', color: '#64748B', display: 'flex', alignItems: 'center', gap: '6px' }}>
-              <Clock size={13} /> Seg a Sex &bull; 08:30 às 18:00
+            <div style={{ fontSize: '0.78rem', color: '#94A3B8', display: 'flex', alignItems: 'center', gap: '6px' }}>
+              <Clock size={13} /> Suporte Remoto &bull; 08:30 às 18:00
             </div>
           </div>
 
