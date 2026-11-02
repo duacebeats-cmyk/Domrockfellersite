@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "domrockfeller-instagram": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\harry\\.gemini\\antigravity-ide\\scratch\\quitafacil-veiculos\\integrations\\instagram\\instagram-mcp-server.js"
+      ],
+      "env": {
+        "INSTAGRAM_ACCESS_TOKEN": "COLE_AQUI_SEU_TOKEN_DA_META_GRAPH_API",
+        "INSTAGRAM_ACCOUNT_ID": "COLE_AQUI_SEU_INSTAGRAM_ACCOUNT_ID"
+      }
+    }
+  }
+}

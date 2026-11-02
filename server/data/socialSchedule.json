@@ -1,0 +1,233 @@
+[
+  {
+    "id": "sched-seg-1000",
+    "day": "Segunda-feira",
+    "time": "10:00",
+    "type": "carrossel",
+    "title": "BMW 320i Sport GP 2.0 Turbo 2023 — O Sedan Mais Desejado",
+    "mediaPath": "public/carros-estoque/carro_19_chevrolet_novo_sonic_ltz.jpg",
+    "caption": "Presença imponente, tração traseira e o design mais desejado do Brasil. 👇\n.\n🚗 BMW 320i Sport GP 2.0 TwinPower Turbo 2023\n⚙️ Motor 2.0 Turbo 184cv | Câmbio Automático ZF 8 marchas\n📍 75.000 km rodados\n✨ BMW Curved Display duplo, ar digital tri-zone, teto solar elétrico e pacote visual esportivo.\n.\n💰 FIPE: R$ 242.795,00 | Oportunidade de Quitação: R$ 120.000,00\n🤝 Condições facilitadas, aceitamos troca e entrega imediata.\n.\n📲 Mande \"QUERO\" na DM ou acesse o link da bio para garantir essa oportunidade antes que saia do estoque.\n.\n#BMW320i #BMWBR #CarrosPremium #SeminovosVitoria #RockfellerCarros #CarrosDeLuxo",
+    "hashtags": ["#BMW320i", "#BMWBR", "#CarrosPremium", "#SeminovosVitoria", "#RockfellerCarros", "#CarrosDeLuxo"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-seg-1400",
+    "day": "Segunda-feira",
+    "time": "14:00",
+    "type": "story",
+    "title": "Enquete Interativa — BMW 320i Tração Traseira",
+    "mediaPath": "public/stories/story_carro_19.jpg",
+    "caption": "Sedan Alemão com tração traseira: Sim ou com certeza? Vote na enquete e receba os detalhes no direct!",
+    "hashtags": ["#RockfellerCarros", "#EnqueteAutomotiva", "#StoriesInstagram"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-seg-1830",
+    "day": "Segunda-feira",
+    "time": "18:30",
+    "type": "reel",
+    "title": "Reels: Walkaround e Curved Display da BMW 320i",
+    "mediaPath": "public/reels/reel_estoque_domrockfeller.mp4",
+    "caption": "Você teria essa máquina na sua garagem? BMW 320i Sport GP 2023 com interior panorâmico e esportividade pura. Mande 'QUERO' na DM!\n\n#BMW320i #ReelsCarros #SomDoMotor #CarrosExclusivos #RockfellerCarros",
+    "hashtags": ["#BMW320i", "#ReelsCarros", "#SomDoMotor", "#CarrosExclusivos", "#RockfellerCarros"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-ter-1000",
+    "day": "Terça-feira",
+    "time": "10:00",
+    "type": "carrossel",
+    "title": "VW Tiguan Allspace R-Line 350 TSI 4x4 2020 — 220cv e 7 Lugares",
+    "mediaPath": "public/carros-estoque/carro_16_jeep_renegade_longitude_diesel_4x4.jpg",
+    "caption": "220 cavalos, tração integral 4Motion e espaço real para 7 passageiros. 👇\n.\n🚗 VW Tiguan Allspace R-Line 350 TSI 4x4 2020\n⚙️ Motor 2.0 TSI Turbo 220cv | Câmbio DSG 7 marchas dupla embreagem\n📍 113.000 km rodados\n✨ Teto solar panorâmico astronômico, tração 4Motion, painel digital Active Info e 7 lugares.\n.\n💰 FIPE: R$ 152.850,00 | Quitação Facilitada: R$ 75.000,00\n🤝 Avaliação justa do seu seminovo na troca e financiamento ágil.\n.\n📲 Envie \"QUERO\" na DM para receber o vídeo detalhado e simular sua entrada!\n.\n#TiguanRLine #VWTiguan #SUV7Lugares #SeminovosPremium #RockfellerCarros #CarrosES",
+    "hashtags": ["#TiguanRLine", "#VWTiguan", "#SUV7Lugares", "#SeminovosPremium", "#RockfellerCarros", "#CarrosES"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-ter-1400",
+    "day": "Terça-feira",
+    "time": "14:00",
+    "type": "story",
+    "title": "Stories Caixa de Perguntas — SUV 7 Lugares",
+    "mediaPath": "public/stories/story_carro_16.jpg",
+    "caption": "Qual SUV de 7 lugares você escolheria para viajar em família? Deixe sua dúvida aqui que respondemos ao vivo!",
+    "hashtags": ["#Tiguan", "#SUV7Lugares", "#RockfellerStories"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-ter-1830",
+    "day": "Terça-feira",
+    "time": "18:30",
+    "type": "reel",
+    "title": "Reels: Teto Solar Panorâmico & 220cv Tiguan R-Line",
+    "mediaPath": "public/reels/reel_estoque_domrockfeller.mp4",
+    "caption": "Quando espaço para 7 se junta com performance esportiva de 220cv. Confira os detalhes dessa Tiguan R-Line 2020!\n\n#TiguanRLine #SUVPremium #ReelsBrasil #RockfellerCarros",
+    "hashtags": ["#TiguanRLine", "#SUVPremium", "#ReelsBrasil", "#RockfellerCarros"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-qua-1000",
+    "day": "Quarta-feira",
+    "time": "10:00",
+    "type": "carrossel",
+    "title": "RAM Rampage Laramie 2.2 Turbodiesel 4x4 2026 — Brutal & Luxuosa",
+    "mediaPath": "public/carros-estoque/carro_23_mini_cooper_s_turbo.jpg",
+    "caption": "Apenas 13 mil km rodados e o porte mais brutal da categoria. 👇\n.\n🚗 RAM Rampage Laramie 2.2 Turbodiesel 4x4 2026\n⚙️ Motor 2.2 Multijet Turbo Diesel 200cv 450Nm | Câmbio Automático 9 marchas\n📍 Apenas 13.000 km rodados (Estado de zero km)\n✨ Interior em couro marrom exclusivo Laramie, tração 4x4 com reduzida, piloto adaptativo ACC e painel 100% digital.\n.\n💰 FIPE: R$ 223.394,00 | Oportunidade Especial: R$ 108.000,00\n🤝 Condição exclusiva de repasse/quitação e laudo cautelar aprovado.\n.\n📲 Digite \"QUERO\" nos comentários ou chame na DM para agendar seu test drive!\n.\n#RAMRampage #RampageLaramie #PicapeDiesel #CarrosFlorianopolis #SeminovosVitoria #RockfellerCarros",
+    "hashtags": ["#RAMRampage", "#RampageLaramie", "#PicapeDiesel", "#CarrosFlorianopolis", "#SeminovosVitoria", "#RockfellerCarros"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-qua-1400",
+    "day": "Quarta-feira",
+    "time": "14:00",
+    "type": "story",
+    "title": "Stories Comparativo — Toro Ranch vs RAM Rampage",
+    "mediaPath": "public/stories/story_carro_23.jpg",
+    "caption": "Toro Ranch ou RAM Rampage? Qual picape diesel 4x4 combina mais com seu dia a dia? Responda e ganhe condições especiais!",
+    "hashtags": ["#RAMRampage", "#Picape4x4", "#StoriesRockfeller"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-qua-1830",
+    "day": "Quarta-feira",
+    "time": "18:30",
+    "type": "reel",
+    "title": "Reels: Força Diesel e Acabamento Laramie RAM 2026",
+    "mediaPath": "public/reels/reel_estoque_domrockfeller.mp4",
+    "caption": "O poder do motor 2.2 turbodiesel de 200cv com o acabamento mais luxuoso das picapes. Mande 'QUERO' para detalhes!\n\n#RAMRampage #PicapeDiesel #Bruta #RockfellerCarros",
+    "hashtags": ["#RAMRampage", "#PicapeDiesel", "#Bruta", "#RockfellerCarros"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-qui-1000",
+    "day": "Quinta-feira",
+    "time": "10:00",
+    "type": "carrossel",
+    "title": "BMW X2 sDrive20i 2019 Blindada — Proteção e Esportividade",
+    "mediaPath": "public/carros-estoque/carro_10_vw_amarok_v6_highline_4x4.jpg",
+    "caption": "Segurança máxima com blindagem certificada e a assinatura esportiva da BMW. 👇\n.\n🚗 BMW X2 sDrive20i 2.0 Turbo 2019 (Blindada)\n⚙️ Motor 2.0 TwinPower Turbo 192cv | Câmbio Automático Steptronic 8 marchas\n📍 72.000 km rodados\n✨ Blindagem de alta tecnologia sem delaminações, faróis Full LED, bancos esportivos elétricos e acabamento M.\n.\n💰 FIPE: R$ 154.065,00 | Valor de Quitação: R$ 87.000,00\n🤝 Condições sob medida para quem busca proteção e status.\n.\n📲 Envie \"QUERO\" na DM para receber o laudo de blindagem e ficha técnica.\n.\n#BMWX2 #CarroBlindado #BlindadosBrasil #SeminovosSeguros #RockfellerCarros #BMWLovers",
+    "hashtags": ["#BMWX2", "#CarroBlindado", "#BlindadosBrasil", "#SeminovosSeguros", "#RockfellerCarros", "#BMWLovers"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-qui-1400",
+    "day": "Quinta-feira",
+    "time": "14:00",
+    "type": "story",
+    "title": "Stories Educativo — 3 Vantagens de um Seminovo Blindado",
+    "mediaPath": "public/stories/story_carro_10.jpg",
+    "caption": "Você sabe como conferir se uma blindagem está 100% perfeita? Arrasta pra cima ou envie uma mensagem!",
+    "hashtags": ["#Blindados", "#SegurançaVeicular", "#RockfellerCarros"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-qui-1830",
+    "day": "Quinta-feira",
+    "time": "18:30",
+    "type": "reel",
+    "title": "Reels: Tour Interno BMW X2 M Sport",
+    "mediaPath": "public/reels/reel_estoque_domrockfeller.mp4",
+    "caption": "Design coupé inconfundível com a segurança que sua família merece. BMW X2 2019 blindada disponível no pátio!\n\n#BMWX2 #Blindado #CarrosDeLuxo #RockfellerCarros",
+    "hashtags": ["#BMWX2", "#Blindado", "#CarrosDeLuxo", "#RockfellerCarros"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-sex-1000",
+    "day": "Sexta-feira",
+    "time": "10:00",
+    "type": "carrossel",
+    "title": "Toyota Corolla XEi 2.0 2023 — O Líder Invicto",
+    "mediaPath": "public/carros-estoque/carro_21_chevrolet_tracker_premier_turbo.jpg",
+    "caption": "Confiabilidade lendária, conforto absoluto e valorização garantida no mercado. 👇\n.\n🚗 Toyota Corolla XEi 2.0 Dynamic Force 2023\n⚙️ Motor 2.0 Flex 177cv | Câmbio Direct Shift 10 marchas\n📍 82.000 km rodados\n✨ Pacote Toyota Safety Sense com frenagem autônoma, piloto adaptativo, 7 airbags e multimídia com espelhamento.\n.\n💰 FIPE: R$ 125.829,00 | Oportunidade Especial: R$ 60.000,00\n🤝 Aceitamos seu carro usado como entrada com a melhor avaliação.\n.\n📲 Comente \"QUERO\" ou toque no link da bio para simular as parcelas hoje mesmo!\n.\n#CorollaXEi #ToyotaCorolla #SedanMedio #SeminovosVitoria #RockfellerCarros #CarrosES",
+    "hashtags": ["#CorollaXEi", "#ToyotaCorolla", "#SedanMedio", "#SeminovosVitoria", "#RockfellerCarros", "#CarrosES"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-sex-1400",
+    "day": "Sexta-feira",
+    "time": "14:00",
+    "type": "story",
+    "title": "Stories Sextou de Estoque — Veículos Higienizados",
+    "mediaPath": "public/stories/story_carro_21.jpg",
+    "caption": "Sextou com o estoque 100% pronto para o fim de semana! Qual deles você quer ver de perto?",
+    "hashtags": ["#SextouComCarroNovo", "#EstoqueRockfeller", "#Corolla"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-sex-1830",
+    "day": "Sexta-feira",
+    "time": "18:30",
+    "type": "reel",
+    "title": "Reels: Por que o Corolla não desvaloriza?",
+    "mediaPath": "public/reels/reel_estoque_domrockfeller.mp4",
+    "caption": "O sedan mais vendido do mundo por um motivo simples: é indestrutível. Corolla XEi 2023 pronto para entrega!\n\n#ToyotaCorolla #Corolla2023 #Seminovos #RockfellerCarros",
+    "hashtags": ["#ToyotaCorolla", "#Corolla2023", "#Seminovos", "#RockfellerCarros"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-sab-1000",
+    "day": "Sábado",
+    "time": "10:00",
+    "type": "carrossel",
+    "title": "Mini Cooper S 2.0 Turbo 2017 — O Ícone Britânico com Teto Duplo",
+    "mediaPath": "public/carros-estoque/carro_12_vw_virtus_comfortline_tsi.jpg",
+    "caption": "Sensação de pilotar um kart com todo o requinte e personalidade britânica. 👇\n.\n🚗 Mini Cooper S 2.0 Turbo 2017\n⚙️ Motor 2.0 TwinPower Turbo 192cv | Câmbio Automático Esportivo\n📍 78.000 km rodados\n✨ Teto solar panorâmico duplo, modos de condução Sport/Mid/Green, anel interativo de LED e escape esportivo.\n.\n💰 FIPE: R$ 96.570,00 | Valor de Quitação: R$ 43.000,00\n🤝 Condição única para quem exige estilo e exclusividade.\n.\n📲 Envie \"QUERO\" na DM ou acesse o link da bio para agendar seu test drive de fim de semana!\n.\n#MiniCooperS #MiniCooperBrasil #HotHatch #CarrosExclusivos #RockfellerCarros #EstiloSobreRodas",
+    "hashtags": ["#MiniCooperS", "#MiniCooperBrasil", "#HotHatch", "#CarrosExclusivos", "#RockfellerCarros", "#EstiloSobreRodas"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-sab-1400",
+    "day": "Sábado",
+    "time": "14:00",
+    "type": "story",
+    "title": "Stories Plantão de Sábado — Showroom Aberto",
+    "mediaPath": "public/stories/story_carro_12.jpg",
+    "caption": "Showroom aberto e café pronto! Vem fazer um test drive no Mini Cooper S hoje mesmo!",
+    "hashtags": ["#MiniCooper", "#SabadoDeTestDrive", "#RockfellerCarros"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-sab-1830",
+    "day": "Sábado",
+    "time": "18:30",
+    "type": "reel",
+    "title": "Reels: Ronco & Pipocos no Escape do Mini Cooper S",
+    "mediaPath": "public/reels/reel_estoque_domrockfeller.mp4",
+    "caption": "Acelere fundo e sinta a emoção do motor 2.0 turbo no modo Sport! Mini Cooper S é pura diversão.\n\n#MiniCooper #Ronco #PuroGoKart #RockfellerCarros",
+    "hashtags": ["#MiniCooper", "#Ronco", "#PuroGoKart", "#RockfellerCarros"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-dom-1000",
+    "day": "Domingo",
+    "time": "10:00",
+    "type": "carrossel",
+    "title": "Mercedes-Benz GLE 400d 4Matic 330cv 2022 — Ultra Luxo Supremo",
+    "mediaPath": "public/carros-estoque/carro_34_bmw_x2_sdrive20i_blindada.jpg",
+    "caption": "O ápice da engenharia alemã: 330 cavalos, 700Nm de torque e luxo supremo. 👇\n.\n🚗 Mercedes-Benz GLE 400d 4Matic AMG Line 2022\n⚙️ Motor 3.0 6 Cilindros Turbodiesel 330cv | Câmbio 9G-Tronic | Tração 4Matic\n📍 55.000 km rodados\n✨ Teto solar panorâmico duplo, interior nobre em couro claro, suspensão pneumática e cockpit MBUX integrado.\n.\n💰 FIPE: R$ 390.462,00 | Oportunidade Especial: R$ 155.000,00\n🤝 Atendimento VIP e sigilo absoluto na negociação.\n.\n📲 Mande \"QUERO\" na DM para um atendimento reservado com nosso consultor executivo.\n.\n#MercedesGLE #GLE400d #MercedesBenzBR #SuperLuxo #SUVPremium #RockfellerCarros",
+    "hashtags": ["#MercedesGLE", "#GLE400d", "#MercedesBenzBR", "#SuperLuxo", "#SUVPremium", "#RockfellerCarros"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-dom-1400",
+    "day": "Domingo",
+    "time": "14:00",
+    "type": "story",
+    "title": "Stories Votação — Pilotar ou Relaxar no Banco de Trás?",
+    "mediaPath": "public/stories/story_carro_34.jpg",
+    "caption": "GLE 400d: Você prefere pilotar com os 330cv ou relaxar no banco traseiro com todo esse conforto? Vote!",
+    "hashtags": ["#MercedesGLE", "#VotacaoDomingo", "#RockfellerCarros"],
+    "status": "scheduled"
+  },
+  {
+    "id": "sched-dom-1830",
+    "day": "Domingo",
+    "time": "18:30",
+    "type": "reel",
+    "title": "Reels: Iluminação Ambiente 64 Cores e Cockpit MBUX GLE",
+    "mediaPath": "public/reels/reel_estoque_domrockfeller.mp4",
+    "caption": "Feche os olhos e imagine essa atmosfera todas as noites. Mercedes-Benz GLE 400d 2022. Exclusividade na Rockfeller Carros!\n\n#MercedesGLE #IluminacaoAmbiente #SuperLuxo #RockfellerCarros",
+    "hashtags": ["#MercedesGLE", "#IluminacaoAmbiente", "#SuperLuxo", "#RockfellerCarros"],
+    "status": "scheduled"
+  }
+]

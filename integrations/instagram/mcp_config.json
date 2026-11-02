@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "domrockfeller-instagram": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\harry\\.gemini\\antigravity-ide\\scratch\\quitafacil-veiculos\\integrations\\instagram\\instagram-mcp-server.js"
+      ],
+      "env": {
+        "INSTAGRAM_ACCESS_TOKEN": "EAAcmjYVUH90BSsyEzZCysBMUBK6mKZCKQo4mF11ux0ZCWFrXF8yHCqYNlaOjkE2D7QI99F02kmc96ihIm0bMJeSVuLyETZAeK8kCF0pmuj5w2uPpem0Kkdy7C3CLVyL7UO46J5YzZAJKZCYyelW1hGwhZAH7pZB4w6vT9BDKV8PcfL2ON0tZBXsY7O2soWc1bFKeVmVqEMe61ZCufu9t9ox7hDELafFUNWFYYZCEbWLrR2ZCGHDRFk6eortL84SORakzCY8tPbh3ggdM583x8RZCeouP7",
+        "INSTAGRAM_ACCOUNT_ID": "17841414513976883"
+      }
+    }
+  }
+}

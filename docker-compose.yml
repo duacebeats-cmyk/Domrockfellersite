@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    container_name: domrockfeller-app
+    restart: always
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+      - SESSION_SECRET=domrockfeller-production-salt-key-2026-vix-floripa
+    volumes:
+      - ./server/data:/app/server/data
+      - ./public/carros-estoque:/app/public/carros-estoque
