@@ -1466,7 +1466,8 @@ app.post('/api/social/schedule/trigger/:id', requireRole(['admin', 'funcionario'
 
 // SPA Fallback: Qualquer rota não-API direciona para o index.html compilado do React
 if (fs.existsSync(DIST_DIR)) {
-  app.get('*', (req, res, next) => {
+  app.use((req, res, next) => {
+    if (req.method !== 'GET') return next();
     if (req.path.startsWith('/api') || req.path.startsWith('/carros-estoque')) {
       return next();
     }
