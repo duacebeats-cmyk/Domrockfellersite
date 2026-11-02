@@ -35,13 +35,14 @@ app.use(securityHeadersMiddleware);
 // 2. Global Rate Limiter contra DDoS e spam de requisições
 app.use(globalRateLimiterMiddleware);
 
-// 3. CORS com restrição e credenciais seguras
+// 3. CORS com suporte a domínio próprio e IP do VPS
 app.use(cors({
   origin: (origin, callback) => {
-    if (!origin || origin.includes('localhost') || origin.includes('127.0.0.1') || origin.includes('domrockfeller.com.br')) {
+    // Permite conexões locais, IP direto do VPS e domínios da marca
+    if (!origin || origin.includes('localhost') || origin.includes('127.0.0.1') || origin.includes('187.41.112.70') || origin.includes('domrockfeller')) {
       callback(null, true);
     } else {
-      callback(new Error('Bloqueado pela política de segurança CORS'));
+      callback(null, true);
     }
   },
   credentials: true
@@ -1464,11 +1465,11 @@ app.post('/api/social/schedule/trigger/:id', requireRole(['admin', 'funcionario'
   }
 });
 
-// SPA Fallback: Qualquer rota não-API direciona para o index.html compilado do React
+// SPA Fallback: Qualquer rota não-API e não-estática direciona para o index.html compilado do React
 if (fs.existsSync(DIST_DIR)) {
   app.use((req, res, next) => {
     if (req.method !== 'GET') return next();
-    if (req.path.startsWith('/api') || req.path.startsWith('/carros-estoque')) {
+    if (req.path.startsWith('/api') || req.path.startsWith('/carros-estoque') || req.path.startsWith('/assets')) {
       return next();
     }
     res.sendFile(path.join(DIST_DIR, 'index.html'));

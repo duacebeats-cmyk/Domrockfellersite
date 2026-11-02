@@ -1,0 +1,62 @@
+[
+  {
+    "id": "luxo_importados",
+    "title": "LUXO",
+    "subtitle": "IMPORTADOS",
+    "iconType": "diamond_crown",
+    "carsCount": 9,
+    "carsList": "GLE 400d, BMW 320i, X3, X4, X2 Blindada, Mercedes A200, GLA200, Audi A3, Mini Cooper",
+    "coverUrl": "/destaques/destaque_luxo_importados.jpg",
+    "storyUrl": "/destaques/story_destaque_luxo_importados.jpg"
+  },
+  {
+    "id": "suvs_picapes",
+    "title": "SUVs & 4x4",
+    "subtitle": "PICAPES",
+    "iconType": "suv_pickup",
+    "carsCount": 11,
+    "carsList": "Rampage, Amarok V6, Toro Ranch, Tiguan, Fastback, Toro Volcano, Compass, Renegade, Kicks, Tracker",
+    "coverUrl": "/destaques/destaque_suvs_picapes.jpg",
+    "storyUrl": "/destaques/story_destaque_suvs_picapes.jpg"
+  },
+  {
+    "id": "sedans_hatchs",
+    "title": "SEDANS",
+    "subtitle": "& HATCHS",
+    "iconType": "sedan_car",
+    "carsCount": 8,
+    "carsList": "Corolla, Novo Sonic, Spin Premier, Virtus, Onix Plus, Onix Premier, HB20 Hatch",
+    "coverUrl": "/destaques/destaque_sedans_hatchs.jpg",
+    "storyUrl": "/destaques/story_destaque_sedans_hatchs.jpg"
+  },
+  {
+    "id": "ate_35_mil",
+    "title": "ATÉ 35 MIL",
+    "subtitle": "OPORTUNIDADES",
+    "iconType": "gold_tag",
+    "carsCount": 7,
+    "carsList": "Ford Ka, Fox, Mobi, HB20 2020, Cruze, Onix Hatch, Audi A3",
+    "coverUrl": "/destaques/destaque_ate_35_mil.jpg",
+    "storyUrl": "/destaques/story_destaque_ate_35_mil.jpg"
+  },
+  {
+    "id": "eletricos_novos",
+    "title": "ELÉTRICOS",
+    "subtitle": "& MODERNOS",
+    "iconType": "electric_energy",
+    "carsCount": 4,
+    "carsList": "BYD Dolphin Mini, Rampage 2026, Fastback 2026, HB20 2025",
+    "coverUrl": "/destaques/destaque_eletricos_novos.jpg",
+    "storyUrl": "/destaques/story_destaque_eletricos_novos.jpg"
+  },
+  {
+    "id": "como_funciona",
+    "title": "SEGURANÇA",
+    "subtitle": "COMO FUNCIONA",
+    "iconType": "justice_shield",
+    "carsCount": 0,
+    "carsList": "Auditoria Forense, Código Civil, Cessão de Direitos e Desconto de até 70%",
+    "coverUrl": "/destaques/destaque_como_funciona.jpg",
+    "storyUrl": "/destaques/story_destaque_como_funciona.jpg"
+  }
+]

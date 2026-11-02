@@ -47,6 +47,606 @@
   ],
   "chatQueue": [
     {
+      "id": "ticket-1793620773819",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.819Z",
+      "messages": [
+        {
+          "id": "msg-1793620773819",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.819Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773817",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.817Z",
+      "messages": [
+        {
+          "id": "msg-1793620773817",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.817Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773815",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.815Z",
+      "messages": [
+        {
+          "id": "msg-1793620773815",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.815Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773814",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.814Z",
+      "messages": [
+        {
+          "id": "msg-1793620773814",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.814Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773812",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.812Z",
+      "messages": [
+        {
+          "id": "msg-1793620773812",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.812Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773810",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.810Z",
+      "messages": [
+        {
+          "id": "msg-1793620773810",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.810Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773808",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.808Z",
+      "messages": [
+        {
+          "id": "msg-1793620773808",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.808Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773807",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.807Z",
+      "messages": [
+        {
+          "id": "msg-1793620773807",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.807Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773805",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.805Z",
+      "messages": [
+        {
+          "id": "msg-1793620773805",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.805Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773804",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.804Z",
+      "messages": [
+        {
+          "id": "msg-1793620773804",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.804Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773802",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.802Z",
+      "messages": [
+        {
+          "id": "msg-1793620773802",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.802Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773800",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.800Z",
+      "messages": [
+        {
+          "id": "msg-1793620773800",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.800Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773798",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.798Z",
+      "messages": [
+        {
+          "id": "msg-1793620773798",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.798Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773797",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.797Z",
+      "messages": [
+        {
+          "id": "msg-1793620773797",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.797Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773795",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.795Z",
+      "messages": [
+        {
+          "id": "msg-1793620773795",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.795Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773794",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.794Z",
+      "messages": [
+        {
+          "id": "msg-1793620773794",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.794Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773792",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.792Z",
+      "messages": [
+        {
+          "id": "msg-1793620773792",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.792Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773790",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.790Z",
+      "messages": [
+        {
+          "id": "msg-1793620773790",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.790Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773789",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.789Z",
+      "messages": [
+        {
+          "id": "msg-1793620773789",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.789Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773787",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.787Z",
+      "messages": [
+        {
+          "id": "msg-1793620773787",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.787Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773785",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.785Z",
+      "messages": [
+        {
+          "id": "msg-1793620773785",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.785Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773784",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.784Z",
+      "messages": [
+        {
+          "id": "msg-1793620773784",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.784Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773782",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.782Z",
+      "messages": [
+        {
+          "id": "msg-1793620773782",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.782Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773780",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.780Z",
+      "messages": [
+        {
+          "id": "msg-1793620773780",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.780Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773779",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.779Z",
+      "messages": [
+        {
+          "id": "msg-1793620773779",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.779Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773777",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.777Z",
+      "messages": [
+        {
+          "id": "msg-1793620773777",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.777Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773775",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.775Z",
+      "messages": [
+        {
+          "id": "msg-1793620773775",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.775Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773773",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.773Z",
+      "messages": [
+        {
+          "id": "msg-1793620773773",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.773Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773772",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.772Z",
+      "messages": [
+        {
+          "id": "msg-1793620773772",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.772Z"
+        }
+      ]
+    },
+    {
+      "id": "ticket-1793620773769",
+      "clientName": "RateLimitBot",
+      "clientPhone": "",
+      "clientEmail": "",
+      "cityUnit": "Vitória - ES",
+      "vehicleModel": "Veículo em análise",
+      "status": "aguardando",
+      "assignedTo": null,
+      "createdAt": "2026-11-02T11:59:33.769Z",
+      "messages": [
+        {
+          "id": "msg-1793620773769",
+          "sender": "cliente",
+          "senderName": "RateLimitBot",
+          "text": "Olá! Gostaria de falar com um atendente humano sobre a quitação do meu veículo.",
+          "timestamp": "2026-11-02T11:59:33.769Z"
+        }
+      ]
+    },
+    {
       "id": "ticket-1793617126607",
       "clientName": "RateLimitBot",
       "clientPhone": "",
@@ -1882,6 +2482,36 @@
     }
   ],
   "leads": [
+    {
+      "id": "contract-1793620773766",
+      "name": "Tester",
+      "phone": "11999999999",
+      "email": "xss.tester@seguranca.com.br",
+      "cityUnit": "Vitória - ES",
+      "vehicleType": "Carro",
+      "vehicleModel": "Veículo Financiado",
+      "vehiclePlate": "Não informada",
+      "processNumber": "Em análise pericial inicial",
+      "paymentStatus": "Pendente",
+      "bank": "Banco Santander",
+      "installmentValue": 1500,
+      "installmentsRemaining": 36,
+      "contractResidualTotal": 54000,
+      "estimatedPayoff": 17280,
+      "estimatedSavings": 36720,
+      "discountPercentage": 68,
+      "delayStatus": "Em dia",
+      "status": "Ficha em Análise",
+      "notes": [
+        {
+          "date": "2026-11-02T11:59:33.766Z",
+          "author": "Sistema Dom RockFeller",
+          "text": "Contrato cadastrado: Veículo (S/ Placa). Saldo residual R$ 54.000 sob análise pericial."
+        }
+      ],
+      "createdAt": "2026-11-02T11:59:33.766Z",
+      "updatedAt": "2026-11-02T11:59:33.766Z"
+    },
     {
       "id": "contract-1793617126561",
       "name": "Tester",
