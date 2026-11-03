@@ -120,10 +120,10 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
             </span>
           </div>
 
-          <h2 style={{ fontSize: '2.6rem', fontWeight: 900, color: '#FFFFFF', marginBottom: '16px', lineHeight: 1.2 }}>
-            Vitrine de Veículos com <span style={{ color: '#FBBF24' }}>Futura Quitação</span>
+          <h2 style={{ fontSize: '2.6rem', fontWeight: 900, color: '#0F172A', marginBottom: '16px', lineHeight: 1.2 }}>
+            Vitrine de Veículos com <span style={{ color: '#D97706' }}>Futura Quitação</span>
           </h2>
-          <p style={{ color: '#94A3B8', fontSize: '1.08rem', lineHeight: 1.6 }}>
+          <p style={{ color: '#475569', fontSize: '1.08rem', lineHeight: 1.6 }}>
             Veículos em processo de renegociação bancária. O comprador assume a posse e circulação do veículo com respaldo pericial forense enquanto nossa equipe jurídica negocia a quitação integral com até <strong>70% de desconto sobre o residual bancário</strong>.
           </p>
 
@@ -220,15 +220,16 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
               fontWeight: 800,
               fontSize: '0.92rem',
               cursor: 'pointer',
-              border: activeSubTab === 'carros' ? '1.5px solid #FBBF24' : '1px solid rgba(255,255,255,0.1)',
-              background: activeSubTab === 'carros' ? 'rgba(245, 158, 11, 0.2)' : 'rgba(15, 20, 30, 0.6)',
-              color: activeSubTab === 'carros' ? '#FDE68A' : '#94A3B8',
+              border: activeSubTab === 'carros' ? '1.5px solid #D97706' : '1px solid #CBD5E1',
+              background: activeSubTab === 'carros' ? 'rgba(217, 119, 6, 0.12)' : '#FFFFFF',
+              color: activeSubTab === 'carros' ? '#B45309' : '#475569',
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '8px'
+              gap: '8px',
+              boxShadow: '0 2px 8px rgba(15, 23, 42, 0.04)'
             }}
           >
-            <Car size={18} />
+            <Car size={18} color={activeSubTab === 'carros' ? '#B45309' : '#475569'} />
             <span>Vitrine Completa (35 Veículos)</span>
           </button>
 
@@ -240,15 +241,16 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
               fontWeight: 800,
               fontSize: '0.92rem',
               cursor: 'pointer',
-              border: activeSubTab === 'destaques' ? '1.5px solid #FBBF24' : '1px solid rgba(255,255,255,0.1)',
-              background: activeSubTab === 'destaques' ? 'rgba(245, 158, 11, 0.2)' : 'rgba(15, 20, 30, 0.6)',
-              color: activeSubTab === 'destaques' ? '#FDE68A' : '#94A3B8',
+              border: activeSubTab === 'destaques' ? '1.5px solid #D97706' : '1px solid #CBD5E1',
+              background: activeSubTab === 'destaques' ? 'rgba(217, 119, 6, 0.12)' : '#FFFFFF',
+              color: activeSubTab === 'destaques' ? '#B45309' : '#475569',
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '8px'
+              gap: '8px',
+              boxShadow: '0 2px 8px rgba(15, 23, 42, 0.04)'
             }}
           >
-            <Award size={18} />
+            <Award size={18} color={activeSubTab === 'destaques' ? '#B45309' : '#475569'} />
             <span>Capas de Destaques Instagram (6)</span>
           </button>
         </div>
@@ -258,8 +260,9 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
           <>
             {/* Filter Toolbar */}
             <div style={{
-              background: '#0d111a',
-              border: '1px solid rgba(245, 158, 11, 0.2)',
+              background: '#FFFFFF',
+              border: '1px solid #E2E8F0',
+              boxShadow: '0 4px 20px -2px rgba(15, 23, 42, 0.05)',
               borderRadius: '16px',
               padding: '20px 24px',
               marginBottom: '36px',
@@ -288,9 +291,9 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                         fontSize: '0.85rem',
                         fontWeight: 700,
                         cursor: 'pointer',
-                        border: activeCategory === tab.id ? '1px solid #FBBF24' : '1px solid rgba(255,255,255,0.08)',
-                        background: activeCategory === tab.id ? 'rgba(245, 158, 11, 0.25)' : 'rgba(255,255,255,0.03)',
-                        color: activeCategory === tab.id ? '#FFFFFF' : '#94A3B8',
+                        border: activeCategory === tab.id ? '1.5px solid #D97706' : '1px solid #E2E8F0',
+                        background: activeCategory === tab.id ? 'rgba(217, 119, 6, 0.12)' : '#F8FAFC',
+                        color: activeCategory === tab.id ? '#B45309' : '#475569',
                         transition: 'all 0.2s ease'
                       }}
                     >
@@ -301,7 +304,7 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
 
                 {/* Search Bar */}
                 <div style={{ position: 'relative', minWidth: '260px' }}>
-                  <Search size={16} color="#94A3B8" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
+                  <Search size={16} color="#64748B" style={{ position: 'absolute', left: '12px', top: '50%', transform: 'translateY(-50%)' }} />
                   <input
                     type="text"
                     placeholder="Buscar por nome, ano..."
@@ -311,9 +314,9 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                       width: '100%',
                       padding: '8px 12px 8px 36px',
                       borderRadius: '8px',
-                      background: '#07090e',
-                      border: '1px solid rgba(245, 158, 11, 0.3)',
-                      color: '#FFFFFF',
+                      background: '#FFFFFF',
+                      border: '1px solid #CBD5E1',
+                      color: '#0F172A',
                       fontSize: '0.88rem',
                       outline: 'none'
                     }}
@@ -329,11 +332,11 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                 flexWrap: 'wrap', 
                 gap: '12px',
                 paddingTop: '12px',
-                borderTop: '1px solid rgba(255,255,255,0.07)'
+                borderTop: '1px solid #F1F5F9'
               }}>
                 {/* Price Brackets */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px', flexWrap: 'wrap' }}>
-                  <span style={{ fontSize: '0.8rem', color: '#94A3B8', fontWeight: 600 }}>Faixa de Valor:</span>
+                  <span style={{ fontSize: '0.8rem', color: '#64748B', fontWeight: 600 }}>Faixa de Valor:</span>
                   {[
                     { id: 'TODOS', label: 'Qualquer Valor' },
                     { id: 'ATE_35K', label: 'Até R$ 35k' },
@@ -350,9 +353,9 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                         fontSize: '0.78rem',
                         fontWeight: 600,
                         cursor: 'pointer',
-                        border: priceRangeFilter === p.id ? '1px solid #FBBF24' : '1px solid rgba(255,255,255,0.06)',
-                        background: priceRangeFilter === p.id ? 'rgba(245, 158, 11, 0.15)' : 'transparent',
-                        color: priceRangeFilter === p.id ? '#FDE68A' : '#94A3B8'
+                        border: priceRangeFilter === p.id ? '1px solid #D97706' : '1px solid #E2E8F0',
+                        background: priceRangeFilter === p.id ? 'rgba(217, 119, 6, 0.12)' : '#F8FAFC',
+                        color: priceRangeFilter === p.id ? '#B45309' : '#64748B'
                       }}
                     >
                       {p.label}
@@ -362,14 +365,14 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
 
                 {/* Sorter */}
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span style={{ fontSize: '0.8rem', color: '#94A3B8', fontWeight: 600 }}>Ordenar por:</span>
+                  <span style={{ fontSize: '0.8rem', color: '#64748B', fontWeight: 600 }}>Ordenar por:</span>
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
                     style={{
-                      background: '#07090e',
-                      border: '1px solid rgba(245, 158, 11, 0.3)',
-                      color: '#FFFFFF',
+                      background: '#FFFFFF',
+                      border: '1px solid #CBD5E1',
+                      color: '#0F172A',
                       padding: '4px 10px',
                       borderRadius: '6px',
                       fontSize: '0.82rem',
@@ -409,26 +412,27 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                   <div
                     key={car.id}
                     style={{
-                      background: 'linear-gradient(180deg, #0e121b 0%, #080a0f 100%)',
-                      border: '1px solid rgba(245, 158, 11, 0.22)',
+                      background: '#FFFFFF',
+                      border: '1px solid #E2E8F0',
                       borderRadius: '18px',
                       overflow: 'hidden',
                       display: 'flex',
                       flexDirection: 'column',
                       transition: 'transform 0.25s ease, box-shadow 0.25s ease',
-                      position: 'relative'
+                      position: 'relative',
+                      boxShadow: '0 4px 18px -2px rgba(15, 23, 42, 0.06)'
                     }}
                     onMouseEnter={e => {
                       e.currentTarget.style.transform = 'translateY(-5px)';
-                      e.currentTarget.style.boxShadow = '0 15px 35px rgba(0,0,0,0.7), 0 0 20px rgba(245, 158, 11, 0.22)';
+                      e.currentTarget.style.boxShadow = '0 16px 32px -4px rgba(15, 23, 42, 0.1), 0 0 1px 1px rgba(217, 119, 6, 0.3)';
                     }}
                     onMouseLeave={e => {
                       e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = 'none';
+                      e.currentTarget.style.boxShadow = '0 4px 18px -2px rgba(15, 23, 42, 0.06)';
                     }}
                   >
                     {/* Car Image with Badge */}
-                    <div style={{ position: 'relative', width: '100%', height: '230px', background: '#050608' }}>
+                    <div style={{ position: 'relative', width: '100%', height: '230px', background: '#F1F5F9' }}>
                       <img 
                         src={car.imageClean} 
                         alt={car.name}
@@ -441,9 +445,9 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                         position: 'absolute',
                         top: '12px',
                         left: '12px',
-                        background: 'rgba(7, 9, 14, 0.88)',
+                        background: 'rgba(15, 23, 42, 0.85)',
                         backdropFilter: 'blur(8px)',
-                        border: '1px solid #FBBF24',
+                        border: '1px solid rgba(255, 255, 255, 0.2)',
                         color: '#FFFFFF',
                         fontSize: '0.75rem',
                         fontWeight: 800,
@@ -458,13 +462,14 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                         position: 'absolute',
                         top: '12px',
                         right: '12px',
-                        background: 'rgba(245, 158, 11, 0.95)',
-                        color: '#07090e',
+                        background: '#D97706',
+                        color: '#FFFFFF',
                         fontSize: '0.72rem',
                         fontWeight: 900,
                         padding: '4px 10px',
                         borderRadius: '6px',
-                        letterSpacing: '0.04em'
+                        letterSpacing: '0.04em',
+                        boxShadow: '0 2px 8px rgba(217, 119, 6, 0.4)'
                       }}>
                         {car.highlight}
                       </span>
@@ -475,13 +480,13 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                           position: 'absolute',
                           bottom: '12px',
                           left: '12px',
-                          background: 'rgba(34, 197, 94, 0.92)',
-                          color: '#052e16',
+                          background: '#059669',
+                          color: '#FFFFFF',
                           fontWeight: 900,
                           fontSize: '0.75rem',
                           padding: '4px 10px',
                           borderRadius: '20px',
-                          boxShadow: '0 2px 8px rgba(0,0,0,0.5)'
+                          boxShadow: '0 2px 8px rgba(5, 150, 105, 0.35)'
                         }}>
                           🔥 {car.discountPct}% OFF NA QUITAÇÃO
                         </div>
@@ -491,18 +496,18 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                     {/* Card Body */}
                     <div style={{ padding: '20px', flex: 1, display: 'flex', flexDirection: 'column' }}>
                       
-                      <div style={{ fontSize: '0.8rem', color: '#FBBF24', fontWeight: 700, textTransform: 'uppercase', marginBottom: '4px' }}>
+                      <div style={{ fontSize: '0.8rem', color: '#D97706', fontWeight: 800, textTransform: 'uppercase', marginBottom: '4px' }}>
                         {car.category}
                       </div>
 
-                      <h3 style={{ fontSize: '1.3rem', fontWeight: 900, color: '#FFFFFF', marginBottom: '14px', lineHeight: 1.3 }}>
+                      <h3 style={{ fontSize: '1.28rem', fontWeight: 900, color: '#0F172A', marginBottom: '14px', lineHeight: 1.3 }}>
                         {car.name}
                       </h3>
 
                       {/* COMPARISON BOX: FIPE VS QUITAÇÃO */}
                       <div style={{
-                        background: 'rgba(245, 158, 11, 0.08)',
-                        border: '1px solid rgba(245, 158, 11, 0.25)',
+                        background: '#F8FAFC',
+                        border: '1px solid #E2E8F0',
                         borderRadius: '14px',
                         padding: '14px 16px',
                         marginBottom: '16px'
@@ -510,29 +515,29 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                         {/* FIPE vs Payoff */}
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '8px' }}>
                           <div>
-                            <span style={{ fontSize: '0.72rem', color: '#64748b', textTransform: 'uppercase', fontWeight: 600 }}>Tabela FIPE: </span>
-                            <span style={{ fontSize: '0.88rem', color: '#94a3b8', textDecoration: 'line-through', fontWeight: 700 }}>
+                            <span style={{ fontSize: '0.72rem', color: '#64748B', textTransform: 'uppercase', fontWeight: 600 }}>Tabela FIPE: </span>
+                            <span style={{ fontSize: '0.88rem', color: '#94A3B8', textDecoration: 'line-through', fontWeight: 700 }}>
                               {car.fipeFormatted || 'R$ ' + (car.pricePayoff * 2.2).toLocaleString('pt-BR')}
                             </span>
                           </div>
                           
-                          <span style={{ fontSize: '0.72rem', color: '#4ade80', fontWeight: 800 }}>
+                          <span style={{ fontSize: '0.72rem', color: '#059669', fontWeight: 800 }}>
                             Economia: {car.savingsFormatted || 'R$ ' + (car.pricePayoff * 1.2).toLocaleString('pt-BR')}
                           </span>
                         </div>
 
                         {/* Payoff Value Big */}
                         <div>
-                          <div style={{ fontSize: '0.72rem', color: '#FBBF24', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.05em' }}>
+                          <div style={{ fontSize: '0.72rem', color: '#64748B', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.05em' }}>
                             Futura Quitação Estimada
                           </div>
-                          <div style={{ fontSize: '2rem', fontWeight: 900, color: '#FDE68A', lineHeight: 1.1 }}>
+                          <div style={{ fontSize: '1.95rem', fontWeight: 900, color: '#D97706', lineHeight: 1.1 }}>
                             {car.formattedPrice}
                           </div>
                         </div>
 
-                        <div style={{ fontSize: '0.7rem', color: '#94a3b8', marginTop: '6px', display: 'flex', alignItems: 'center', gap: '4px' }}>
-                          <ShieldCheck size={12} color="#FBBF24" />
+                        <div style={{ fontSize: '0.7rem', color: '#64748B', marginTop: '6px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                          <ShieldCheck size={12} color="#059669" />
                           <span>Contrato sob auditoria pericial judicial</span>
                         </div>
                       </div>
@@ -546,7 +551,7 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                           target="_blank"
                           rel="noopener noreferrer"
                           style={{
-                            background: 'linear-gradient(135deg, #22c55e, #16a34a)',
+                            background: 'linear-gradient(135deg, #10B981, #059669)',
                             color: '#FFFFFF',
                             padding: '10px',
                             fontWeight: 800,
@@ -557,7 +562,7 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                             gap: '8px',
                             borderRadius: '8px',
                             textDecoration: 'none',
-                            boxShadow: '0 4px 12px rgba(34, 197, 94, 0.25)'
+                            boxShadow: '0 4px 12px rgba(16, 185, 129, 0.25)'
                           }}
                         >
                           <MessageCircle size={17} />
@@ -571,10 +576,10 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                             onClick={() => setSelectedDossier(car)}
                             style={{
                               padding: '8px',
-                              background: 'rgba(245, 158, 11, 0.12)',
-                              border: '1px solid rgba(245, 158, 11, 0.3)',
+                              background: '#F1F5F9',
+                              border: '1px solid #CBD5E1',
                               borderRadius: '8px',
-                              color: '#FDE68A',
+                              color: '#1E293B',
                               fontSize: '0.78rem',
                               fontWeight: 700,
                               cursor: 'pointer',
@@ -584,7 +589,7 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                               gap: '6px'
                             }}
                           >
-                            <FileText size={13} />
+                            <FileText size={13} color="#64748B" />
                             <span>Ver Dossiê</span>
                           </button>
 
@@ -599,10 +604,10 @@ export function CarStockCatalog({ onSelectCarForSimulation, onOpenChat }) {
                             }}
                             style={{
                               padding: '8px',
-                              background: 'rgba(255, 255, 255, 0.05)',
-                              border: '1px solid rgba(255, 255, 255, 0.12)',
+                              background: 'rgba(217, 119, 6, 0.08)',
+                              border: '1px solid rgba(217, 119, 6, 0.3)',
                               borderRadius: '8px',
-                              color: '#CBD5E1',
+                              color: '#B45309',
                               fontSize: '0.78rem',
                               fontWeight: 700,
                               cursor: 'pointer',

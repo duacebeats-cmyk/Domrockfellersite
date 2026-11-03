@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { 
   ShieldCheck, Calculator, Phone, Menu, X, Users, MessageSquare, 
-  User, LogIn, LogOut, Crown, CheckCircle2, ChevronDown, Headphones 
+  User, LogIn, LogOut, Crown, CheckCircle2, ChevronDown, ChevronRight,
+  Headphones, Car, Scale, Building2, Award, HelpCircle, Sparkles
 } from 'lucide-react';
 
 export function Navbar({ 
@@ -31,13 +32,14 @@ export function Navbar({
       position: 'sticky',
       top: 0,
       zIndex: 100,
-      background: 'rgba(6, 8, 13, 0.94)',
+      background: 'rgba(255, 255, 255, 0.96)',
       backdropFilter: 'blur(16px)',
       WebkitBackdropFilter: 'blur(16px)',
-      borderBottom: '1px solid rgba(245, 158, 11, 0.2)'
+      borderBottom: '1px solid #E2E8F0',
+      boxShadow: '0 4px 20px -2px rgba(15, 23, 42, 0.04)'
     }}>
       {/* Main Nav Bar */}
-      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '72px' }}>
+      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '74px' }}>
         
         {/* Brand Logo with Crowned Golden Lion & Transparent Background */}
         <div 
@@ -50,12 +52,12 @@ export function Navbar({
             width: '46px',
             height: '46px',
             borderRadius: '12px',
-            background: 'radial-gradient(circle, rgba(245, 158, 11, 0.22) 0%, rgba(10, 14, 22, 0.8) 70%)',
-            border: '1.5px solid rgba(245, 158, 11, 0.45)',
+            background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.14) 0%, rgba(255, 255, 255, 0.95) 100%)',
+            border: '1.5px solid rgba(217, 119, 6, 0.4)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 0 16px rgba(245, 158, 11, 0.25)',
+            boxShadow: '0 2px 10px rgba(217, 119, 6, 0.16)',
             flexShrink: 0,
             transition: 'transform 0.2s ease'
           }}>
@@ -66,23 +68,23 @@ export function Navbar({
                 width: '36px',
                 height: '36px',
                 objectFit: 'contain',
-                filter: 'drop-shadow(0 2px 6px rgba(245, 158, 11, 0.45))'
+                filter: 'drop-shadow(0 2px 4px rgba(217, 119, 6, 0.3))'
               }}
             />
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span style={{ fontSize: '1.4rem', fontWeight: 900, letterSpacing: '-0.02em', color: '#FFFFFF', lineHeight: 1 }}>
-              ROCK<span style={{ color: '#FBBF24' }}>FELLER</span>
+            <span style={{ fontSize: '1.38rem', fontWeight: 900, letterSpacing: '-0.02em', color: '#0F172A', lineHeight: 1 }}>
+              ROCK<span style={{ color: '#D97706' }}>FELLER</span>
             </span>
             <span style={{ 
               fontSize: '0.65rem', 
-              background: 'rgba(245, 158, 11, 0.15)', 
-              color: '#FDE68A', 
+              background: 'rgba(217, 119, 6, 0.1)', 
+              color: '#B45309', 
               padding: '2px 8px', 
               borderRadius: '4px', 
               fontWeight: 800, 
-              border: '1px solid rgba(245, 158, 11, 0.4)',
+              border: '1px solid rgba(217, 119, 6, 0.3)',
               letterSpacing: '0.08em',
               lineHeight: 1.4
             }}>
@@ -91,54 +93,70 @@ export function Navbar({
           </div>
         </div>
 
-        {/* Desktop Navigation Links - Centered & Well-Proportioned */}
-        <nav style={{ display: 'none', alignItems: 'center', gap: '26px' }} className="desktop-nav">
-          <a onClick={() => scrollTo('estoque')} className="nav-item-link" style={{ color: '#FDE68A', fontWeight: 800 }}>
-            ✨ Estoque (35 Carros)
+        {/* Desktop Navigation Links - Centered, Proportional & Paired with Icons */}
+        <nav style={{ display: 'none', alignItems: 'center', gap: '8px' }} className="desktop-nav">
+          <a onClick={() => scrollTo('estoque')} className="nav-item-link nav-highlight">
+            <Car size={15} color="#D97706" />
+            <span>Vitrine de Veículos</span>
           </a>
           <a onClick={() => scrollTo('como-funciona')} className="nav-item-link">
-            Como Funciona
+            <Scale size={15} color="#475569" />
+            <span>Como Funciona</span>
           </a>
           <a onClick={() => scrollTo('simulador')} className="nav-item-link">
-            Simulador
+            <Calculator size={15} color="#475569" />
+            <span>Simulador</span>
           </a>
           <a onClick={() => scrollTo('sedes')} className="nav-item-link">
-            Nossas Sedes
+            <Building2 size={15} color="#475569" />
+            <span>Nossas Sedes</span>
           </a>
           <a onClick={() => scrollTo('casos')} className="nav-item-link">
-            Casos de Sucesso
+            <Award size={15} color="#475569" />
+            <span>Casos Reais</span>
           </a>
           <a onClick={() => scrollTo('faq')} className="nav-item-link">
-            Dúvidas
+            <HelpCircle size={15} color="#475569" />
+            <span>Dúvidas</span>
           </a>
         </nav>
 
         {/* Action Buttons & Auth State */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           
-          {/* AUTHENTICATION CONTROL (No admin link in public menu!) */}
+          {/* Quick Simulation CTA in Header (Desktop) */}
+          <button
+            onClick={() => scrollTo('simulador')}
+            className="btn btn-sm btn-gold hide-on-tablet"
+            style={{ padding: '8px 16px', fontSize: '0.84rem' }}
+          >
+            <Sparkles size={14} />
+            <span>Simular Contrato</span>
+          </button>
+
+          {/* AUTHENTICATION CONTROL */}
           {!currentUser ? (
             <button
               onClick={onOpenAuth}
-              className="btn btn-sm btn-gold"
-              style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '9px 20px', fontWeight: 700, fontSize: '0.88rem' }}
+              className="btn btn-sm btn-secondary"
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '8px 16px', fontWeight: 700, fontSize: '0.86rem' }}
               title="Entrar na sua conta"
             >
-              <User size={16} />
+              <User size={15} color="#475569" />
               <span>Entrar</span>
             </button>
           ) : (
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
               
               {/* Role specific view switcher button */}
               {currentUser.role === 'admin' && (
                 <button
                   onClick={() => setActiveView(activeView === 'admin' ? 'site' : 'admin')}
                   className={`btn btn-sm ${activeView === 'admin' ? 'btn-secondary' : 'btn-gold'}`}
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '8px 16px' }}
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '8px 14px', fontSize: '0.84rem' }}
                   title="Painel Administrativo da Diretoria"
                 >
-                  <Crown size={15} color="#0A0D14" />
+                  <Crown size={15} />
                   <span>{activeView === 'admin' ? 'Ver Site' : 'Painel Admin'}</span>
                 </button>
               )}
@@ -147,10 +165,10 @@ export function Navbar({
                 <button
                   onClick={() => setActiveView(activeView === 'admin' ? 'site' : 'admin')}
                   className={`btn btn-sm ${activeView === 'admin' ? 'btn-secondary' : 'btn-gold'}`}
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '8px 16px' }}
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '8px 14px', fontSize: '0.84rem' }}
                   title="Central de Atendimento & CRM"
                 >
-                  <Headphones size={15} color="#0A0D14" />
+                  <Headphones size={15} />
                   <span>{activeView === 'admin' ? 'Ver Site' : 'Painel Atendente'}</span>
                 </button>
               )}
@@ -159,7 +177,7 @@ export function Navbar({
                 <button
                   onClick={() => setActiveView(activeView === 'client' ? 'site' : 'client')}
                   className={`btn btn-sm ${activeView === 'client' ? 'btn-secondary' : 'btn-gold'}`}
-                  style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '8px 16px' }}
+                  style={{ display: 'inline-flex', alignItems: 'center', gap: '7px', padding: '8px 14px', fontSize: '0.84rem' }}
                   title="Acessar Portal do Cliente"
                 >
                   <User size={15} />
@@ -171,10 +189,10 @@ export function Navbar({
               <button
                 onClick={onLogout}
                 className="btn btn-sm btn-secondary"
-                style={{ padding: '8px 10px' }}
+                style={{ padding: '8px 10px', color: '#EF4444' }}
                 title="Sair da Conta"
               >
-                <LogOut size={15} color="#F87171" />
+                <LogOut size={15} />
               </button>
 
             </div>
@@ -184,10 +202,10 @@ export function Navbar({
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
             className="btn btn-secondary btn-sm mobile-menu-toggle"
-            style={{ padding: '8px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
+            style={{ padding: '8px 10px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center' }}
             aria-label="Abrir Menu"
           >
-            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            {mobileMenuOpen ? <X size={20} color="#0F172A" /> : <Menu size={20} color="#0F172A" />}
           </button>
 
         </div>
@@ -196,33 +214,92 @@ export function Navbar({
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
         <div style={{
-          background: '#0B0E17',
-          borderBottom: '1px solid rgba(245, 158, 11, 0.2)',
-          padding: '20px 24px',
+          background: '#FFFFFF',
+          borderBottom: '2px solid #E2E8F0',
+          boxShadow: '0 16px 30px -10px rgba(15, 23, 42, 0.1)',
+          padding: '16px 18px',
           display: 'flex',
           flexDirection: 'column',
-          gap: '14px'
+          gap: '8px'
         }}>
-          <a onClick={() => scrollTo('estoque')} style={{ fontSize: '1rem', color: '#FDE68A', fontWeight: 800, padding: '6px 0' }}>✨ Vitrine de Veículos</a>
-          <a onClick={() => scrollTo('como-funciona')} style={{ fontSize: '1rem', color: '#F8FAFC', padding: '6px 0' }}>Como Funciona</a>
-          <a onClick={() => scrollTo('simulador')} style={{ fontSize: '1rem', color: '#F8FAFC', padding: '6px 0' }}>Simulador de Desconto</a>
-          <a onClick={() => scrollTo('sedes')} style={{ fontSize: '1rem', color: '#F8FAFC', padding: '6px 0' }}>Sedes &amp; Atendimento</a>
-          <a onClick={() => scrollTo('casos')} style={{ fontSize: '1rem', color: '#F8FAFC', padding: '6px 0' }}>Casos de Sucesso</a>
-          <a onClick={() => scrollTo('faq')} style={{ fontSize: '1rem', color: '#F8FAFC', padding: '6px 0' }}>Dúvidas Frequentes</a>
-          <hr style={{ borderColor: 'rgba(245, 158, 11, 0.15)' }} />
+          <a onClick={() => scrollTo('estoque')} className="mobile-nav-card" style={{ background: 'rgba(245, 158, 11, 0.08)', borderColor: 'rgba(217, 119, 6, 0.25)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: 'rgba(217, 119, 6, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Car size={18} color="#D97706" />
+              </div>
+              <div>
+                <div style={{ fontSize: '0.94rem', fontWeight: 800, color: '#B45309' }}>Vitrine de Veículos</div>
+                <div style={{ fontSize: '0.75rem', color: '#64748B' }}>Carros com quitação programada</div>
+              </div>
+            </div>
+            <ChevronRight size={16} color="#B45309" />
+          </a>
+
+          <a onClick={() => scrollTo('como-funciona')} className="mobile-nav-card">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Scale size={18} color="#2563EB" />
+              </div>
+              <span style={{ fontSize: '0.92rem', fontWeight: 600, color: '#1E293B' }}>Como Funciona a Quitação</span>
+            </div>
+            <ChevronRight size={16} color="#94A3B8" />
+          </a>
+
+          <a onClick={() => scrollTo('simulador')} className="mobile-nav-card">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Calculator size={18} color="#D97706" />
+              </div>
+              <span style={{ fontSize: '0.92rem', fontWeight: 600, color: '#1E293B' }}>Simulador de Desconto</span>
+            </div>
+            <ChevronRight size={16} color="#94A3B8" />
+          </a>
+
+          <a onClick={() => scrollTo('sedes')} className="mobile-nav-card">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Building2 size={18} color="#059669" />
+              </div>
+              <span style={{ fontSize: '0.92rem', fontWeight: 600, color: '#1E293B' }}>Sedes Floripa &amp; Vitória</span>
+            </div>
+            <ChevronRight size={16} color="#94A3B8" />
+          </a>
+
+          <a onClick={() => scrollTo('casos')} className="mobile-nav-card">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Award size={18} color="#D97706" />
+              </div>
+              <span style={{ fontSize: '0.92rem', fontWeight: 600, color: '#1E293B' }}>Casos de Sucesso Reais</span>
+            </div>
+            <ChevronRight size={16} color="#94A3B8" />
+          </a>
+
+          <a onClick={() => scrollTo('faq')} className="mobile-nav-card">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <HelpCircle size={18} color="#64748B" />
+              </div>
+              <span style={{ fontSize: '0.92rem', fontWeight: 600, color: '#1E293B' }}>Dúvidas Frequentes</span>
+            </div>
+            <ChevronRight size={16} color="#94A3B8" />
+          </a>
+
+          <hr style={{ borderColor: '#E2E8F0', margin: '6px 0' }} />
           
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
             {!currentUser ? (
               <button
                 onClick={() => { setMobileMenuOpen(false); onOpenAuth(); }}
                 className="btn btn-gold"
+                style={{ width: '100%', padding: '12px' }}
               >
                 <LogIn size={16} /> Entrar / Minha Conta
               </button>
             ) : (
               <>
-                <div style={{ fontSize: '0.85rem', color: '#94A3B8', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span>Conectado: <strong style={{ color: '#FFFFFF' }}>{currentUser.name}</strong></span>
+                <div style={{ fontSize: '0.85rem', color: '#64748B', display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '4px 0' }}>
+                  <span>Conectado: <strong style={{ color: '#0F172A' }}>{currentUser.name}</strong></span>
                   <span className="badge badge-gold">
                     {currentUser.role.toUpperCase()}
                   </span>
@@ -231,6 +308,7 @@ export function Navbar({
                   <button
                     onClick={() => { setActiveView('admin'); setMobileMenuOpen(false); }}
                     className="btn btn-gold"
+                    style={{ width: '100%' }}
                   >
                     <Crown size={16} /> Abrir Painel de Gestão & Chat
                   </button>
@@ -238,6 +316,7 @@ export function Navbar({
                   <button
                     onClick={() => { setActiveView('client'); setMobileMenuOpen(false); }}
                     className="btn btn-gold"
+                    style={{ width: '100%' }}
                   >
                     <User size={16} /> Abrir Portal do Cliente
                   </button>
@@ -245,7 +324,7 @@ export function Navbar({
                 <button
                   onClick={() => { onLogout(); setMobileMenuOpen(false); }}
                   className="btn btn-secondary"
-                  style={{ color: '#F87171' }}
+                  style={{ color: '#EF4444', width: '100%' }}
                 >
                   <LogOut size={16} /> Sair da Conta
                 </button>
@@ -257,24 +336,52 @@ export function Navbar({
 
       <style>{`
         .nav-item-link {
-          font-size: 0.94rem;
-          color: #E2E8F0;
+          font-size: 0.88rem;
+          color: #334155;
           font-weight: 600;
           cursor: pointer;
-          transition: color 0.2s ease, transform 0.2s ease;
-          padding: 8px 4px;
-          display: inline-block;
+          transition: all 0.2s ease;
+          padding: 8px 12px;
+          border-radius: 8px;
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          user-select: none;
         }
         .nav-item-link:hover {
-          color: #FBBF24;
+          color: #B45309;
+          background: rgba(245, 158, 11, 0.08);
           transform: translateY(-1px);
         }
-        @media (min-width: 900px) {
+        .nav-highlight {
+          color: #B45309 !important;
+          background: rgba(245, 158, 11, 0.09) !important;
+          border: 1px solid rgba(217, 119, 6, 0.22) !important;
+          font-weight: 700 !important;
+        }
+        .nav-highlight:hover {
+          background: rgba(245, 158, 11, 0.16) !important;
+        }
+        .mobile-nav-card {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 10px 14px;
+          border-radius: 10px;
+          border: 1px solid #E2E8F0;
+          background: #FFFFFF;
+          cursor: pointer;
+          transition: background 0.15s ease;
+        }
+        .mobile-nav-card:active {
+          background: #F8FAFC;
+        }
+        @media (min-width: 960px) {
           .desktop-nav { display: flex !important; }
           .mobile-menu-toggle { display: none !important; }
         }
-        @media (max-width: 640px) {
-          .hide-on-mobile { display: none !important; }
+        @media (max-width: 1080px) {
+          .hide-on-tablet { display: none !important; }
         }
       `}</style>
     </header>

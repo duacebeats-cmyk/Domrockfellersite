@@ -1,35 +1,40 @@
 /* ====================================================================
-   DOM ROCKFELLER - LUXURY BLACK & GOLD DESIGN SYSTEM
-   Theme: High-End Black & Gold (Obsidian, Onyx, Imperial Gold & Champagne)
+   DOM ROCKFELLER - HIGH-TRUST CORPORATE WHITE & GOLD DESIGN SYSTEM
+   Theme: High-Credibility Institutional White (Clean Slate, Pure White, Imperial Gold & Navy)
    ==================================================================== */
 
 :root {
-  --bg-dark: #06080D;
-  --bg-card: rgba(12, 16, 25, 0.85);
-  --bg-card-hover: rgba(20, 26, 40, 0.95);
-  --bg-input: rgba(10, 14, 22, 0.95);
-  --bg-surface: #0B0F17;
+  --bg-dark: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FFFFFF;
+  --bg-input: #FFFFFF;
+  --bg-surface: #F1F5F9;
   
-  --gold-300: #FFF1B8;
-  --gold-400: #FDE68A;
-  --gold-500: #F59E0B;
-  --gold-600: #D97706;
-  --gold-700: #B45309;
-  --gold-metallic: linear-gradient(135deg, #FFF1B8 0%, #F59E0B 45%, #B45309 100%);
-  --gold-glow: rgba(245, 158, 11, 0.35);
-  --gold-border: rgba(245, 158, 11, 0.28);
+  --gold-300: #FDE68A;
+  --gold-400: #F59E0B;
+  --gold-500: #D97706;
+  --gold-600: #B45309;
+  --gold-700: #92400E;
+  --gold-metallic: linear-gradient(135deg, #F59E0B 0%, #D97706 45%, #B45309 100%);
+  --gold-glow: rgba(217, 119, 6, 0.25);
+  --gold-border: rgba(217, 119, 6, 0.35);
   
-  --emerald-400: #34D399;
-  --emerald-500: #10B981;
-  --blue-400: #60A5FA;
-  --blue-500: #3B82F6;
-  --rose-400: #F87171;
+  --emerald-400: #10B981;
+  --emerald-500: #059669;
+  --emerald-600: #047857;
   
-  --border-color: rgba(245, 158, 11, 0.16);
-  --border-highlight: rgba(245, 158, 11, 0.45);
+  --blue-400: #3B82F6;
+  --blue-500: #2563EB;
+  --blue-600: #1D4ED8;
+  --navy-900: #0F172A;
+  --navy-800: #1E293B;
+  --rose-400: #EF4444;
   
-  --text-primary: #FDFEFE;
-  --text-secondary: #94A3B8;
+  --border-color: #E2E8F0;
+  --border-highlight: #CBD5E1;
+  
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
   --text-muted: #64748B;
   
   --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -40,9 +45,9 @@
   --radius-xl: 28px;
   --radius-full: 9999px;
 
-  --shadow-card: 0 10px 30px -10px rgba(0, 0, 0, 0.8), 0 0 1px 1px rgba(245, 158, 11, 0.12);
-  --shadow-glow: 0 0 35px -5px rgba(245, 158, 11, 0.35);
-  --shadow-modal: 0 25px 60px -15px rgba(0, 0, 0, 0.9);
+  --shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+  --shadow-glow: 0 6px 25px -4px rgba(217, 119, 6, 0.22);
+  --shadow-modal: 0 25px 60px -15px rgba(15, 23, 42, 0.22);
 }
 
 * {
@@ -64,9 +69,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   background-image: 
-    radial-gradient(circle at 18% 12%, rgba(245, 158, 11, 0.09) 0%, transparent 45%),
-    radial-gradient(circle at 82% 28%, rgba(212, 175, 55, 0.07) 0%, transparent 50%),
-    radial-gradient(circle at 50% 80%, rgba(245, 158, 11, 0.05) 0%, transparent 55%);
+    radial-gradient(circle at 18% 12%, rgba(217, 119, 6, 0.04) 0%, transparent 45%),
+    radial-gradient(circle at 82% 28%, rgba(37, 99, 235, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(217, 119, 6, 0.02) 0%, transparent 55%);
   background-attachment: fixed;
   min-height: 100vh;
 }
@@ -82,14 +87,14 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-dark);
+  background: #F1F5F9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1C2331;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--gold-600);
+  background: #94A3B8;
 }
 
 /* Typography Helpers */
@@ -115,7 +120,7 @@ a {
 }
 
 a:hover {
-  color: var(--gold-400);
+  color: var(--gold-600);
 }
 
 a:active {
@@ -145,7 +150,7 @@ button:active {
   padding-right: 24px;
 }
 
-/* Badges with Micro-interactions */
+/* Badges with High-Trust Tone */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -153,7 +158,7 @@ button:active {
   padding: 6px 14px;
   border-radius: var(--radius-full);
   font-size: 0.82rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
@@ -164,8 +169,8 @@ button:active {
 
 .badge:hover {
   transform: translateY(-1px);
-  filter: brightness(1.15);
-  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
+  filter: brightness(1.05);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
 }
 
 .badge:active {
@@ -173,24 +178,24 @@ button:active {
 }
 
 .badge-gold {
-  background: rgba(245, 158, 11, 0.12);
-  color: var(--gold-400);
-  border: 1px solid var(--border-highlight);
+  background: rgba(245, 158, 11, 0.1);
+  color: #B45309;
+  border: 1px solid rgba(245, 158, 11, 0.35);
 }
 
 .badge-emerald {
-  background: rgba(16, 185, 129, 0.12);
-  color: var(--emerald-400);
-  border: 1px solid rgba(16, 185, 129, 0.35);
+  background: rgba(16, 185, 129, 0.1);
+  color: #047857;
+  border: 1px solid rgba(16, 185, 129, 0.3);
 }
 
 .badge-blue {
-  background: rgba(59, 130, 246, 0.12);
-  color: #60A5FA;
-  border: 1px solid rgba(59, 130, 246, 0.3);
+  background: rgba(37, 99, 235, 0.08);
+  color: #1D4ED8;
+  border: 1px solid rgba(37, 99, 235, 0.25);
 }
 
-/* Glassmorphism Card with Dynamic Hover & Active Transitions */
+/* Card Styling with Elevated Light Soft Shadows */
 .glass-card, [class*="card"] {
   background: var(--bg-card);
   backdrop-filter: blur(16px);
@@ -205,9 +210,9 @@ button:active {
 }
 
 .glass-card:hover {
-  transform: translateY(-6px) scale(1.008);
-  border-color: rgba(245, 158, 11, 0.5) !important;
-  box-shadow: 0 20px 45px -10px rgba(0, 0, 0, 0.9), 0 0 30px -4px rgba(245, 158, 11, 0.25) !important;
+  transform: translateY(-5px);
+  border-color: rgba(217, 119, 6, 0.4) !important;
+  box-shadow: 0 16px 35px -6px rgba(15, 23, 42, 0.09), 0 0 1px 1px rgba(217, 119, 6, 0.15) !important;
 }
 
 .glass-card:active {
@@ -215,7 +220,7 @@ button:active {
   transition: transform 0.1s ease;
 }
 
-/* Buttons in Luxury Black & Gold with Tactile Spring Click States */
+/* Buttons in High-Trust Corporate Design */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -249,40 +254,43 @@ button:active {
 }
 
 .btn-primary, .btn-gold {
-  background: linear-gradient(135deg, #FFF1B8 0%, #F59E0B 40%, #B45309 100%);
-  color: #0A0D14;
-  box-shadow: 0 4px 20px var(--gold-glow);
+  background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%);
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(217, 119, 6, 0.32);
   font-weight: 800;
+  border: 1px solid rgba(217, 119, 6, 0.5);
 }
 
 .btn-primary:hover, .btn-gold:hover {
-  background: linear-gradient(135deg, #FFFFFF 0%, #FBBF24 50%, #D97706 100%);
+  background: linear-gradient(135deg, #FBBF24 0%, #D97706 45%, #92400E 100%);
   transform: translateY(-3px);
-  box-shadow: 0 10px 28px rgba(245, 158, 11, 0.5), 0 0 16px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 8px 24px rgba(217, 119, 6, 0.45);
+  color: #FFFFFF;
 }
 
 .btn-primary:active, .btn-gold:active {
   transform: translateY(1.5px) scale(0.96) !important;
-  box-shadow: 0 2px 10px rgba(245, 158, 11, 0.35);
+  box-shadow: 0 2px 10px rgba(217, 119, 6, 0.35);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.04);
-  color: #F8FAFC;
-  border: 1px solid var(--border-color);
+  background: #FFFFFF;
+  color: #1E293B;
+  border: 1px solid #CBD5E1;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
 }
 
 .btn-secondary:hover {
-  background: rgba(245, 158, 11, 0.12);
-  border-color: var(--border-highlight);
-  color: #FFFFFF;
-  transform: translateY(-2.5px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(245, 158, 11, 0.2);
+  background: #F8FAFC;
+  border-color: #94A3B8;
+  color: #0F172A;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
 }
 
 .btn-secondary:active {
-  transform: translateY(1.5px) scale(0.97) !important;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  transform: translateY(1px) scale(0.97) !important;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
 }
 
 .btn-sm {
@@ -299,18 +307,18 @@ button:active {
 
 /* Gradient Text Gold */
 .text-gradient-gold {
-  background: linear-gradient(135deg, #FFF1B8 0%, #F59E0B 50%, #D97706 100%);
+  background: linear-gradient(135deg, #B45309 0%, #D97706 45%, #F59E0B 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-emerald {
-  background: linear-gradient(135deg, #FFFFFF 20%, #F59E0B 100%);
+  background: linear-gradient(135deg, #047857 0%, #059669 50%, #10B981 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Form Inputs with Smooth Focus and Hover Halos */
+/* Form Inputs with Smooth Focus */
 .form-group {
   display: flex;
   flex-direction: column;
@@ -322,7 +330,7 @@ button:active {
 .form-label {
   font-size: 0.88rem;
   font-weight: 600;
-  color: #E2E8F0;
+  color: #334155;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -333,11 +341,12 @@ button:active {
   width: 100%;
   padding: 12px 16px;
   background: var(--bg-input);
-  border: 1px solid rgba(245, 158, 11, 0.2);
+  border: 1px solid #CBD5E1;
   border-radius: var(--radius-md);
-  color: #FFFFFF;
+  color: #0F172A;
   font-family: inherit;
   font-size: 0.95rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
   transition: border-color 0.25s ease, 
               box-shadow 0.25s ease, 
               transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), 
@@ -346,29 +355,29 @@ button:active {
 }
 
 .form-input:hover, .form-select:hover, .form-textarea:hover {
-  border-color: rgba(245, 158, 11, 0.45);
+  border-color: #94A3B8;
 }
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
-  border-color: var(--gold-400);
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.28), 0 0 16px rgba(245, 158, 11, 0.2);
-  transform: translateY(-1.5px);
-  background: rgba(12, 16, 26, 0.98);
+  border-color: #D97706;
+  box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.16);
+  transform: translateY(-1px);
+  background: #FFFFFF;
 }
 
 .form-select option {
-  background: #0B0E17;
-  color: #FFFFFF;
+  background: #FFFFFF;
+  color: #0F172A;
 }
 
-/* Range Slider Gold with Interactive Thumb Feedback */
+/* Range Slider Gold with Interactive Feedback */
 .range-slider {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
   height: 8px;
   border-radius: 4px;
-  background: #171E2B;
+  background: #E2E8F0;
   outline: none;
   margin: 12px 0;
   transition: background 0.2s ease;
@@ -380,20 +389,20 @@ button:active {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: var(--gold-400);
+  background: #D97706;
   cursor: pointer;
-  box-shadow: 0 0 14px rgba(245, 158, 11, 0.6);
+  box-shadow: 0 2px 10px rgba(217, 119, 6, 0.45);
   transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
 }
 
 .range-slider::-webkit-slider-thumb:hover {
   transform: scale(1.2);
-  box-shadow: 0 0 20px rgba(245, 158, 11, 0.9);
+  box-shadow: 0 2px 16px rgba(217, 119, 6, 0.7);
 }
 
 .range-slider::-webkit-slider-thumb:active {
   transform: scale(0.95);
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+  box-shadow: 0 1px 6px rgba(217, 119, 6, 0.4);
 }
 
 /* Animations */

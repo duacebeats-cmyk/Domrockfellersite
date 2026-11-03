@@ -13,7 +13,7 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
       padding: '60px 0 70px',
       overflow: 'hidden'
     }}>
-      {/* Creative Watermark with Golden Lion Emblem in Background */}
+      {/* Subtle Crest Watermark in Background */}
       <div style={{
         position: 'absolute',
         top: '40%',
@@ -21,17 +21,16 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
         transform: 'translate(-50%, -50%)',
         width: '650px',
         height: '650px',
-        opacity: 0.04,
+        opacity: 0.03,
         pointerEvents: 'none',
         zIndex: 0,
         backgroundImage: 'url(/lion-icon.png)',
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        filter: 'blur(1px)'
+        backgroundPosition: 'center'
       }} />
 
-      {/* Decorative ambient radial gold spots */}
+      {/* Decorative ambient radial gold spots for light theme */}
       <div style={{
         position: 'absolute',
         top: '-120px',
@@ -39,7 +38,7 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
         transform: 'translateX(-50%)',
         width: '700px',
         height: '450px',
-        background: 'radial-gradient(circle, rgba(245, 158, 11, 0.16) 0%, rgba(212, 175, 55, 0.08) 50%, transparent 70%)',
+        background: 'radial-gradient(circle, rgba(245, 158, 11, 0.08) 0%, rgba(37, 99, 235, 0.04) 50%, transparent 70%)',
         pointerEvents: 'none',
         zIndex: 0
       }} />
@@ -47,7 +46,7 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{ maxWidth: '940px', margin: '0 auto', textAlign: 'center' }}>
           
-          {/* Creative Logo Crest Header in Hero */}
+          {/* Logo Crest Header in Hero */}
           <div style={{ marginBottom: '22px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <div style={{
               position: 'relative',
@@ -56,41 +55,40 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
               justifyContent: 'center',
               marginBottom: '16px'
             }}>
-              {/* Pulsing Gold Glow behind Lion */}
+              {/* Subtle Gold Ambient Halo */}
               <div style={{
                 position: 'absolute',
-                width: '140px',
-                height: '140px',
+                width: '130px',
+                height: '130px',
                 borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(245, 158, 11, 0.35) 0%, transparent 70%)',
-                filter: 'blur(15px)',
+                background: 'radial-gradient(circle, rgba(245, 158, 11, 0.2) 0%, transparent 70%)',
+                filter: 'blur(12px)',
                 zIndex: 0
-              }} className="animate-pulse-subtle" />
+              }} />
 
               <img 
                 src="/lion-icon.png" 
                 alt="RockFeller Soluções" 
                 style={{
-                  width: '105px',
-                  height: '105px',
+                  width: '98px',
+                  height: '98px',
                   objectFit: 'contain',
                   position: 'relative',
                   zIndex: 1,
-                  filter: 'drop-shadow(0 6px 20px rgba(245, 158, 11, 0.5))'
+                  filter: 'drop-shadow(0 4px 12px rgba(217, 119, 6, 0.3))'
                 }}
-                className="animate-float"
               />
             </div>
 
             {/* Badges Row */}
             <div style={{ display: 'inline-flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px' }}>
               <span className="badge badge-gold">
-                <ShieldCheck size={15} /> Assessoria Jurídica & Consultoria Financeira
+                <ShieldCheck size={15} /> Assessoria Jurídica &amp; Consultoria Financeira
               </span>
-              <span className="badge badge-gold" style={{ background: 'rgba(255, 255, 255, 0.04)', borderColor: 'rgba(245, 158, 11, 0.3)' }}>
-                <Sparkles size={14} color="#FBBF24" /> Ações Revisionais Legítimas na Justiça
+              <span className="badge badge-blue">
+                <Sparkles size={14} /> Ações Revisionais Legítimas na Justiça
               </span>
-              <span className="badge badge-gold" style={{ background: 'rgba(245, 158, 11, 0.08)', borderColor: 'rgba(245, 158, 11, 0.35)' }}>
+              <span className="badge badge-emerald">
                 Florianópolis (SC) • Vitória (Inauguração em breve)
               </span>
             </div>
@@ -98,20 +96,21 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
 
           {/* Main Headline */}
           <h1 style={{
-            fontSize: 'clamp(2.3rem, 5vw, 3.8rem)',
+            fontSize: 'clamp(2.2rem, 5vw, 3.6rem)',
             fontWeight: 900,
-            lineHeight: 1.15,
-            marginBottom: '22px',
-            color: '#FFFFFF'
+            lineHeight: 1.18,
+            marginBottom: '20px',
+            color: '#0F172A',
+            letterSpacing: '-0.025em'
           }}>
             Análise Pericial de Juros Abusivos e <span className="text-gradient-gold">Ação Revisional na Justiça</span>
           </h1>
 
           {/* Subheading */}
           <p style={{
-            fontSize: 'clamp(1.05rem, 2vw, 1.22rem)',
-            color: '#CBD5E1',
-            lineHeight: 1.65,
+            fontSize: 'clamp(1.05rem, 2vw, 1.2rem)',
+            color: '#475569',
+            lineHeight: 1.68,
             maxWidth: '820px',
             margin: '0 auto 36px'
           }}>
@@ -123,7 +122,7 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
             <button
               onClick={() => scrollTo('simulador')}
               className="btn btn-primary btn-lg"
-              style={{ minWidth: 'min(100%, 250px)' }}
+              style={{ minWidth: 'min(100%, 260px)' }}
             >
               <Sparkles size={20} />
               <span>Simular Perícia do Meu Contrato</span>
@@ -132,9 +131,9 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
             <button
               onClick={onOpenChat}
               className="btn btn-secondary btn-lg"
-              style={{ minWidth: 'min(100%, 230px)', borderColor: 'rgba(245, 158, 11, 0.4)' }}
+              style={{ minWidth: 'min(100%, 240px)' }}
             >
-              <MessageSquare size={18} color="#FBBF24" />
+              <MessageSquare size={18} color="#D97706" />
               <span>Falar com Atendente Humano</span>
             </button>
           </div>
@@ -146,18 +145,19 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
             alignItems: 'center',
             gap: '24px',
             flexWrap: 'wrap',
-            color: '#CBD5E1',
+            color: '#334155',
             fontSize: '0.88rem',
-            paddingBottom: '25px'
+            fontWeight: 600,
+            paddingBottom: '20px'
           }}>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-              <CheckCircle2 size={18} color="#FBBF24" /> Perícia Contábil Fundamentada no CDC
+              <CheckCircle2 size={18} color="#059669" /> Perícia Contábil Fundamentada no CDC
             </span>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-              <CheckCircle2 size={18} color="#FBBF24" /> Defesa Técnica contra Busca e Apreensão
+              <CheckCircle2 size={18} color="#059669" /> Defesa Técnica contra Busca e Apreensão
             </span>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-              <CheckCircle2 size={18} color="#FBBF24" /> Sede Florianópolis • Vitória (Inauguração em breve)
+              <CheckCircle2 size={18} color="#059669" /> Sede Florianópolis • Vitória (Inauguração em breve)
             </span>
           </div>
 
@@ -167,31 +167,31 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
         <div className="grid-4" style={{ marginTop: '20px' }}>
           
           <div className="glass-card" style={{ padding: '24px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #FDE68A, #B45309)' }} />
-            <div style={{ fontSize: '2.1rem', fontWeight: 800, color: '#FBBF24', marginBottom: '6px' }}>R$ 18.4M+</div>
-            <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#F8FAFC' }}>Economia Gerada</div>
-            <div style={{ fontSize: '0.78rem', color: '#94A3B8', marginTop: '4px' }}>Dinheiro economizado por nossos clientes</div>
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #F59E0B, #B45309)' }} />
+            <div style={{ fontSize: '2.1rem', fontWeight: 800, color: '#D97706', marginBottom: '4px' }}>R$ 18.4M+</div>
+            <div style={{ fontSize: '0.94rem', fontWeight: 700, color: '#0F172A' }}>Economia Gerada</div>
+            <div style={{ fontSize: '0.80rem', color: '#64748B', marginTop: '4px' }}>Dinheiro economizado por nossos clientes</div>
           </div>
 
           <div className="glass-card" style={{ padding: '24px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #F59E0B, #D97706)' }} />
-            <div style={{ fontSize: '2.1rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '6px' }}>+3.800</div>
-            <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#F8FAFC' }}>Veículos Desalienados</div>
-            <div style={{ fontSize: '0.78rem', color: '#94A3B8', marginTop: '4px' }}>Carros, motos e utilitários quitados</div>
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #2563EB, #1D4ED8)' }} />
+            <div style={{ fontSize: '2.1rem', fontWeight: 800, color: '#0F172A', marginBottom: '4px' }}>+3.800</div>
+            <div style={{ fontSize: '0.94rem', fontWeight: 700, color: '#0F172A' }}>Veículos Desalienados</div>
+            <div style={{ fontSize: '0.80rem', color: '#64748B', marginTop: '4px' }}>Carros, motos e utilitários quitados</div>
           </div>
 
           <div className="glass-card" style={{ padding: '24px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #FFE58F, #F59E0B)' }} />
-            <div style={{ fontSize: '2.1rem', fontWeight: 800, color: '#FBBF24', marginBottom: '6px' }}>Até 75%</div>
-            <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#F8FAFC' }}>Redução Revisional</div>
-            <div style={{ fontSize: '0.78rem', color: '#94A3B8', marginTop: '4px' }}>Economia em parcelas futuras e encargos abusivos</div>
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #10B981, #059669)' }} />
+            <div style={{ fontSize: '2.1rem', fontWeight: 800, color: '#059669', marginBottom: '4px' }}>Até 75%</div>
+            <div style={{ fontSize: '0.94rem', fontWeight: 700, color: '#0F172A' }}>Redução Revisional</div>
+            <div style={{ fontSize: '0.80rem', color: '#64748B', marginTop: '4px' }}>Economia em parcelas futuras e encargos</div>
           </div>
 
           <div className="glass-card" style={{ padding: '24px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #F59E0B, #FFE58F)' }} />
-            <div style={{ fontSize: '2.1rem', fontWeight: 800, color: '#FFFFFF', marginBottom: '6px' }}>Sedes</div>
-            <div style={{ fontSize: '0.9rem', fontWeight: 600, color: '#F8FAFC' }}>Florianópolis &amp; Vitória (Em Breve)</div>
-            <div style={{ fontSize: '0.78rem', color: '#94A3B8', marginTop: '4px' }}>Atendimento presencial e suporte corporativo</div>
+            <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: 'linear-gradient(90deg, #D97706, #F59E0B)' }} />
+            <div style={{ fontSize: '2.1rem', fontWeight: 800, color: '#0F172A', marginBottom: '4px' }}>Sedes Físicas</div>
+            <div style={{ fontSize: '0.94rem', fontWeight: 700, color: '#0F172A' }}>Florianópolis &amp; Vitória (Em Breve)</div>
+            <div style={{ fontSize: '0.80rem', color: '#64748B', marginTop: '4px' }}>Atendimento presencial e suporte corporativo</div>
           </div>
 
         </div>

@@ -65,10 +65,10 @@ export function Simulator({ onCompleteSimulation }) {
           <span className="badge badge-gold" style={{ marginBottom: '14px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
             <Calculator size={15} /> Perícia Prévia & Estimativa Revisional
           </span>
-          <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', marginBottom: '16px', color: '#FFFFFF' }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', marginBottom: '16px', color: '#0F172A' }}>
             Simule o <span className="text-gradient-gold">Recálculo de Juros Abusivos</span>
           </h2>
-          <p style={{ fontSize: '1.05rem', color: '#94A3B8' }}>
+          <p style={{ fontSize: '1.05rem', color: '#475569' }}>
             Descubra em segundos a estimativa do valor incontroverso expurgando os juros abusivos apurados em uma Ação Revisional legítima na Justiça.
           </p>
         </div>
@@ -76,8 +76,8 @@ export function Simulator({ onCompleteSimulation }) {
         {/* Main Simulator Card Layout */}
         <div className="glass-card" style={{
           padding: 'clamp(24px, 4vw, 44px)',
-          border: '1px solid rgba(16, 185, 129, 0.25)',
-          boxShadow: '0 20px 50px -10px rgba(0,0,0,0.7), 0 0 30px -5px rgba(16, 185, 129, 0.15)'
+          border: '1px solid #E2E8F0',
+          boxShadow: '0 10px 35px -5px rgba(15, 23, 42, 0.07)'
         }}>
           <div className="grid-2" style={{ alignItems: 'center', gap: '40px' }}>
             
@@ -88,7 +88,7 @@ export function Simulator({ onCompleteSimulation }) {
                 {/* Vehicle Type selector */}
                 <div className="form-group">
                   <label className="form-label">
-                    <Car size={16} color="#34D399" /> Tipo de Veículo
+                    <Car size={16} color="#059669" /> Tipo de Veículo
                   </label>
                   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
                     {['Carro', 'Moto', 'Caminhão'].map((type) => (
@@ -99,10 +99,10 @@ export function Simulator({ onCompleteSimulation }) {
                         style={{
                           padding: '10px',
                           borderRadius: '10px',
-                          background: vehicleType === type ? 'rgba(16, 185, 129, 0.2)' : 'rgba(255, 255, 255, 0.04)',
-                          border: `1px solid ${vehicleType === type ? '#10B981' : 'rgba(255, 255, 255, 0.1)'}`,
-                          color: vehicleType === type ? '#34D399' : '#94A3B8',
-                          fontWeight: 600,
+                          background: vehicleType === type ? 'rgba(5, 150, 105, 0.1)' : '#F8FAFC',
+                          border: `1.5px solid ${vehicleType === type ? '#059669' : '#CBD5E1'}`,
+                          color: vehicleType === type ? '#047857' : '#475569',
+                          fontWeight: 700,
                           cursor: 'pointer',
                           transition: 'all 0.2s'
                         }}
@@ -245,12 +245,12 @@ export function Simulator({ onCompleteSimulation }) {
             {/* Simulation Result Card (Right Column) */}
             <div>
               <div style={{
-                background: 'linear-gradient(145deg, rgba(16, 24, 40, 0.95), rgba(8, 14, 26, 0.95))',
+                background: '#FFFFFF',
                 borderRadius: '20px',
-                border: '1px solid rgba(16, 185, 129, 0.4)',
+                border: '1.5px solid #059669',
                 padding: 'clamp(24px, 3.5vw, 36px)',
                 position: 'relative',
-                boxShadow: '0 20px 40px rgba(0, 0, 0, 0.5)'
+                boxShadow: '0 16px 36px rgba(15, 23, 42, 0.08)'
               }}>
                 
                 {/* Discount Badge */}
@@ -264,7 +264,7 @@ export function Simulator({ onCompleteSimulation }) {
                   fontSize: '0.88rem',
                   padding: '6px 16px',
                   borderRadius: '20px',
-                  boxShadow: '0 6px 18px rgba(16, 185, 129, 0.4)',
+                  boxShadow: '0 6px 18px rgba(16, 185, 129, 0.35)',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '6px'
@@ -272,12 +272,12 @@ export function Simulator({ onCompleteSimulation }) {
                   <Sparkles size={16} /> ~{discountPercent}% DE DESCONTO
                 </div>
 
-                <div style={{ fontSize: '0.85rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#94A3B8', marginBottom: '8px' }}>
+                <div style={{ fontSize: '0.82rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: '#64748B', fontWeight: 700, marginBottom: '6px' }}>
                   Estimativa de Quitação Negociada
                 </div>
 
-                <div style={{ fontSize: '1.05rem', color: '#CBD5E1', marginBottom: '24px' }}>
-                  Instituição: <strong style={{ color: '#FFFFFF' }}>{bank}</strong> &bull; {installmentsRemaining}x parcelas
+                <div style={{ fontSize: '1.02rem', color: '#334155', marginBottom: '22px' }}>
+                  Instituição: <strong style={{ color: '#0F172A' }}>{bank}</strong> &bull; {installmentsRemaining}x parcelas
                 </div>
 
                 {/* Total Contracted */}
@@ -286,12 +286,13 @@ export function Simulator({ onCompleteSimulation }) {
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   padding: '14px 18px',
-                  background: 'rgba(255, 255, 255, 0.03)',
+                  background: '#F8FAFC',
+                  border: '1px solid #E2E8F0',
                   borderRadius: '12px',
                   marginBottom: '12px'
                 }}>
-                  <span style={{ color: '#94A3B8', fontSize: '0.92rem' }}>Saldo Devedor Contratual:</span>
-                  <span style={{ fontSize: '1.15rem', color: '#94A3B8', textDecoration: 'line-through' }}>
+                  <span style={{ color: '#64748B', fontSize: '0.90rem' }}>Saldo Devedor Contratual:</span>
+                  <span style={{ fontSize: '1.15rem', color: '#94A3B8', textDecoration: 'line-through', fontWeight: 700 }}>
                     R$ {totalResidual.toLocaleString('pt-BR')}
                   </span>
                 </div>
@@ -302,16 +303,16 @@ export function Simulator({ onCompleteSimulation }) {
                   justifyContent: 'space-between',
                   alignItems: 'center',
                   padding: '16px 18px',
-                  background: 'rgba(16, 185, 129, 0.1)',
-                  border: '1px solid rgba(16, 185, 129, 0.3)',
+                  background: 'rgba(5, 150, 105, 0.07)',
+                  border: '1px solid rgba(5, 150, 105, 0.25)',
                   borderRadius: '14px',
                   marginBottom: '14px'
                 }}>
                   <div>
-                    <div style={{ fontSize: '0.82rem', color: '#34D399', fontWeight: 600 }}>VALOR ESTIMADO PARA QUITAR:</div>
-                    <div style={{ fontSize: '0.76rem', color: '#94A3B8' }}>Liquidação à vista negociada</div>
+                    <div style={{ fontSize: '0.80rem', color: '#047857', fontWeight: 700 }}>VALOR ESTIMADO PARA QUITAR:</div>
+                    <div style={{ fontSize: '0.74rem', color: '#64748B' }}>Liquidação à vista negociada</div>
                   </div>
-                  <div style={{ fontSize: '1.8rem', fontWeight: 800, color: '#34D399' }}>
+                  <div style={{ fontSize: '1.8rem', fontWeight: 900, color: '#047857' }}>
                     R$ {estimatedPayoff.toLocaleString('pt-BR')}
                   </div>
                 </div>
@@ -319,25 +320,25 @@ export function Simulator({ onCompleteSimulation }) {
                 {/* Estimated Total Savings Highlight */}
                 <div style={{
                   padding: '20px',
-                  background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(245, 158, 11, 0.04))',
-                  border: '1px solid rgba(245, 158, 11, 0.35)',
+                  background: 'rgba(217, 119, 6, 0.07)',
+                  border: '1px solid rgba(217, 119, 6, 0.3)',
                   borderRadius: '16px',
-                  marginBottom: '24px',
+                  marginBottom: '22px',
                   textAlign: 'center'
                 }}>
-                  <div style={{ fontSize: '0.85rem', color: '#FBBF24', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ fontSize: '0.82rem', color: '#B45309', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                     Sua Economia Estimada no Bolso:
                   </div>
-                  <div style={{ fontSize: '2.4rem', fontWeight: 800, color: '#FBBF24', margin: '4px 0' }}>
+                  <div style={{ fontSize: '2.3rem', fontWeight: 900, color: '#D97706', margin: '4px 0' }}>
                     R$ {estimatedSavings.toLocaleString('pt-BR')}
                   </div>
-                  <div style={{ fontSize: '0.8rem', color: '#CBD5E1' }}>
+                  <div style={{ fontSize: '0.82rem', color: '#475569' }}>
                     Dinheiro que você deixa de pagar em juros bancários futuros!
                   </div>
                 </div>
 
                 {/* Trust Points */}
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.84rem', color: '#94A3B8' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.84rem', color: '#475569' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                     <Check size={16} color="#FBBF24" /> Perícia técnica fundamentada no CDC e súmulas do STJ
                   </div>

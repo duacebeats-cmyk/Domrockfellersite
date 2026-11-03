@@ -49,10 +49,10 @@ export function Offices({ onOpenSimulator }) {
           <span className="badge badge-emerald" style={{ marginBottom: '14px', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
             <Building2 size={15} /> Presença Física &amp; Estrutura Corporativa
           </span>
-          <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', marginBottom: '16px', color: '#FFFFFF' }}>
-            Sedes Dom RockFeller em <span style={{ color: '#60A5FA' }}>Florianópolis</span> e <span className="text-gradient-gold">Vitória</span>
+          <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', marginBottom: '16px', color: '#0F172A' }}>
+            Sedes Dom RockFeller em <span style={{ color: '#2563EB' }}>Florianópolis</span> e <span className="text-gradient-gold">Vitória</span>
           </h2>
-          <p style={{ fontSize: '1.05rem', color: '#94A3B8' }}>
+          <p style={{ fontSize: '1.05rem', color: '#475569' }}>
             A Dom RockFeller oferece assessoria jurídica estruturada e transparente. Atendemos com peritos e especialistas no Sul e Sudeste, esclarecendo os riscos contratuais e conduzindo seu processo com segurança.
           </p>
         </div>
@@ -65,12 +65,23 @@ export function Offices({ onOpenSimulator }) {
               className="glass-card" 
               style={{ 
                 padding: 'clamp(22px, 4vw, 36px)', 
-                border: `1px solid ${office.tagColor}40`,
+                border: office.isComingSoon ? '1.5px solid rgba(217, 119, 6, 0.3)' : '1.5px solid rgba(37, 99, 235, 0.3)',
                 position: 'relative',
                 overflow: 'hidden',
-                background: 'linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(10, 16, 28, 0.95))'
+                background: '#FFFFFF',
+                boxShadow: '0 6px 24px -2px rgba(15, 23, 42, 0.06)'
               }}
             >
+              {/* Top Accent Strip */}
+              <div style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                height: '4px',
+                background: office.isComingSoon ? 'linear-gradient(90deg, #F59E0B, #B45309)' : 'linear-gradient(90deg, #3B82F6, #1D4ED8)'
+              }} />
+
               {/* Header Badge */}
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '22px', flexWrap: 'wrap', gap: '10px' }}>
                 <div>
@@ -80,10 +91,10 @@ export function Offices({ onOpenSimulator }) {
                         fontSize: '0.75rem', 
                         fontWeight: 800, 
                         textTransform: 'uppercase', 
-                        color: office.isComingSoon ? '#FDE68A' : '#60A5FA', 
+                        color: office.isComingSoon ? '#B45309' : '#1D4ED8', 
                         letterSpacing: '0.05em',
-                        background: office.isComingSoon ? 'rgba(245, 158, 11, 0.2)' : 'rgba(59, 130, 246, 0.15)',
-                        border: `1px solid ${office.isComingSoon ? '#F59E0B' : '#3B82F6'}`,
+                        background: office.isComingSoon ? 'rgba(217, 119, 6, 0.12)' : 'rgba(37, 99, 235, 0.1)',
+                        border: `1px solid ${office.isComingSoon ? 'rgba(217, 119, 6, 0.35)' : 'rgba(37, 99, 235, 0.3)'}`,
                         padding: '3px 10px',
                         borderRadius: '20px'
                       }}
@@ -91,10 +102,10 @@ export function Offices({ onOpenSimulator }) {
                       {office.statusBadge}
                     </span>
                   </div>
-                  <h3 style={{ fontSize: '1.75rem', color: '#FFFFFF', marginTop: '4px' }}>
+                  <h3 style={{ fontSize: '1.75rem', color: '#0F172A', marginTop: '4px', fontWeight: 800 }}>
                     {office.city}
                   </h3>
-                  <div style={{ fontSize: '0.92rem', color: '#CBD5E1', fontWeight: 600 }}>
+                  <div style={{ fontSize: '0.92rem', color: '#475569', fontWeight: 600 }}>
                     {office.building}
                   </div>
                 </div>
@@ -102,9 +113,9 @@ export function Offices({ onOpenSimulator }) {
                 <div style={{
                   padding: '10px',
                   borderRadius: '12px',
-                  background: `${office.tagColor}15`,
-                  border: `1px solid ${office.tagColor}35`,
-                  color: office.tagColor
+                  background: office.isComingSoon ? 'rgba(217, 119, 6, 0.1)' : 'rgba(37, 99, 235, 0.1)',
+                  border: `1px solid ${office.isComingSoon ? 'rgba(217, 119, 6, 0.3)' : 'rgba(37, 99, 235, 0.25)'}`,
+                  color: office.isComingSoon ? '#D97706' : '#2563EB'
                 }}>
                   <Building2 size={26} />
                 </div>
@@ -114,38 +125,38 @@ export function Offices({ onOpenSimulator }) {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '26px' }}>
                 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <MapPin size={18} color={office.tagColor} style={{ flexShrink: 0, marginTop: '2px' }} />
-                  <div style={{ fontSize: '0.9rem', color: '#E2E8F0', lineHeight: 1.5 }}>
-                    <strong>{office.address}</strong><br />
+                  <MapPin size={18} color={office.isComingSoon ? '#D97706' : '#2563EB'} style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <div style={{ fontSize: '0.9rem', color: '#1E293B', lineHeight: 1.5 }}>
+                    <strong style={{ color: '#0F172A' }}>{office.address}</strong><br />
                     {office.neighborhood} • {office.cep}<br />
-                    <span style={{ fontSize: '0.8rem', color: '#94A3B8' }}>{office.reference}</span>
+                    <span style={{ fontSize: '0.8rem', color: '#64748B' }}>{office.reference}</span>
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <Clock size={18} color={office.tagColor} style={{ flexShrink: 0 }} />
-                  <div style={{ fontSize: '0.9rem', color: '#E2E8F0' }}>
+                  <Clock size={18} color={office.isComingSoon ? '#D97706' : '#2563EB'} style={{ flexShrink: 0 }} />
+                  <div style={{ fontSize: '0.9rem', color: '#334155' }}>
                     {office.hours}
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <Phone size={18} color={office.tagColor} style={{ flexShrink: 0 }} />
-                  <a href={`tel:${office.phone.replace(/\D/g, '')}`} style={{ fontSize: '0.9rem', color: '#FFFFFF', fontWeight: 600 }}>
+                  <Phone size={18} color={office.isComingSoon ? '#D97706' : '#2563EB'} style={{ flexShrink: 0 }} />
+                  <a href={`tel:${office.phone.replace(/\D/g, '')}`} style={{ fontSize: '0.9rem', color: '#0F172A', fontWeight: 700 }}>
                     {office.phone}
                   </a>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <MessageSquare size={18} color={office.tagColor} style={{ flexShrink: 0 }} />
-                  <span style={{ fontSize: '0.9rem', color: '#FFFFFF', fontWeight: 600 }}>
+                  <MessageSquare size={18} color={office.isComingSoon ? '#D97706' : '#2563EB'} style={{ flexShrink: 0 }} />
+                  <span style={{ fontSize: '0.9rem', color: '#0F172A', fontWeight: 700 }}>
                     WhatsApp: {office.whatsappFormatted}
                   </span>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <Mail size={18} color={office.tagColor} style={{ flexShrink: 0 }} />
-                  <a href={`mailto:${office.email}`} style={{ fontSize: '0.9rem', color: '#FDE68A', fontWeight: 600 }}>
+                  <Mail size={18} color={office.isComingSoon ? '#D97706' : '#2563EB'} style={{ flexShrink: 0 }} />
+                  <a href={`mailto:${office.email}`} style={{ fontSize: '0.9rem', color: '#B45309', fontWeight: 700 }}>
                     {office.email}
                   </a>
                 </div>
@@ -154,25 +165,25 @@ export function Offices({ onOpenSimulator }) {
 
               {/* Amenities / Coming Soon Notice */}
               <div style={{
-                background: office.isComingSoon ? 'rgba(245, 158, 11, 0.08)' : 'rgba(255, 255, 255, 0.03)',
-                border: office.isComingSoon ? '1px dashed rgba(245, 158, 11, 0.3)' : '1px solid rgba(255, 255, 255, 0.05)',
+                background: office.isComingSoon ? 'rgba(217, 119, 6, 0.08)' : '#F8FAFC',
+                border: office.isComingSoon ? '1px dashed rgba(217, 119, 6, 0.4)' : '1px solid #E2E8F0',
                 borderRadius: '10px',
                 padding: '12px 16px',
                 display: 'flex',
                 alignItems: 'center',
                 gap: '10px',
                 fontSize: '0.82rem',
-                color: office.isComingSoon ? '#FDE68A' : '#94A3B8',
+                color: office.isComingSoon ? '#B45309' : '#475569',
                 marginBottom: '26px'
               }}>
                 {office.isComingSoon ? (
                   <>
-                    <Sparkles size={16} color="#FBBF24" style={{ flexShrink: 0 }} />
+                    <Sparkles size={16} color="#D97706" style={{ flexShrink: 0 }} />
                     <span>Inauguração presencial em breve no ES. Atendimento online e recepção de perícias já disponível.</span>
                   </>
                 ) : (
                   <>
-                    <Coffee size={16} color="#FBBF24" style={{ flexShrink: 0 }} />
+                    <Coffee size={16} color="#059669" style={{ flexShrink: 0 }} />
                     <span>Recepção executiva com café, estrutura corporativa e perícia contratual presencial.</span>
                   </>
                 )}

@@ -39,10 +39,10 @@ export function Faq() {
           <span className="badge badge-emerald" style={{ marginBottom: '14px' }}>
             <HelpCircle size={15} /> Esclarecimento de Dúvidas
           </span>
-          <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', marginBottom: '16px', color: '#FFFFFF' }}>
+          <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', marginBottom: '16px', color: '#0F172A' }}>
             Perguntas <span className="text-gradient-emerald">Frequentes</span>
           </h2>
-          <p style={{ fontSize: '1.05rem', color: '#94A3B8' }}>
+          <p style={{ fontSize: '1.05rem', color: '#475569' }}>
             Transparência e segurança jurídica em cada etapa do seu processo de quitação.
           </p>
         </div>
@@ -57,8 +57,10 @@ export function Faq() {
                 className="glass-card"
                 style={{
                   borderRadius: '16px',
-                  border: isOpen ? '1px solid rgba(16, 185, 129, 0.4)' : '1px solid rgba(255, 255, 255, 0.08)',
+                  border: isOpen ? '1.5px solid #059669' : '1px solid #E2E8F0',
                   overflow: 'hidden',
+                  background: '#FFFFFF',
+                  boxShadow: isOpen ? '0 10px 25px -4px rgba(5, 150, 105, 0.1)' : '0 2px 10px rgba(15, 23, 42, 0.04)',
                   transition: 'all 0.25s ease'
                 }}
               >
@@ -73,11 +75,11 @@ export function Faq() {
                     alignItems: 'center',
                     background: 'transparent',
                     border: 'none',
-                    color: '#FFFFFF',
+                    color: isOpen ? '#047857' : '#0F172A',
                     textAlign: 'left',
                     cursor: 'pointer',
-                    fontSize: '1.05rem',
-                    fontWeight: 600,
+                    fontSize: '1.02rem',
+                    fontWeight: 700,
                     gap: '16px'
                   }}
                 >
@@ -86,11 +88,11 @@ export function Faq() {
                     width: '32px',
                     height: '32px',
                     borderRadius: '50%',
-                    background: isOpen ? 'rgba(16, 185, 129, 0.2)' : 'rgba(255, 255, 255, 0.05)',
+                    background: isOpen ? 'rgba(5, 150, 105, 0.1)' : '#F1F5F9',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    color: isOpen ? '#34D399' : '#94A3B8',
+                    color: isOpen ? '#059669' : '#64748B',
                     flexShrink: 0
                   }}>
                     {isOpen ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
@@ -102,11 +104,12 @@ export function Faq() {
                     className="accordion-body"
                     style={{
                       padding: '0 26px 24px',
-                      color: '#94A3B8',
-                      fontSize: '0.95rem',
+                      color: '#475569',
+                      fontSize: '0.94rem',
                       lineHeight: 1.7,
-                      borderTop: '1px solid rgba(255, 255, 255, 0.05)',
-                      paddingTop: '16px'
+                      borderTop: '1px solid #F1F5F9',
+                      paddingTop: '16px',
+                      background: '#F8FAFC'
                     }}
                   >
                     {faq.a}
