@@ -41,16 +41,16 @@ export function Navbar({
       {/* Main Nav Bar */}
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '74px' }}>
         
-        {/* Brand Logo: Institutional Monogram Seal & Authority Wordmark */}
+        {/* Brand Logo: Institutional Wordmark */}
         <div 
           onClick={() => { setActiveView('site'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-          style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15, cursor: 'pointer', userSelect: 'none' }}
+          style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15, cursor: 'pointer', userSelect: 'none', flexShrink: 0 }}
           title="Dom RockFeller"
         >
-          <span style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.14em', color: '#64748B', textTransform: 'uppercase' }}>
+          <span style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.14em', color: '#64748B', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
             Assessoria &amp; Perícia
           </span>
-          <span style={{ fontSize: '1.42rem', fontWeight: 900, letterSpacing: '-0.025em', color: '#0A2540' }}>
+          <span style={{ fontSize: '1.38rem', fontWeight: 900, letterSpacing: '-0.025em', color: '#0A2540', whiteSpace: 'nowrap' }}>
             DOM <span style={{ color: '#C59B27' }}>ROCKFELLER</span>
           </span>
         </div>
@@ -86,16 +86,6 @@ export function Navbar({
         {/* Action Buttons & Auth State */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
           
-          {/* Quick Simulation CTA in Header (Desktop) */}
-          <button
-            onClick={() => scrollTo('simulador')}
-            className="btn btn-sm btn-gold hide-on-tablet"
-            style={{ padding: '8px 16px', fontSize: '0.84rem' }}
-          >
-            <Sparkles size={14} />
-            <span>Simular Contrato</span>
-          </button>
-
           {/* AUTHENTICATION CONTROL */}
           {!currentUser ? (
             <button
@@ -294,32 +284,53 @@ export function Navbar({
       )}
 
       <style>{`
+        .desktop-nav {
+          display: none;
+          align-items: center;
+          gap: 6px;
+          white-space: nowrap;
+          flex-shrink: 0;
+        }
         .nav-item-link {
-          font-size: 0.88rem;
-          color: #334155;
+          font-size: 0.90rem;
+          color: #334E68;
           font-weight: 600;
           cursor: pointer;
-          transition: all 0.2s ease;
+          transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
           padding: 8px 12px;
           border-radius: 8px;
           display: inline-flex;
           align-items: center;
-          gap: 6px;
+          gap: 7px;
+          white-space: nowrap !important;
+          flex-shrink: 0;
           user-select: none;
+          line-height: 1;
+        }
+        .nav-item-link span {
+          white-space: nowrap !important;
+          line-height: 1;
+        }
+        .nav-item-link svg {
+          flex-shrink: 0;
+          vertical-align: middle;
         }
         .nav-item-link:hover {
-          color: #B45309;
-          background: rgba(245, 158, 11, 0.08);
+          color: #876214;
+          background: rgba(197, 155, 39, 0.09);
           transform: translateY(-1px);
         }
+        .nav-item-link:hover svg {
+          stroke: #876214 !important;
+        }
         .nav-highlight {
-          color: #B45309 !important;
-          background: rgba(245, 158, 11, 0.09) !important;
-          border: 1px solid rgba(217, 119, 6, 0.22) !important;
+          color: #876214 !important;
+          background: rgba(197, 155, 39, 0.1) !important;
+          border: 1px solid rgba(197, 155, 39, 0.3) !important;
           font-weight: 700 !important;
         }
         .nav-highlight:hover {
-          background: rgba(245, 158, 11, 0.16) !important;
+          background: rgba(197, 155, 39, 0.18) !important;
         }
         .mobile-nav-card {
           display: flex;
