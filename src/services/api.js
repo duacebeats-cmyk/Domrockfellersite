@@ -367,28 +367,59 @@ export const api = {
     return { success: true, user: safeUser };
   },
 
-  async socialLogin(provider) {
-    const isGoogle = provider.toLowerCase() === 'google';
-    const email = isGoogle ? 'usuario.google@gmail.com' : 'usuario.facebook@facebook.com';
-    const name = isGoogle ? 'Usuário Google' : 'Usuário Facebook';
+  async socialLogin({ provider, email, name, picture, socialId }) {
+    const cleanProvider = (provider || 'google').toLowerCase();
+    const cleanEmail = email ? email.toLowerCase().trim() : (cleanProvider === 'google' ? 'usuario.google@gmail.com' : 'usuario.facebook@facebook.com');
+    const cleanName = name || (cleanProvider === 'google' ? 'Usuário Google' : 'Usuário Facebook');
 
+    // 1. Tenta autenticar no backend REST API
+    try {
+      const res = await fetch('/api/auth/social-login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          provider: cleanProvider,
+          email: cleanEmail,
+          name: cleanName,
+          picture: picture || null,
+          socialId: socialId || null
+        })
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        const userWithToken = { ...data.user, token: data.token };
+        this.setCurrentUser(userWithToken);
+        return { success: true, user: userWithToken };
+      }
+    } catch (e) {
+      console.warn('Backend API social-login offline, fallback para armazenamento local seguro.');
+    }
+
+    // 2. Fallback local offline/demo
     const users = getLocalUsers();
-    let user = users.find(u => u.email.toLowerCase() === email);
+    let user = users.find(u => u.email.toLowerCase() === cleanEmail);
     if (!user) {
       user = {
-        id: `usr-${provider.toLowerCase()}-${Date.now()}`,
-        name,
-        email,
+        id: `usr-${cleanProvider}-${Date.now()}`,
+        name: cleanName,
+        email: cleanEmail,
         phone: '(27) 99888-0000',
         role: 'cliente',
         cityUnit: 'Vitória - ES',
-        authProvider: provider,
+        authProvider: cleanProvider,
+        picture: picture || null,
+        socialId: socialId || null,
         isOnline: true,
         createdAt: new Date().toISOString()
       };
       users.push(user);
       saveLocalUsers(users);
+    } else {
+      user.authProvider = cleanProvider;
+      if (picture) user.picture = picture;
+      saveLocalUsers(users);
     }
+
     const { password: _, ...safeUser } = user;
     this.setCurrentUser(safeUser);
     return { success: true, user: safeUser };

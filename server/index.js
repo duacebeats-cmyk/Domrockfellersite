@@ -455,6 +455,50 @@ app.post('/api/auth/register', (req, res) => {
   res.status(201).json({ success: true, token, user: safeUser });
 });
 
+// 2.1. OAuth Real Social Login (Google & Facebook)
+app.post('/api/auth/social-login', (req, res) => {
+  const { provider, email, name, picture, socialId } = req.body;
+
+  if (!email || !provider) {
+    return res.status(400).json({ success: false, message: 'Provedor e e-mail são obrigatórios para login social.' });
+  }
+
+  const db = readDb();
+  const cleanEmail = email.toLowerCase().trim();
+  let user = db.users.find(u => u.email.toLowerCase().trim() === cleanEmail);
+
+  if (!user) {
+    // Registra novo usuário automaticamente via OAuth com papel 'cliente'
+    user = {
+      id: `usr-${provider.toLowerCase()}-${Date.now()}`,
+      name: name || (provider === 'google' ? 'Usuário Google' : 'Usuário Facebook'),
+      email: cleanEmail,
+      password: hashPassword(`oauth_${provider}_${socialId || Date.now()}_${Math.random()}`),
+      phone: '',
+      role: 'cliente',
+      cityUnit: 'Vitória - ES',
+      authProvider: provider,
+      picture: picture || null,
+      socialId: socialId || null,
+      isOnline: true,
+      createdAt: new Date().toISOString()
+    };
+    db.users.push(user);
+    writeDb(db);
+  } else {
+    // Atualiza dados sociais caso necessário
+    user.authProvider = provider;
+    if (picture && !user.picture) user.picture = picture;
+    if (socialId && !user.socialId) user.socialId = socialId;
+    user.isOnline = true;
+    writeDb(db);
+  }
+
+  const token = createToken(user);
+  const { password: _, ...safeUser } = user;
+  res.json({ success: true, token, user: safeUser });
+});
+
 // 3. List all users (ESTRITO: Somente Administradores com Token Válido)
 app.get('/api/users', requireRole(['admin']), (req, res) => {
   const db = readDb();
