@@ -69,13 +69,31 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }) {
     }
   };
 
+  const handleSocialAuth = async (provider) => {
+    setErrorMsg('');
+    setLoading(true);
+    try {
+      const result = await api.socialLogin(provider);
+      if (result && result.success) {
+        onAuthSuccess(result.user);
+        onClose();
+      } else {
+        setErrorMsg((result && result.message) || `Falha ao autenticar com ${provider}.`);
+      }
+    } catch (err) {
+      setErrorMsg(`Erro de comunicação com ${provider}.`);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="modal-overlay" onClick={onClose} style={{ zIndex: 1100 }}>
       <div 
         className="modal-content" 
         onClick={(e) => e.stopPropagation()} 
         style={{ 
-          padding: '38px 32px 30px', 
+          padding: '36px 30px 28px', 
           maxWidth: '460px',
           background: '#FFFFFF',
           borderRadius: '24px',
@@ -115,63 +133,26 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }) {
           <X size={18} />
         </button>
 
-        {/* Brand Security Header */}
-        <div style={{ textAlign: 'center', marginBottom: '22px' }}>
-          
-          {/* SSL Security Badge */}
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '12px' }}>
-            <span style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '6px',
-              fontSize: '0.74rem',
-              fontWeight: 800,
-              color: '#047857',
-              background: 'rgba(16, 185, 129, 0.08)',
-              border: '1px solid rgba(16, 185, 129, 0.25)',
-              padding: '4px 12px',
-              borderRadius: '20px',
-              letterSpacing: '0.02em',
-              textTransform: 'uppercase'
-            }}>
-              <Lock size={12} color="#047857" />
-              <span>Ambiente Seguro 256-bit SSL</span>
-            </span>
-          </div>
-
-          {/* Institutional Icon */}
-          <div style={{
-            width: '54px',
-            height: '54px',
-            borderRadius: '16px',
-            background: 'linear-gradient(135deg, #0A2540 0%, #0F3256 100%)',
-            border: '1.5px solid rgba(197, 155, 39, 0.45)',
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#C59B27',
-            boxShadow: '0 4px 14px rgba(10, 37, 64, 0.2)',
-            marginBottom: '12px'
-          }}>
-            <ShieldCheck size={28} color="#C59B27" />
-          </div>
-
-          <h3 style={{ fontSize: '1.55rem', fontWeight: 900, color: '#0A2540', letterSpacing: '-0.025em', margin: '0 0 4px' }}>
-            Portal Dom RockFeller
+        {/* Clean, Objective Header */}
+        <div style={{ textAlign: 'center', marginBottom: '20px' }}>
+          <h3 style={{ fontSize: '1.42rem', fontWeight: 900, color: '#0A2540', letterSpacing: '-0.02em', margin: '0 0 5px' }}>
+            {mode === 'login' ? 'Entrar no Portal' : 'Criar Nova Conta'}
           </h3>
-          <p style={{ fontSize: '0.88rem', color: '#64748B', margin: 0, lineHeight: 1.5 }}>
-            Acesso exclusivo para consulta de perícias e andamento processual.
+          <p style={{ fontSize: '0.86rem', color: '#64748B', margin: 0 }}>
+            {mode === 'login' 
+              ? 'Acesse com suas credenciais ou redes sociais' 
+              : 'Cadastre-se rapidamente para acompanhar suas perícias'}
           </p>
         </div>
 
-        {/* Segmented Control Tab Switcher (Bank / Social Media Style) */}
+        {/* Segmented Control Tab Switcher */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           background: '#F1F5F9',
           borderRadius: '12px',
           padding: '4px',
-          marginBottom: '22px',
+          marginBottom: '18px',
           border: '1px solid #E2E8F0'
         }}>
           <button
@@ -210,6 +191,103 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }) {
           >
             Criar Nova Conta
           </button>
+        </div>
+
+        {/* Google & Facebook Direct Social Authentication Buttons */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '18px' }}>
+          <button
+            type="button"
+            disabled={loading}
+            onClick={() => handleSocialAuth('Google')}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '12px',
+              width: '100%',
+              padding: '11px 16px',
+              borderRadius: '12px',
+              border: '1.5px solid #CBD5E1',
+              background: '#FFFFFF',
+              color: '#1E293B',
+              fontSize: '0.88rem',
+              fontWeight: 700,
+              cursor: loading ? 'not-allowed' : 'pointer',
+              transition: 'all 0.2s ease',
+              boxShadow: '0 1px 3px rgba(0,0,0,0.04)'
+            }}
+            onMouseEnter={(e) => {
+              if (!loading) {
+                e.currentTarget.style.background = '#F8FAFC';
+                e.currentTarget.style.borderColor = '#94A3B8';
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (!loading) {
+                e.currentTarget.style.background = '#FFFFFF';
+                e.currentTarget.style.borderColor = '#CBD5E1';
+              }
+            }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.8-2.4 3.65v3.03h3.88c2.27-2.09 3.665-5.17 3.665-9.12z"/>
+              <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.03c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.26v3.13C3.27 21.36 7.33 24 12 24z"/>
+              <path fill="#FBBC05" d="M5.28 14.29c-.25-.72-.38-1.49-.38-2.29s.13-1.57.38-2.29V6.57H1.26C.46 8.16 0 9.98 0 12s.46 3.84 1.26 5.43l4.02-3.14z"/>
+              <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.27 2.64 1.26 6.57l4.02 3.14c.95-2.83 3.6-4.96 6.72-4.96z"/>
+            </svg>
+            <span>{mode === 'login' ? 'Continuar com o Google' : 'Cadastrar com o Google'}</span>
+          </button>
+
+          <button
+            type="button"
+            disabled={loading}
+            onClick={() => handleSocialAuth('Facebook')}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              gap: '12px',
+              width: '100%',
+              padding: '11px 16px',
+              borderRadius: '12px',
+              border: 'none',
+              background: '#1877F2',
+              color: '#FFFFFF',
+              fontSize: '0.88rem',
+              fontWeight: 700,
+              cursor: loading ? 'not-allowed' : 'pointer',
+              transition: 'all 0.2s ease',
+              boxShadow: '0 2px 6px rgba(24, 119, 242, 0.22)'
+            }}
+            onMouseEnter={(e) => {
+              if (!loading) e.currentTarget.style.background = '#166FE5';
+            }}
+            onMouseLeave={(e) => {
+              if (!loading) e.currentTarget.style.background = '#1877F2';
+            }}
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span>{mode === 'login' ? 'Continuar com o Facebook' : 'Cadastrar com o Facebook'}</span>
+          </button>
+        </div>
+
+        {/* Divider */}
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          margin: '16px 0 18px',
+          gap: '12px',
+          color: '#94A3B8',
+          fontSize: '0.78rem',
+          fontWeight: 700,
+          textTransform: 'uppercase',
+          letterSpacing: '0.04em'
+        }}>
+          <div style={{ flex: 1, height: '1px', background: '#E2E8F0' }} />
+          <span>ou continue com e-mail</span>
+          <div style={{ flex: 1, height: '1px', background: '#E2E8F0' }} />
         </div>
 
         {/* Error message alert */}

@@ -44,12 +44,9 @@ export function Navbar({
         {/* Brand Logo: Institutional Wordmark */}
         <div 
           onClick={() => { setActiveView('site'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-          style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15, cursor: 'pointer', userSelect: 'none', flexShrink: 0 }}
+          style={{ display: 'flex', alignItems: 'center', cursor: 'pointer', userSelect: 'none', flexShrink: 0 }}
           title="Dom RockFeller"
         >
-          <span style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.14em', color: '#64748B', textTransform: 'uppercase', whiteSpace: 'nowrap' }}>
-            Assessoria &amp; Perícia
-          </span>
           <span style={{ fontSize: '1.38rem', fontWeight: 900, letterSpacing: '-0.025em', color: '#0A2540', whiteSpace: 'nowrap' }}>
             DOM <span style={{ color: '#C59B27' }}>ROCKFELLER</span>
           </span>

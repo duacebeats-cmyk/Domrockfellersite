@@ -367,6 +367,33 @@ export const api = {
     return { success: true, user: safeUser };
   },
 
+  async socialLogin(provider) {
+    const isGoogle = provider.toLowerCase() === 'google';
+    const email = isGoogle ? 'usuario.google@gmail.com' : 'usuario.facebook@facebook.com';
+    const name = isGoogle ? 'Usuário Google' : 'Usuário Facebook';
+
+    const users = getLocalUsers();
+    let user = users.find(u => u.email.toLowerCase() === email);
+    if (!user) {
+      user = {
+        id: `usr-${provider.toLowerCase()}-${Date.now()}`,
+        name,
+        email,
+        phone: '(27) 99888-0000',
+        role: 'cliente',
+        cityUnit: 'Vitória - ES',
+        authProvider: provider,
+        isOnline: true,
+        createdAt: new Date().toISOString()
+      };
+      users.push(user);
+      saveLocalUsers(users);
+    }
+    const { password: _, ...safeUser } = user;
+    this.setCurrentUser(safeUser);
+    return { success: true, user: safeUser };
+  },
+
   async getUsers() {
     try {
       const res = await fetch('/api/users', {
