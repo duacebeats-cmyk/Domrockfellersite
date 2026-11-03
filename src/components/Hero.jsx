@@ -10,26 +10,9 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
   return (
     <section style={{
       position: 'relative',
-      padding: '60px 0 70px',
+      padding: '45px 0 65px',
       overflow: 'hidden'
     }}>
-      {/* Subtle Crest Watermark in Background */}
-      <div style={{
-        position: 'absolute',
-        top: '40%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: '650px',
-        height: '650px',
-        opacity: 0.03,
-        pointerEvents: 'none',
-        zIndex: 0,
-        backgroundImage: 'url(/lion-icon.png)',
-        backgroundSize: 'contain',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center'
-      }} />
-
       {/* Decorative ambient radial gold spots for light theme */}
       <div style={{
         position: 'absolute',
@@ -45,54 +28,6 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         <div style={{ maxWidth: '940px', margin: '0 auto', textAlign: 'center' }}>
-          
-          {/* Logo Crest Header in Hero */}
-          <div style={{ marginBottom: '22px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <div style={{
-              position: 'relative',
-              display: 'inline-flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              marginBottom: '16px'
-            }}>
-              {/* Subtle Gold Ambient Halo */}
-              <div style={{
-                position: 'absolute',
-                width: '130px',
-                height: '130px',
-                borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(245, 158, 11, 0.2) 0%, transparent 70%)',
-                filter: 'blur(12px)',
-                zIndex: 0
-              }} />
-
-              <img 
-                src="/lion-icon.png" 
-                alt="RockFeller Soluções" 
-                style={{
-                  width: '98px',
-                  height: '98px',
-                  objectFit: 'contain',
-                  position: 'relative',
-                  zIndex: 1,
-                  filter: 'drop-shadow(0 4px 12px rgba(217, 119, 6, 0.3))'
-                }}
-              />
-            </div>
-
-            {/* Badges Row */}
-            <div style={{ display: 'inline-flex', flexWrap: 'wrap', justifyContent: 'center', gap: '10px' }}>
-              <span className="badge badge-gold">
-                <ShieldCheck size={15} /> Assessoria Jurídica &amp; Consultoria Financeira
-              </span>
-              <span className="badge badge-blue">
-                <Sparkles size={14} /> Ações Revisionais Legítimas na Justiça
-              </span>
-              <span className="badge badge-emerald">
-                Florianópolis (SC) • Vitória (Inauguração em breve)
-              </span>
-            </div>
-          </div>
 
           {/* Main Headline */}
           <h1 style={{

@@ -41,64 +41,37 @@ export function Navbar({
       {/* Main Nav Bar */}
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '74px' }}>
         
-        {/* Brand Logo with Crowned Golden Lion & Transparent Background */}
+        {/* Brand Logo with Vector Vehicle Emblem */}
         <div 
           onClick={() => { setActiveView('site'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer', userSelect: 'none' }}
-          title="Dom RockFeller Soluções Financeiras"
+          title="Dom RockFeller"
         >
-          {/* Transparent Lion Crown Emblem with Gold Ambient Halo */}
+          {/* Vector Vehicle Emblem */}
           <div style={{
-            width: '46px',
-            height: '46px',
-            borderRadius: '12px',
-            background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.14) 0%, rgba(255, 255, 255, 0.95) 100%)',
-            border: '1.5px solid rgba(217, 119, 6, 0.4)',
+            width: '42px',
+            height: '42px',
+            borderRadius: '11px',
+            background: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 2px 10px rgba(217, 119, 6, 0.16)',
+            boxShadow: '0 3px 12px rgba(217, 119, 6, 0.28)',
             flexShrink: 0,
-            transition: 'transform 0.2s ease'
+            color: '#FFFFFF'
           }}>
-            <img 
-              src="/lion-icon.png" 
-              alt="Dom RockFeller" 
-              style={{
-                width: '36px',
-                height: '36px',
-                objectFit: 'contain',
-                filter: 'drop-shadow(0 2px 4px rgba(217, 119, 6, 0.3))'
-              }}
-            />
+            <Car size={22} color="#FFFFFF" strokeWidth={2.2} />
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-            <span style={{ fontSize: '1.38rem', fontWeight: 900, letterSpacing: '-0.02em', color: '#0F172A', lineHeight: 1 }}>
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <span style={{ fontSize: '1.42rem', fontWeight: 900, letterSpacing: '-0.025em', color: '#0F172A', lineHeight: 1 }}>
               ROCK<span style={{ color: '#D97706' }}>FELLER</span>
-            </span>
-            <span style={{ 
-              fontSize: '0.65rem', 
-              background: 'rgba(217, 119, 6, 0.1)', 
-              color: '#B45309', 
-              padding: '2px 8px', 
-              borderRadius: '4px', 
-              fontWeight: 800, 
-              border: '1px solid rgba(217, 119, 6, 0.3)',
-              letterSpacing: '0.08em',
-              lineHeight: 1.4
-            }}>
-              SOLUÇÕES
             </span>
           </div>
         </div>
 
         {/* Desktop Navigation Links - Centered, Proportional & Paired with Icons */}
         <nav style={{ display: 'none', alignItems: 'center', gap: '8px' }} className="desktop-nav">
-          <a onClick={() => scrollTo('estoque')} className="nav-item-link nav-highlight">
-            <Car size={15} color="#D97706" />
-            <span>Vitrine de Veículos</span>
-          </a>
           <a onClick={() => scrollTo('como-funciona')} className="nav-item-link">
             <Scale size={15} color="#475569" />
             <span>Como Funciona</span>
@@ -222,19 +195,6 @@ export function Navbar({
           flexDirection: 'column',
           gap: '8px'
         }}>
-          <a onClick={() => scrollTo('estoque')} className="mobile-nav-card" style={{ background: 'rgba(245, 158, 11, 0.08)', borderColor: 'rgba(217, 119, 6, 0.25)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: 'rgba(217, 119, 6, 0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <Car size={18} color="#D97706" />
-              </div>
-              <div>
-                <div style={{ fontSize: '0.94rem', fontWeight: 800, color: '#B45309' }}>Vitrine de Veículos</div>
-                <div style={{ fontSize: '0.75rem', color: '#64748B' }}>Carros com quitação programada</div>
-              </div>
-            </div>
-            <ChevronRight size={16} color="#B45309" />
-          </a>
-
           <a onClick={() => scrollTo('como-funciona')} className="mobile-nav-card">
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
