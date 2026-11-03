@@ -41,31 +41,36 @@ export function Navbar({
       {/* Main Nav Bar */}
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '74px' }}>
         
-        {/* Brand Logo with Vector Vehicle Emblem */}
+        {/* Brand Logo: Institutional Monogram Seal & Authority Wordmark */}
         <div 
           onClick={() => { setActiveView('site'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-          style={{ display: 'flex', alignItems: 'center', gap: '12px', cursor: 'pointer', userSelect: 'none' }}
+          style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer', userSelect: 'none' }}
           title="Dom RockFeller"
         >
-          {/* Vector Vehicle Emblem */}
+          {/* Monogram Seal 'DR' (Oxford Navy + Satin Gold) */}
           <div style={{
-            width: '42px',
-            height: '42px',
-            borderRadius: '11px',
-            background: 'linear-gradient(135deg, #F59E0B 0%, #D97706 100%)',
+            width: '40px',
+            height: '40px',
+            borderRadius: '10px',
+            background: 'linear-gradient(135deg, #0A2540 0%, #0F3256 100%)',
+            border: '1.5px solid rgba(197, 155, 39, 0.45)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 3px 12px rgba(217, 119, 6, 0.28)',
-            flexShrink: 0,
-            color: '#FFFFFF'
+            boxShadow: '0 2px 8px rgba(10, 37, 64, 0.18)',
+            flexShrink: 0
           }}>
-            <Car size={22} color="#FFFFFF" strokeWidth={2.2} />
+            <span style={{ fontSize: '1.08rem', fontWeight: 900, color: '#C59B27', letterSpacing: '0.04em', fontFamily: 'serif' }}>
+              DR
+            </span>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center' }}>
-            <span style={{ fontSize: '1.42rem', fontWeight: 900, letterSpacing: '-0.025em', color: '#0F172A', lineHeight: 1 }}>
-              ROCK<span style={{ color: '#D97706' }}>FELLER</span>
+          <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
+            <span style={{ fontSize: '0.60rem', fontWeight: 700, letterSpacing: '0.12em', color: '#64748B', textTransform: 'uppercase' }}>
+              Assessoria &amp; Perícia
+            </span>
+            <span style={{ fontSize: '1.34rem', fontWeight: 900, letterSpacing: '-0.025em', color: '#0A2540' }}>
+              DOM <span style={{ color: '#C59B27' }}>ROCKFELLER</span>
             </span>
           </div>
         </div>
