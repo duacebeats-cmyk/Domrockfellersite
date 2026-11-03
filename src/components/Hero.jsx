@@ -34,52 +34,17 @@ export function Hero({ onOpenSimulator, onOpenChat }) {
             marginBottom: '42px',
             position: 'relative'
           }}>
-            {/* Introductory Header Badge */}
-            <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '14px' }}>
-              <span className="badge badge-gold" style={{ padding: '6px 16px', fontSize: '0.80rem' }}>
-                <Sparkles size={14} /> Vídeo de Apresentação Oficial
-              </span>
-            </div>
-
             {/* Video Player Frame with Gold Accent and Elevated Glow */}
             <div style={{
               maxWidth: '920px',
               margin: '0 auto',
               borderRadius: '24px',
               overflow: 'hidden',
-              background: '#0A2540',
+              background: '#000000',
               border: '2px solid rgba(197, 155, 39, 0.45)',
               boxShadow: '0 25px 60px -12px rgba(10, 37, 64, 0.28), 0 0 35px rgba(197, 155, 39, 0.22)',
               position: 'relative'
             }}>
-              {/* Player Top Glass Header */}
-              <div style={{
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                padding: '12px 20px',
-                background: 'linear-gradient(135deg, rgba(10, 37, 64, 0.98), rgba(15, 50, 86, 0.98))',
-                borderBottom: '1px solid rgba(197, 155, 39, 0.3)',
-                color: '#FFFFFF'
-              }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span style={{
-                    width: '9px',
-                    height: '9px',
-                    borderRadius: '50%',
-                    background: '#10B981',
-                    boxShadow: '0 0 10px #10B981',
-                    display: 'inline-block'
-                  }} />
-                  <span style={{ fontSize: '0.82rem', fontWeight: 800, letterSpacing: '0.04em', textTransform: 'uppercase', color: '#F8FAFC' }}>
-                    Dom RockFeller &bull; Assessoria &amp; Perícia
-                  </span>
-                </div>
-                <span style={{ fontSize: '0.74rem', color: '#C59B27', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.06em' }}>
-                  Apresentação aos Clientes
-                </span>
-              </div>
-
               {/* Video Element */}
               <div style={{
                 position: 'relative',
