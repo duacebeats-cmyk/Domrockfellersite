@@ -702,14 +702,32 @@ img, video, canvas, svg {
 }
 
 @media (max-width: 768px) {
+  body {
+    padding-bottom: 74px !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
   .container {
     padding-left: 16px !important;
     padding-right: 16px !important;
   }
   
   .glass-card {
-    padding: 22px 16px !important;
-    border-radius: 16px !important;
+    padding: 20px 16px !important;
+    border-radius: 18px !important;
+  }
+
+  /* Section padding balanced for mobile screens */
+  section {
+    padding: 48px 0 !important;
+  }
+
+  /* Mobile App Chat button offset above bottom dock */
+  .chat-floating-btn {
+    bottom: 76px !important;
+    right: 16px !important;
+    width: 52px !important;
+    height: 52px !important;
   }
 
   /* Buttons on mobile adapt smoothly without overflow */
@@ -726,8 +744,9 @@ img, video, canvas, svg {
     max-width: 94% !important;
     padding: 24px 16px !important;
     margin: 12px auto !important;
-    max-height: 92vh !important;
+    max-height: 88vh !important;
     overflow-y: auto !important;
+    border-radius: 20px !important;
   }
 
   /* Input fields full-width on mobile */
@@ -742,7 +761,7 @@ img, video, canvas, svg {
   }
 
   h2 {
-    font-size: clamp(1.5rem, 5.2vw, 1.95rem) !important;
+    font-size: clamp(1.45rem, 5.2vw, 1.95rem) !important;
     line-height: 1.25 !important;
   }
 }

@@ -13,6 +13,7 @@ import { AdminPanel } from './components/AdminPanel';
 import { ClientPortal } from './components/ClientPortal';
 import { AuthModal } from './components/AuthModal';
 import { CarShowcaseSlider } from './components/CarShowcaseSlider';
+import { MobileBottomNav } from './components/MobileBottomNav';
 import { CheckCircle2, ShieldCheck } from 'lucide-react';
 import { api } from './services/api';
 
@@ -186,6 +187,14 @@ export function App() {
           ))}
         </div>
       )}
+
+      {/* App-Style Mobile Bottom Dock Navigation Bar */}
+      <MobileBottomNav
+        currentUser={currentUser}
+        onOpenAuth={() => setIsAuthModalOpen(true)}
+        setActiveView={setActiveView}
+        activeView={activeView}
+      />
 
     </div>
   );

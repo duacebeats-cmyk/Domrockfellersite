@@ -151,6 +151,31 @@ export function CarShowcaseSlider({ onSelectCarForSimulation, onOpenChat }) {
     setCurrentIndex(prev => (prev < maxIndex ? prev + 1 : 0));
   };
 
+  // Mobile Touch Swipe Handling
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
+
+  const onTouchStart = (e) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const onTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+    if (isLeftSwipe) {
+      handleNext();
+    } else if (isRightSwipe) {
+      handlePrev();
+    }
+  };
+
   // Visible items slice for maximum 3 cars
   const visibleCars = cars.slice(currentIndex, currentIndex + cardsPerView);
 
@@ -246,13 +271,19 @@ export function CarShowcaseSlider({ onSelectCarForSimulation, onOpenChat }) {
           </div>
         </div>
 
-        {/* 3 Cars Showcase Grid */}
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: `repeat(${cardsPerView}, 1fr)`,
-          gap: '24px',
-          alignItems: 'stretch'
-        }}>
+        {/* 3 Cars Showcase Grid with Mobile Touch Swiping */}
+        <div 
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+          style={{
+            display: 'grid',
+            gridTemplateColumns: `repeat(${cardsPerView}, 1fr)`,
+            gap: '24px',
+            alignItems: 'stretch',
+            touchAction: 'pan-y'
+          }}
+        >
           {visibleCars.map((car) => (
             <div
               key={car.id}

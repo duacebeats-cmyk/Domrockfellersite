@@ -157,10 +157,10 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '9px', marginBottom: '14px', fontSize: '0.85rem' }}>
               <a 
-                href="tel:48920049681" 
+                href="tel:4891502530" 
                 style={{ color: '#F8FAFC', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 600 }}
               >
-                <Phone size={14} color="#60A5FA" /> +55 48 92004-9681
+                <Phone size={14} color="#60A5FA" /> Telefone: (48) 9150-2530
               </a>
               <a 
                 href="https://api.whatsapp.com/send?phone=5548920049681&text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20pela%20sede%20de%20Florian%C3%B3polis%20da%20Dom%20RockFeller." 
@@ -168,13 +168,13 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
                 rel="noreferrer" 
                 style={{ color: '#34D399', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 700 }}
               >
-                <MessageSquare size={14} color="#34D399" /> WhatsApp: (48) 92004-9681
+                <MessageSquare size={14} color="#34D399" /> WhatsApp: +55 48 92004-9681
               </a>
               <a 
-                href="mailto:contato@domrockfeller.tech"
-                style={{ color: '#FDE68A', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 600 }}
+                href="mailto:contatorockfellersolucoes@gmail.com"
+                style={{ color: '#FDE68A', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 600, wordBreak: 'break-all' }}
               >
-                <Mail size={14} color="#FBBF24" /> contato@domrockfeller.tech
+                <Mail size={14} color="#FBBF24" /> contatorockfellersolucoes@gmail.com
               </a>
             </div>
 
@@ -213,13 +213,13 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
                 rel="noreferrer" 
                 style={{ color: '#34D399', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 700 }}
               >
-                <MessageSquare size={14} color="#34D399" /> Atendimento Online no ES
+                <MessageSquare size={14} color="#34D399" /> WhatsApp: +55 48 92004-9681
               </a>
               <a 
-                href="mailto:contato@domrockfeller.tech"
-                style={{ color: '#FDE68A', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 600 }}
+                href="mailto:contatorockfellersolucoes@gmail.com"
+                style={{ color: '#FDE68A', display: 'inline-flex', alignItems: 'center', gap: '7px', fontWeight: 600, wordBreak: 'break-all' }}
               >
-                <Mail size={14} color="#FBBF24" /> contato@domrockfeller.tech
+                <Mail size={14} color="#FBBF24" /> contatorockfellersolucoes@gmail.com
               </a>
             </div>
 
@@ -274,18 +274,39 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
 
         </div>
 
-        {/* Legal Disclaimer Box */}
+        {/* Legal Disclaimer & Corporate Registration Box */}
         <div style={{
-          background: 'rgba(10, 14, 22, 0.75)',
-          border: '1px solid rgba(245, 158, 11, 0.18)',
+          background: 'rgba(10, 14, 22, 0.85)',
+          border: '1px solid rgba(245, 158, 11, 0.22)',
           borderRadius: '16px',
-          padding: '20px 24px',
-          marginBottom: '35px',
-          fontSize: '0.8rem',
+          padding: '24px 26px',
+          marginBottom: '32px',
+          fontSize: '0.82rem',
           lineHeight: 1.65,
-          color: '#64748B'
+          color: '#94A3B8'
         }}>
-          <strong style={{ color: '#E2E8F0' }}>Aviso de Transparência, Ética e Segurança Jurídica:</strong> A <strong>Dom RockFeller</strong> atua como assessoria jurídica e consultoria financeira especializada em perícia contábil de juros abusivos e na propositura de ações revisionais legítimas perante a Justiça. Todos os clientes são orientados com absoluta clareza sobre os riscos de busca e apreensão decorrentes da mora contratual (Decreto-Lei 911/69), sendo adotadas medidas processuais técnicas preventivas, como o depósito em juízo dos valores incontroversos e pedidos de tutela provisória. Não somos instituição financeira e não concedemos empréstimos.
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginBottom: '18px', paddingBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
+            <div>
+              <span style={{ fontSize: '0.72rem', color: '#FBBF24', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.05em', display: 'block', marginBottom: '3px' }}>Razão Social</span>
+              <strong style={{ color: '#FFFFFF', fontSize: '0.88rem' }}>Rockfeller Solucoes Ltda</strong>
+            </div>
+            <div>
+              <span style={{ fontSize: '0.72rem', color: '#FBBF24', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.05em', display: 'block', marginBottom: '3px' }}>CNPJ</span>
+              <strong style={{ color: '#FFFFFF', fontSize: '0.88rem' }}>55.989.699/0001-56</strong>
+            </div>
+            <div>
+              <span style={{ fontSize: '0.72rem', color: '#FBBF24', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.05em', display: 'block', marginBottom: '3px' }}>Sócio / Gestão</span>
+              <strong style={{ color: '#FFFFFF', fontSize: '0.88rem' }}>Guilherme Mauricio da Silva</strong>
+            </div>
+            <div>
+              <span style={{ fontSize: '0.72rem', color: '#FBBF24', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.05em', display: 'block', marginBottom: '3px' }}>CNAE Principal</span>
+              <span style={{ color: '#CBD5E1', fontSize: '0.82rem' }}>8211-3/00 (Apoio administrativo e escritório)</span>
+            </div>
+          </div>
+
+          <p style={{ margin: 0 }}>
+            <strong style={{ color: '#E2E8F0' }}>Aviso de Transparência, Ética e Segurança Jurídica:</strong> A <strong>Dom RockFeller</strong> (Rockfeller Solucoes Ltda) atua prestando apoio administrativo especializado em análise pericial contábil de contratos de financiamento, identificação de encargos abusivos e viabilização de defesas técnicas e acordos de quitação extrajudiciais e judiciais. Todos os clientes são orientados com absoluta clareza sobre os riscos de busca e apreensão (Decreto-Lei 911/69), priorizando sempre a segurança patrimonial e a redução do saldo devedor. Não somos banco nem realizamos concessão de empréstimos.
+          </p>
         </div>
 
         {/* Bottom Copyright & Unit Credits */}
@@ -295,24 +316,24 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
           alignItems: 'center',
           flexWrap: 'wrap',
           gap: '16px',
-          paddingTop: '25px',
+          paddingTop: '20px',
           borderTop: '1px solid rgba(245, 158, 11, 0.12)',
           fontSize: '0.82rem',
           color: '#64748B'
         }}>
           <div>
-            &copy; 2026 <strong>Dom RockFeller Assessoria Jurídica & Pericial Ltda.</strong> CNPJ: 42.189.554/0001-82. Todos os direitos reservados.
+            &copy; 2026 <strong>Rockfeller Solucoes Ltda</strong> &bull; CNPJ: 55.989.699/0001-56 &bull; Sede: Rua Gerônimo Coelho, 280, Sala 1103, Centro, Florianópolis/SC.
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#F59E0B' }} />
-              Vitória - ES
+              <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#FBBF24' }} />
+              Florianópolis - SC (Sede Matriz)
             </span>
             <span style={{ color: 'rgba(245, 158, 11, 0.3)' }}>|</span>
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#FBBF24' }} />
-              Florianópolis - SC
+              <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#F59E0B' }} />
+              Vitória - ES (Em Breve)
             </span>
           </div>
         </div>
