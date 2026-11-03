@@ -2,7 +2,7 @@ import React from 'react';
 import { 
   ShieldCheck, MapPin, Phone, MessageSquare, Lock, User, 
   Clock, Building2, Calculator, ArrowRight, Award, CheckCircle2, 
-  ExternalLink, Sparkles 
+  ExternalLink, Sparkles, Mail
 } from 'lucide-react';
 
 export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat }) {
