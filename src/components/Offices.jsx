@@ -82,42 +82,28 @@ export function Offices({ onOpenSimulator }) {
                 background: office.isComingSoon ? 'linear-gradient(90deg, #F59E0B, #B45309)' : 'linear-gradient(90deg, #3B82F6, #1D4ED8)'
               }} />
 
-              {/* Header Badge */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '22px', flexWrap: 'wrap', gap: '10px' }}>
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '6px' }}>
-                    <span 
-                      style={{ 
-                        fontSize: '0.75rem', 
-                        fontWeight: 800, 
-                        textTransform: 'uppercase', 
-                        color: office.isComingSoon ? '#B45309' : '#1D4ED8', 
-                        letterSpacing: '0.05em',
-                        background: office.isComingSoon ? 'rgba(217, 119, 6, 0.12)' : 'rgba(37, 99, 235, 0.1)',
-                        border: `1px solid ${office.isComingSoon ? 'rgba(217, 119, 6, 0.35)' : 'rgba(37, 99, 235, 0.3)'}`,
-                        padding: '3px 10px',
-                        borderRadius: '20px'
-                      }}
-                    >
-                      {office.statusBadge}
-                    </span>
-                  </div>
-                  <h3 style={{ fontSize: '1.75rem', color: '#0F172A', marginTop: '4px', fontWeight: 800 }}>
-                    {office.city}
-                  </h3>
-                  <div style={{ fontSize: '0.92rem', color: '#475569', fontWeight: 600 }}>
-                    {office.building}
-                  </div>
-                </div>
-
-                <div style={{
-                  padding: '10px',
-                  borderRadius: '12px',
-                  background: office.isComingSoon ? 'rgba(217, 119, 6, 0.1)' : 'rgba(37, 99, 235, 0.1)',
-                  border: `1px solid ${office.isComingSoon ? 'rgba(217, 119, 6, 0.3)' : 'rgba(37, 99, 235, 0.25)'}`,
-                  color: office.isComingSoon ? '#D97706' : '#2563EB'
-                }}>
-                  <Building2 size={26} />
+              {/* Header Badge & Title - Centered */}
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '22px', gap: '6px' }}>
+                <span 
+                  style={{ 
+                    fontSize: '0.75rem', 
+                    fontWeight: 800, 
+                    textTransform: 'uppercase', 
+                    color: office.isComingSoon ? '#876214' : '#0A2540', 
+                    letterSpacing: '0.06em',
+                    background: office.isComingSoon ? 'rgba(197, 155, 39, 0.12)' : 'rgba(10, 37, 64, 0.08)',
+                    border: `1px solid ${office.isComingSoon ? 'rgba(197, 155, 39, 0.35)' : 'rgba(10, 37, 64, 0.2)'}`,
+                    padding: '4px 14px',
+                    borderRadius: '20px'
+                  }}
+                >
+                  {office.statusBadge}
+                </span>
+                <h3 style={{ fontSize: '1.8rem', color: '#0A2540', margin: '4px 0 0', fontWeight: 800 }}>
+                  {office.city}
+                </h3>
+                <div style={{ fontSize: '0.94rem', color: '#475569', fontWeight: 600 }}>
+                  {office.building}
                 </div>
               </div>
 
@@ -125,38 +111,38 @@ export function Offices({ onOpenSimulator }) {
               <div style={{ display: 'flex', flexDirection: 'column', gap: '14px', marginBottom: '26px' }}>
                 
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <MapPin size={18} color={office.isComingSoon ? '#D97706' : '#2563EB'} style={{ flexShrink: 0, marginTop: '2px' }} />
+                  <MapPin size={18} color={office.isComingSoon ? '#C59B27' : '#0A2540'} style={{ flexShrink: 0, marginTop: '2px' }} />
                   <div style={{ fontSize: '0.9rem', color: '#1E293B', lineHeight: 1.5 }}>
-                    <strong style={{ color: '#0F172A' }}>{office.address}</strong><br />
+                    <strong style={{ color: '#0A2540' }}>{office.address}</strong><br />
                     {office.neighborhood} • {office.cep}<br />
                     <span style={{ fontSize: '0.8rem', color: '#64748B' }}>{office.reference}</span>
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <Clock size={18} color={office.isComingSoon ? '#D97706' : '#2563EB'} style={{ flexShrink: 0 }} />
+                  <Clock size={18} color={office.isComingSoon ? '#C59B27' : '#0A2540'} style={{ flexShrink: 0 }} />
                   <div style={{ fontSize: '0.9rem', color: '#334155' }}>
                     {office.hours}
                   </div>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <Phone size={18} color={office.isComingSoon ? '#D97706' : '#2563EB'} style={{ flexShrink: 0 }} />
-                  <a href={`tel:${office.phone.replace(/\D/g, '')}`} style={{ fontSize: '0.9rem', color: '#0F172A', fontWeight: 700 }}>
+                  <Phone size={18} color={office.isComingSoon ? '#C59B27' : '#0A2540'} style={{ flexShrink: 0 }} />
+                  <a href={`tel:${office.phone.replace(/\D/g, '')}`} style={{ fontSize: '0.9rem', color: '#0A2540', fontWeight: 700 }}>
                     {office.phone}
                   </a>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <MessageSquare size={18} color={office.isComingSoon ? '#D97706' : '#2563EB'} style={{ flexShrink: 0 }} />
-                  <span style={{ fontSize: '0.9rem', color: '#0F172A', fontWeight: 700 }}>
+                  <MessageSquare size={18} color={office.isComingSoon ? '#C59B27' : '#0A2540'} style={{ flexShrink: 0 }} />
+                  <span style={{ fontSize: '0.9rem', color: '#0A2540', fontWeight: 700 }}>
                     WhatsApp: {office.whatsappFormatted}
                   </span>
                 </div>
 
                 <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <Mail size={18} color={office.isComingSoon ? '#D97706' : '#2563EB'} style={{ flexShrink: 0 }} />
-                  <a href={`mailto:${office.email}`} style={{ fontSize: '0.9rem', color: '#B45309', fontWeight: 700 }}>
+                  <Mail size={18} color={office.isComingSoon ? '#C59B27' : '#0A2540'} style={{ flexShrink: 0 }} />
+                  <a href={`mailto:${office.email}`} style={{ fontSize: '0.9rem', color: '#876214', fontWeight: 700 }}>
                     {office.email}
                   </a>
                 </div>
@@ -165,20 +151,22 @@ export function Offices({ onOpenSimulator }) {
 
               {/* Amenities / Coming Soon Notice */}
               <div style={{
-                background: office.isComingSoon ? 'rgba(217, 119, 6, 0.08)' : '#F8FAFC',
-                border: office.isComingSoon ? '1px dashed rgba(217, 119, 6, 0.4)' : '1px solid #E2E8F0',
-                borderRadius: '10px',
+                background: office.isComingSoon ? 'rgba(197, 155, 39, 0.08)' : '#F8FAFC',
+                border: office.isComingSoon ? '1px dashed rgba(197, 155, 39, 0.4)' : '1px solid #E2E8F0',
+                borderRadius: '12px',
                 padding: '12px 16px',
                 display: 'flex',
                 alignItems: 'center',
+                justifyContent: 'center',
+                textAlign: 'center',
                 gap: '10px',
                 fontSize: '0.82rem',
-                color: office.isComingSoon ? '#B45309' : '#475569',
+                color: office.isComingSoon ? '#876214' : '#475569',
                 marginBottom: '26px'
               }}>
                 {office.isComingSoon ? (
                   <>
-                    <Sparkles size={16} color="#D97706" style={{ flexShrink: 0 }} />
+                    <Sparkles size={16} color="#C59B27" style={{ flexShrink: 0 }} />
                     <span>Inauguração presencial em breve no ES. Atendimento online e recepção de perícias já disponível.</span>
                   </>
                 ) : (
@@ -189,14 +177,14 @@ export function Offices({ onOpenSimulator }) {
                 )}
               </div>
 
-              {/* Action Buttons */}
-              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+              {/* Action Buttons - Centered */}
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap' }}>
                 <a
                   href={`https://api.whatsapp.com/send?phone=${office.whatsapp}&text=Ol%C3%A1!%20Gostaria%20de%20atendimento%20com%20a%20equipe%20da%20Dom%20RockFeller%20(${office.city}).`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-sm btn-primary"
-                  style={{ flex: 1, minWidth: 'min(100%, 160px)' }}
+                  style={{ flex: 1, minWidth: 'min(100%, 180px)' }}
                 >
                   <MessageSquare size={16} />
                   <span>WhatsApp {office.city}</span>
@@ -208,7 +196,7 @@ export function Offices({ onOpenSimulator }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-sm btn-secondary"
-                    style={{ display: 'flex', alignItems: 'center', gap: '6px' }}
+                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '6px' }}
                   >
                     <span>Como Chegar</span>
                     <ExternalLink size={14} />

@@ -44,36 +44,37 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
 
       <div className="container" style={{ position: 'relative', zIndex: 1 }}>
         
-        {/* Top Pre-Footer Callout Box */}
+        {/* Top Pre-Footer Callout Box - Centered */}
         <div 
           className="glass-card"
           style={{
-            padding: '36px 40px',
+            padding: '38px 30px',
             marginBottom: '65px',
             background: 'radial-gradient(ellipse at top, rgba(20, 28, 44, 0.95) 0%, rgba(10, 14, 22, 0.95) 100%)',
-            border: '1.5px solid rgba(245, 158, 11, 0.35)',
+            border: '1.5px solid rgba(197, 155, 39, 0.35)',
             borderRadius: '24px',
             display: 'flex',
-            justifyContent: 'space-between',
+            flexDirection: 'column',
+            justifyContent: 'center',
             alignItems: 'center',
-            flexWrap: 'wrap',
-            gap: '24px',
-            boxShadow: '0 20px 45px -10px rgba(0, 0, 0, 0.9), 0 0 35px rgba(245, 158, 11, 0.15)'
+            textAlign: 'center',
+            gap: '22px',
+            boxShadow: '0 20px 45px -10px rgba(0, 0, 0, 0.9), 0 0 35px rgba(197, 155, 39, 0.15)'
           }}
         >
-          <div style={{ maxWidth: '620px' }}>
-            <span className="badge badge-gold" style={{ marginBottom: '12px' }}>
+          <div style={{ maxWidth: '780px' }}>
+            <span className="badge badge-gold" style={{ marginBottom: '14px', display: 'inline-flex' }}>
               <Sparkles size={14} /> Assessoria Jurídica & Perícia Contábil
             </span>
-            <h3 style={{ fontSize: 'clamp(1.4rem, 2.5vw, 1.9rem)', color: '#FFFFFF', fontWeight: 800, marginBottom: '8px' }}>
+            <h3 style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.1rem)', color: '#FFFFFF', fontWeight: 800, marginBottom: '12px' }}>
               Análise de Juros Abusivos & <span className="text-gradient-gold">Ação Revisional Legítima</span>
             </h3>
-            <p style={{ color: '#94A3B8', fontSize: '0.94rem', margin: 0, lineHeight: 1.6 }}>
+            <p style={{ color: '#94A3B8', fontSize: '0.96rem', margin: 0, lineHeight: 1.65 }}>
               Visite nossas sedes em <strong>Vitória (ES)</strong> ou <strong>Florianópolis (SC)</strong>, ou solicite sua perícia contábil para identificar abusividades e planejar a proteção do seu veículo na Justiça.
             </p>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '14px', flexWrap: 'wrap' }}>
             <button
               onClick={() => {
                 setActiveView('site');
@@ -81,7 +82,7 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
                 else scrollTo('simulador');
               }}
               className="btn btn-gold"
-              style={{ padding: '14px 26px' }}
+              style={{ padding: '14px 28px' }}
             >
               <Calculator size={17} />
               <span>Simular Ação Revisional</span>
@@ -92,7 +93,7 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
               target="_blank"
               rel="noreferrer"
               className="btn btn-secondary"
-              style={{ padding: '14px 22px', color: '#34D399', borderColor: 'rgba(16, 185, 129, 0.35)' }}
+              style={{ padding: '14px 24px', color: '#34D399', borderColor: 'rgba(16, 185, 129, 0.35)' }}
             >
               <Phone size={16} color="#34D399" />
               <span>WhatsApp Oficial</span>
@@ -105,48 +106,13 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
           
           {/* Column 1: Brand & Credibility */}
           <div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '18px' }}>
-              <div style={{
-                width: '46px',
-                height: '46px',
-                borderRadius: '12px',
-                background: 'radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, rgba(10, 14, 22, 0.9) 70%)',
-                border: '1.5px solid rgba(245, 158, 11, 0.5)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 0 16px rgba(245, 158, 11, 0.3)',
-                flexShrink: 0
-              }}>
-                <img 
-                  src="/lion-icon.png" 
-                  alt="Dom RockFeller" 
-                  style={{ width: '36px', height: '36px', objectFit: 'contain' }}
-                />
-              </div>
-
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                  <span style={{ fontSize: '1.35rem', fontWeight: 900, color: '#FFFFFF', letterSpacing: '-0.02em', lineHeight: 1 }}>
-                    ROCK<span style={{ color: '#FBBF24' }}>FELLER</span>
-                  </span>
-                  <span style={{ 
-                    fontSize: '0.62rem', 
-                    background: 'rgba(245, 158, 11, 0.15)', 
-                    color: '#FDE68A', 
-                    padding: '2px 7px', 
-                    borderRadius: '4px', 
-                    fontWeight: 800, 
-                    border: '1px solid rgba(245, 158, 11, 0.4)',
-                    letterSpacing: '0.08em'
-                  }}>
-                    SOLUÇÕES
-                  </span>
-                </div>
-                <div style={{ fontSize: '0.72rem', color: '#94A3B8', fontWeight: 600, letterSpacing: '0.04em', marginTop: '2px' }}>
-                  Dom RockFeller Assessoria Jurídica &amp; Financeira
-                </div>
-              </div>
+            <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15, marginBottom: '18px' }}>
+              <span style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.14em', color: '#94A3B8', textTransform: 'uppercase' }}>
+                Assessoria &amp; Perícia
+              </span>
+              <span style={{ fontSize: '1.45rem', fontWeight: 900, letterSpacing: '-0.025em', color: '#FFFFFF' }}>
+                DOM <span style={{ color: '#D4AF37' }}>ROCKFELLER</span>
+              </span>
             </div>
 
             <p style={{ lineHeight: 1.65, color: '#94A3B8', marginBottom: '22px', fontSize: '0.88rem' }}>

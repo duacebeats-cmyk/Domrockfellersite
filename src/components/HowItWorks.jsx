@@ -58,55 +58,58 @@ export function HowItWorks({ onOpenSimulator }) {
                 key={idx} 
                 className="glass-card" 
                 style={{ 
-                  padding: '32px 24px', 
+                  padding: '36px 24px', 
                   position: 'relative',
                   display: 'flex',
                   flexDirection: 'column',
                   justifyContent: 'space-between',
+                  alignItems: 'center',
+                  textAlign: 'center',
                   background: '#FFFFFF',
                   border: '1px solid #E2E8F0',
-                  boxShadow: '0 4px 18px -2px rgba(15, 23, 42, 0.05)'
+                  boxShadow: '0 4px 18px -2px rgba(10, 37, 64, 0.05)'
                 }}
               >
-                <div>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-                    <div style={{
-                      width: '52px',
-                      height: '52px',
-                      borderRadius: '14px',
-                      background: 'rgba(217, 119, 6, 0.1)',
-                      border: '1px solid rgba(217, 119, 6, 0.25)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      color: '#D97706'
-                    }}>
-                      <Icon size={26} />
-                    </div>
-                    <span style={{ fontSize: '2rem', fontWeight: 800, color: '#CBD5E1', fontFamily: 'monospace' }}>
-                      {step.num}
-                    </span>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%' }}>
+                  <div style={{
+                    width: '60px',
+                    height: '60px',
+                    borderRadius: '16px',
+                    background: 'rgba(197, 155, 39, 0.12)',
+                    border: '1.5px solid rgba(197, 155, 39, 0.35)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: '#C59B27',
+                    marginBottom: '12px'
+                  }}>
+                    <Icon size={28} />
                   </div>
 
-                  <h3 style={{ fontSize: '1.18rem', marginBottom: '12px', color: '#0F172A', fontWeight: 800 }}>
+                  <span style={{ fontSize: '0.82rem', fontWeight: 800, color: '#C59B27', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '10px' }}>
+                    Etapa {step.num}
+                  </span>
+
+                  <h3 style={{ fontSize: '1.15rem', marginBottom: '12px', color: '#0A2540', fontWeight: 800, textAlign: 'center' }}>
                     {step.title}
                   </h3>
 
-                  <p style={{ fontSize: '0.88rem', color: '#475569', lineHeight: 1.6, marginBottom: '20px' }}>
+                  <p style={{ fontSize: '0.9rem', color: '#475569', lineHeight: 1.65, marginBottom: '22px', textAlign: 'center' }}>
                     {step.desc}
                   </p>
                 </div>
 
-                <div>
+                <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
                   <span style={{
                     fontSize: '0.74rem',
                     fontWeight: 700,
                     textTransform: 'uppercase',
-                    color: '#B45309',
-                    background: 'rgba(245, 158, 11, 0.1)',
-                    padding: '4px 10px',
+                    color: '#876214',
+                    background: 'rgba(197, 155, 39, 0.1)',
+                    padding: '5px 14px',
                     borderRadius: '6px',
-                    border: '1px solid rgba(245, 158, 11, 0.25)'
+                    border: '1px solid rgba(197, 155, 39, 0.25)',
+                    textAlign: 'center'
                   }}>
                     {step.tag}
                   </span>
@@ -118,38 +121,38 @@ export function HowItWorks({ onOpenSimulator }) {
 
         {/* Security Callout */}
         <div style={{
-          marginTop: '40px',
+          marginTop: '45px',
           background: '#FFFFFF',
           border: '1px solid #E2E8F0',
-          boxShadow: '0 6px 20px -2px rgba(15, 23, 42, 0.06)',
-          borderRadius: '16px',
-          padding: '24px 30px',
+          boxShadow: '0 6px 20px -2px rgba(10, 37, 64, 0.06)',
+          borderRadius: '20px',
+          padding: '28px 34px',
           display: 'flex',
-          justifyContent: 'space-between',
+          justifyContent: 'center',
           alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '20px'
+          flexDirection: 'column',
+          textAlign: 'center',
+          gap: '18px'
         }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '10px' }}>
             <div style={{
-              width: '44px',
-              height: '44px',
+              width: '48px',
+              height: '48px',
               borderRadius: '50%',
               background: 'rgba(16, 185, 129, 0.12)',
               border: '1px solid rgba(16, 185, 129, 0.3)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              color: '#059669',
-              flexShrink: 0
+              color: '#059669'
             }}>
-              <CheckCircle size={24} />
+              <CheckCircle size={26} />
             </div>
             <div>
-              <div style={{ color: '#0F172A', fontWeight: 800, fontSize: '1.05rem' }}>
+              <div style={{ color: '#0A2540', fontWeight: 800, fontSize: '1.1rem', marginBottom: '4px' }}>
                 Segurança Jurídica &amp; Pagamento Direto no Banco ou Juízo
               </div>
-              <div style={{ color: '#475569', fontSize: '0.85rem' }}>
+              <div style={{ color: '#475569', fontSize: '0.92rem', maxWidth: '680px', margin: '0 auto' }}>
                 Transparência absoluta: os depósitos judiciais ou acordos homologados são feitos em juízo ou diretamente na instituição credora.
               </div>
             </div>
@@ -161,7 +164,7 @@ export function HowItWorks({ onOpenSimulator }) {
               if (el) el.scrollIntoView({ behavior: 'smooth' });
             }}
             className="btn btn-primary"
-            style={{ whiteSpace: 'nowrap' }}
+            style={{ minWidth: '240px' }}
           >
             <span>Iniciar Estudo Pericial</span>
             <ArrowRight size={16} />

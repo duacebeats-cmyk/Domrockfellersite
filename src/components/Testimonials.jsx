@@ -75,15 +75,14 @@ export function Testimonials() {
               }}
             >
               <div>
-                
-                {/* Top header */}
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
-                  <div style={{ display: 'flex', gap: '3px' }}>
+                {/* Top header - Centered */}
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '6px', marginBottom: '16px' }}>
+                  <div style={{ display: 'flex', gap: '3px', justifyContent: 'center' }}>
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} size={16} fill="#F59E0B" color="#F59E0B" />
+                      <Star key={i} size={16} fill="#C59B27" color="#C59B27" />
                     ))}
                   </div>
-                  <span style={{ fontSize: '0.78rem', color: '#64748B' }}>{item.date}</span>
+                  <span style={{ fontSize: '0.78rem', color: '#64748B', textAlign: 'center' }}>{item.date}</span>
                 </div>
 
                 {/* Savings Pill Box */}
@@ -99,36 +98,37 @@ export function Testimonials() {
                     <span style={{ color: '#047857', fontWeight: 800 }}>{item.percent} OFF</span>
                   </div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '4px' }}>
-                    <span style={{ fontSize: '0.82rem', color: '#0F172A' }}>Quitado por: <strong>{item.settled}</strong></span>
+                    <span style={{ fontSize: '0.82rem', color: '#0A2540' }}>Quitado por: <strong>{item.settled}</strong></span>
                     <span style={{ fontSize: '0.88rem', fontWeight: 800, color: '#047857' }}>Economizou {item.savings}</span>
                   </div>
                 </div>
 
-                {/* Quote */}
-                <p style={{ fontSize: '0.9rem', color: '#334155', fontStyle: 'italic', lineHeight: 1.6, marginBottom: '20px' }}>
+                {/* Quote - Centered */}
+                <p style={{ fontSize: '0.9rem', color: '#334E68', fontStyle: 'italic', lineHeight: 1.62, marginBottom: '20px', textAlign: 'center' }}>
                   "{item.quote}"
                 </p>
 
               </div>
 
-              {/* Author Footer */}
-              <div style={{ borderTop: '1px solid #F1F5F9', paddingTop: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+              {/* Author Footer - Centered */}
+              <div style={{ borderTop: '1px solid #F1F5F9', paddingTop: '16px', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', gap: '8px' }}>
                 <div style={{
-                  width: '42px',
-                  height: '42px',
+                  width: '44px',
+                  height: '44px',
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #059669, #2563EB)',
+                  background: 'linear-gradient(135deg, #0A2540, #1B4B79)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  color: '#FFFFFF',
-                  fontWeight: 700,
-                  fontSize: '0.95rem'
+                  color: '#C59B27',
+                  fontWeight: 800,
+                  fontSize: '1rem',
+                  border: '1.5px solid rgba(197, 155, 39, 0.4)'
                 }}>
                   {item.name.charAt(0)}
                 </div>
                 <div>
-                  <div style={{ fontWeight: 800, color: '#0F172A', fontSize: '0.95rem' }}>{item.name}</div>
+                  <div style={{ fontWeight: 800, color: '#0A2540', fontSize: '0.95rem' }}>{item.name}</div>
                   <div style={{ fontSize: '0.8rem', color: '#64748B' }}>{item.vehicle} &bull; {item.city}</div>
                 </div>
               </div>

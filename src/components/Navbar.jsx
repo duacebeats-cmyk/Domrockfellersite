@@ -44,35 +44,15 @@ export function Navbar({
         {/* Brand Logo: Institutional Monogram Seal & Authority Wordmark */}
         <div 
           onClick={() => { setActiveView('site'); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
-          style={{ display: 'flex', alignItems: 'center', gap: '10px', cursor: 'pointer', userSelect: 'none' }}
+          style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15, cursor: 'pointer', userSelect: 'none' }}
           title="Dom RockFeller"
         >
-          {/* Monogram Seal 'DR' (Oxford Navy + Satin Gold) */}
-          <div style={{
-            width: '40px',
-            height: '40px',
-            borderRadius: '10px',
-            background: 'linear-gradient(135deg, #0A2540 0%, #0F3256 100%)',
-            border: '1.5px solid rgba(197, 155, 39, 0.45)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: '0 2px 8px rgba(10, 37, 64, 0.18)',
-            flexShrink: 0
-          }}>
-            <span style={{ fontSize: '1.08rem', fontWeight: 900, color: '#C59B27', letterSpacing: '0.04em', fontFamily: 'serif' }}>
-              DR
-            </span>
-          </div>
-
-          <div style={{ display: 'flex', flexDirection: 'column', lineHeight: 1.15 }}>
-            <span style={{ fontSize: '0.60rem', fontWeight: 700, letterSpacing: '0.12em', color: '#64748B', textTransform: 'uppercase' }}>
-              Assessoria &amp; Perícia
-            </span>
-            <span style={{ fontSize: '1.34rem', fontWeight: 900, letterSpacing: '-0.025em', color: '#0A2540' }}>
-              DOM <span style={{ color: '#C59B27' }}>ROCKFELLER</span>
-            </span>
-          </div>
+          <span style={{ fontSize: '0.62rem', fontWeight: 700, letterSpacing: '0.14em', color: '#64748B', textTransform: 'uppercase' }}>
+            Assessoria &amp; Perícia
+          </span>
+          <span style={{ fontSize: '1.42rem', fontWeight: 900, letterSpacing: '-0.025em', color: '#0A2540' }}>
+            DOM <span style={{ color: '#C59B27' }}>ROCKFELLER</span>
+          </span>
         </div>
 
         {/* Desktop Navigation Links - Centered, Proportional & Paired with Icons */}

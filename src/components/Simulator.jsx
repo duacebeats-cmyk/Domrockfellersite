@@ -320,33 +320,33 @@ export function Simulator({ onCompleteSimulation }) {
                 {/* Estimated Total Savings Highlight */}
                 <div style={{
                   padding: '20px',
-                  background: 'rgba(217, 119, 6, 0.07)',
-                  border: '1px solid rgba(217, 119, 6, 0.3)',
+                  background: 'rgba(197, 155, 39, 0.08)',
+                  border: '1px solid rgba(197, 155, 39, 0.3)',
                   borderRadius: '16px',
                   marginBottom: '22px',
                   textAlign: 'center'
                 }}>
-                  <div style={{ fontSize: '0.82rem', color: '#B45309', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+                  <div style={{ fontSize: '0.82rem', color: '#876214', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.04em' }}>
                     Sua Economia Estimada no Bolso:
                   </div>
-                  <div style={{ fontSize: '2.3rem', fontWeight: 900, color: '#D97706', margin: '4px 0' }}>
+                  <div style={{ fontSize: '2.3rem', fontWeight: 900, color: '#C59B27', margin: '4px 0' }}>
                     R$ {estimatedSavings.toLocaleString('pt-BR')}
                   </div>
                   <div style={{ fontSize: '0.82rem', color: '#475569' }}>
-                    Dinheiro que você deixa de pagar em juros bancários futuros!
+                    Dinheiro que você deixa de pagar em juros bancários abusivos!
                   </div>
                 </div>
 
                 {/* Trust Points */}
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', fontSize: '0.84rem', color: '#475569' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Check size={16} color="#FBBF24" /> Perícia técnica fundamentada no CDC e súmulas do STJ
+                    <Check size={16} color="#C59B27" /> Perícia técnica fundamentada no CDC e súmulas do STJ
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Check size={16} color="#FBBF24" /> Transparência e defesa ativa contra risco de busca e apreensão
+                    <Check size={16} color="#C59B27" /> Transparência e defesa ativa contra risco de busca e apreensão
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Check size={16} color="#FBBF24" /> Atendimento presencial nas sedes de <strong>{selectedUnit}</strong>
+                    <Check size={16} color="#C59B27" /> Atendimento presencial nas sedes de <strong>{selectedUnit}</strong>
                   </div>
                 </div>
 
