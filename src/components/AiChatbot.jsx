@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { 
   X, Send, Sparkles, Bot, User, Calculator, 
   ArrowRight, Headphones, CheckCircle2, 
-  Clock, AlertCircle, Phone, ArrowUpRight, RotateCcw
+  Clock, AlertCircle, Phone, ArrowUpRight, RotateCcw,
+  MessageSquare
 } from 'lucide-react';
 import { api } from '../services/api';
 
@@ -463,51 +464,17 @@ export function AiChatbot({ isOpen, onToggle, onOpenSimulator, onScrollToSection
 
   return (
     <>
-      {/* Floating trigger with Lion Crown Logo */}
+      {/* Floating trigger with Executive Clean Chat Icon */}
       {!isOpen && (
         <button
           onClick={onToggle}
-          style={{
-            position: 'fixed',
-            bottom: '26px',
-            right: '26px',
-            zIndex: 999,
-            width: '66px',
-            height: '66px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle, #101625 0%, #060910 100%)',
-            border: '2px solid #F59E0B',
-            boxShadow: '0 8px 30px rgba(245, 158, 11, 0.45)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            cursor: 'pointer',
-            transition: 'transform 0.2s cubic-bezier(0.16, 1, 0.3, 1)'
-          }}
-          className="animate-pulse-subtle chat-floating-btn"
-          title="Falar com a Dom RockFeller Soluções"
+          className="chat-floating-btn"
+          title="Falar com a Dom RockFeller Assessoria"
         >
-          <img 
-            src="/lion-icon.png" 
-            alt="Atendimento" 
-            style={{ width: '42px', height: '42px', objectFit: 'contain' }}
-          />
-          <span style={{
-            position: 'absolute',
-            top: '-2px',
-            right: '-2px',
-            width: '20px',
-            height: '20px',
-            borderRadius: '50%',
-            background: '#F59E0B',
-            border: '2px solid #06080D',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            fontSize: '0.68rem',
-            fontWeight: 800,
-            color: '#000'
-          }}>
+          <div className="chat-floating-btn-inner">
+            <MessageSquare size={27} color="#FFFFFF" strokeWidth={2.2} />
+          </div>
+          <span className="chat-notification-badge">
             1
           </span>
         </button>
@@ -524,9 +491,9 @@ export function AiChatbot({ isOpen, onToggle, onOpenSimulator, onScrollToSection
             width: 'clamp(320px, 92vw, 420px)',
             height: 'clamp(500px, 82vh, 640px)',
             background: '#090C15',
-            border: '1.5px solid rgba(245, 158, 11, 0.35)',
+            border: '1.5px solid rgba(197, 155, 39, 0.4)',
             borderRadius: '24px',
-            boxShadow: '0 20px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(245, 158, 11, 0.2)',
+            boxShadow: '0 20px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(197, 155, 39, 0.2)',
             display: 'flex',
             flexDirection: 'column',
             zIndex: 1000,
@@ -536,8 +503,8 @@ export function AiChatbot({ isOpen, onToggle, onOpenSimulator, onScrollToSection
           {/* Header */}
           <div style={{
             padding: '16px 20px',
-            background: 'linear-gradient(135deg, rgba(245, 158, 11, 0.16), rgba(12, 16, 26, 0.95))',
-            borderBottom: '1px solid rgba(245, 158, 11, 0.2)',
+            background: 'linear-gradient(135deg, rgba(10, 37, 64, 0.95), rgba(15, 50, 86, 0.95))',
+            borderBottom: '1px solid rgba(197, 155, 39, 0.3)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center'
@@ -547,18 +514,20 @@ export function AiChatbot({ isOpen, onToggle, onOpenSimulator, onScrollToSection
                 width: '42px',
                 height: '42px',
                 borderRadius: '12px',
-                background: 'rgba(245, 158, 11, 0.15)',
-                border: '1px solid rgba(245, 158, 11, 0.4)',
+                background: 'linear-gradient(135deg, #0A2540 0%, #0F3256 100%)',
+                border: '1.5px solid rgba(197, 155, 39, 0.45)',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                color: '#C59B27',
+                boxShadow: '0 2px 8px rgba(0,0,0,0.3)'
               }}>
-                <img src="/lion-icon.png" alt="Lion" style={{ width: '32px', height: '32px', objectFit: 'contain' }} />
+                <Bot size={22} color="#C59B27" />
               </div>
               <div>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
                   <span style={{ fontWeight: 800, color: '#FFFFFF', fontSize: '0.96rem' }}>
-                    {chatMode === 'live' ? `${activeTicket?.assignedTo?.name || 'Consultor Dom RockFeller'}` : 'RockFeller Soluções'}
+                    {chatMode === 'live' ? `${activeTicket?.assignedTo?.name || 'Consultor Dom RockFeller'}` : 'Dom RockFeller Assessoria'}
                   </span>
                   <span style={{ 
                     width: '8px', 

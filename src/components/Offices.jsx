@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, MessageSquare, Clock, Building2, Coffee, ShieldCheck, ExternalLink, Mail, Sparkles } from 'lucide-react';
+import { MapPin, Phone, MessageSquare, Clock, Building2, Coffee, ShieldCheck, ExternalLink, Mail, Sparkles, Lock } from 'lucide-react';
 
 export function Offices({ onOpenSimulator }) {
   const offices = [
@@ -65,11 +65,11 @@ export function Offices({ onOpenSimulator }) {
               className="glass-card" 
               style={{ 
                 padding: 'clamp(22px, 4vw, 36px)', 
-                border: office.isComingSoon ? '1.5px solid rgba(217, 119, 6, 0.3)' : '1.5px solid rgba(37, 99, 235, 0.3)',
+                border: office.isComingSoon ? '1.5px solid rgba(197, 155, 39, 0.45)' : '1.5px solid rgba(10, 37, 64, 0.25)',
                 position: 'relative',
                 overflow: 'hidden',
                 background: '#FFFFFF',
-                boxShadow: '0 6px 24px -2px rgba(15, 23, 42, 0.06)'
+                boxShadow: '0 6px 24px -2px rgba(10, 37, 64, 0.06)'
               }}
             >
               {/* Top Accent Strip */}
@@ -79,31 +79,58 @@ export function Offices({ onOpenSimulator }) {
                 left: 0,
                 right: 0,
                 height: '4px',
-                background: office.isComingSoon ? 'linear-gradient(90deg, #F59E0B, #B45309)' : 'linear-gradient(90deg, #3B82F6, #1D4ED8)'
+                background: office.isComingSoon ? 'linear-gradient(90deg, #D4AF37, #A67C1E)' : 'linear-gradient(90deg, #0A2540, #1B4B79)'
               }} />
 
-              {/* Header Badge & Title - Centered */}
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: '22px', gap: '6px' }}>
-                <span 
-                  style={{ 
-                    fontSize: '0.75rem', 
-                    fontWeight: 800, 
-                    textTransform: 'uppercase', 
-                    color: office.isComingSoon ? '#876214' : '#0A2540', 
-                    letterSpacing: '0.06em',
-                    background: office.isComingSoon ? 'rgba(197, 155, 39, 0.12)' : 'rgba(10, 37, 64, 0.08)',
-                    border: `1px solid ${office.isComingSoon ? 'rgba(197, 155, 39, 0.35)' : 'rgba(10, 37, 64, 0.2)'}`,
-                    padding: '4px 14px',
-                    borderRadius: '20px'
-                  }}
+              {/* Header: Status Badge & Closed Lock Icon Box */}
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '22px', gap: '14px' }}>
+                <div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
+                    <span 
+                      style={{ 
+                        fontSize: '0.74rem', 
+                        fontWeight: 800, 
+                        textTransform: 'uppercase', 
+                        color: office.isComingSoon ? '#876214' : '#047857', 
+                        letterSpacing: '0.06em',
+                        background: office.isComingSoon ? 'rgba(197, 155, 39, 0.12)' : 'rgba(16, 185, 129, 0.1)',
+                        border: `1.5px solid ${office.isComingSoon ? 'rgba(197, 155, 39, 0.4)' : 'rgba(16, 185, 129, 0.3)'}`,
+                        padding: '4px 12px',
+                        borderRadius: '20px',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '6px'
+                      }}
+                    >
+                      {office.isComingSoon ? <Lock size={13} color="#876214" /> : <ShieldCheck size={13} color="#047857" />}
+                      <span>{office.isComingSoon ? 'Inauguração em breve' : office.statusBadge}</span>
+                    </span>
+                  </div>
+                  <h3 style={{ fontSize: '1.85rem', color: '#0A2540', margin: '2px 0 0', fontWeight: 900, letterSpacing: '-0.02em' }}>
+                    {office.city}
+                  </h3>
+                  <div style={{ fontSize: '0.92rem', color: '#475569', fontWeight: 600 }}>
+                    {office.building}
+                  </div>
+                </div>
+
+                {/* Top Right Icon Box: Lock for Vitória, Building for Floripa */}
+                <div style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '12px',
+                  background: office.isComingSoon ? 'rgba(197, 155, 39, 0.12)' : 'rgba(10, 37, 64, 0.08)',
+                  border: `1.5px solid ${office.isComingSoon ? 'rgba(197, 155, 39, 0.45)' : 'rgba(10, 37, 64, 0.2)'}`,
+                  color: office.isComingSoon ? '#876214' : '#0A2540',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: office.isComingSoon ? '0 4px 14px rgba(197, 155, 39, 0.2)' : 'none',
+                  flexShrink: 0
+                }}
+                title={office.isComingSoon ? 'Unidade Vitória - Inauguração em breve' : 'Unidade Ativa'}
                 >
-                  {office.statusBadge}
-                </span>
-                <h3 style={{ fontSize: '1.8rem', color: '#0A2540', margin: '4px 0 0', fontWeight: 800 }}>
-                  {office.city}
-                </h3>
-                <div style={{ fontSize: '0.94rem', color: '#475569', fontWeight: 600 }}>
-                  {office.building}
+                  {office.isComingSoon ? <Lock size={22} color="#876214" /> : <Building2 size={22} color="#0A2540" />}
                 </div>
               </div>
 
@@ -166,8 +193,8 @@ export function Offices({ onOpenSimulator }) {
               }}>
                 {office.isComingSoon ? (
                   <>
-                    <Sparkles size={16} color="#C59B27" style={{ flexShrink: 0 }} />
-                    <span>Inauguração presencial em breve no ES. Atendimento online e recepção de perícias já disponível.</span>
+                    <Lock size={16} color="#876214" style={{ flexShrink: 0 }} />
+                    <span>Inauguração presencial em breve no ES. Atendimento online e recepção de perícias 100% ativo.</span>
                   </>
                 ) : (
                   <>
@@ -187,7 +214,7 @@ export function Offices({ onOpenSimulator }) {
                   style={{ flex: 1, minWidth: 'min(100%, 180px)' }}
                 >
                   <MessageSquare size={16} />
-                  <span>WhatsApp {office.city}</span>
+                  <span>WhatsApp {office.city} {office.isComingSoon ? '(Inauguração em Breve)' : ''}</span>
                 </a>
 
                 {!office.isComingSoon && (

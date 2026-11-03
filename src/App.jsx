@@ -12,6 +12,7 @@ import { AiChatbot } from './components/AiChatbot';
 import { AdminPanel } from './components/AdminPanel';
 import { ClientPortal } from './components/ClientPortal';
 import { AuthModal } from './components/AuthModal';
+import { CarShowcaseSlider } from './components/CarShowcaseSlider';
 import { CheckCircle2, ShieldCheck } from 'lucide-react';
 import { api } from './services/api';
 
@@ -97,6 +98,14 @@ export function App() {
           <>
             <Hero
               onOpenSimulator={() => scrollToSection('simulador')}
+              onOpenChat={() => setIsChatOpen(true)}
+            />
+
+            <CarShowcaseSlider
+              onSelectCarForSimulation={(car) => {
+                scrollToSection('simulador');
+                addToast(`Veículo selecionado: ${car.name} (${car.year}) - Quitação estimada: ${car.formattedPrice}`);
+              }}
               onOpenChat={() => setIsChatOpen(true)}
             />
 

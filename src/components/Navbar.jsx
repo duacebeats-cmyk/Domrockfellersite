@@ -57,6 +57,10 @@ export function Navbar({
 
         {/* Desktop Navigation Links - Centered, Proportional & Paired with Icons */}
         <nav style={{ display: 'none', alignItems: 'center', gap: '8px' }} className="desktop-nav">
+          <a onClick={() => scrollTo('vitrine')} className="nav-item-link">
+            <Car size={15} color="#475569" />
+            <span>Vitrine</span>
+          </a>
           <a onClick={() => scrollTo('como-funciona')} className="nav-item-link">
             <Scale size={15} color="#475569" />
             <span>Como Funciona</span>
@@ -180,6 +184,16 @@ export function Navbar({
           flexDirection: 'column',
           gap: '8px'
         }}>
+          <a onClick={() => scrollTo('vitrine')} className="mobile-nav-card">
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Car size={18} color="#C59B27" />
+              </div>
+              <span style={{ fontSize: '0.92rem', fontWeight: 600, color: '#1E293B' }}>Vitrine de Veículos (Venda &amp; Quitação)</span>
+            </div>
+            <ChevronRight size={16} color="#94A3B8" />
+          </a>
+
           <a onClick={() => scrollTo('como-funciona')} className="mobile-nav-card">
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
