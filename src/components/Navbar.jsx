@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   ShieldCheck, Calculator, Phone, Menu, X, Users, MessageSquare, 
   User, LogIn, LogOut, Crown, CheckCircle2, ChevronDown, ChevronRight,
@@ -15,6 +15,21 @@ export function Navbar({
   onLogout 
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollTo = (id) => {
     setActiveView('site');
@@ -32,14 +47,24 @@ export function Navbar({
       position: 'sticky',
       top: 0,
       zIndex: 100,
-      background: 'rgba(255, 255, 255, 0.96)',
-      backdropFilter: 'blur(16px)',
-      WebkitBackdropFilter: 'blur(16px)',
-      borderBottom: '1px solid #E2E8F0',
-      boxShadow: '0 4px 20px -2px rgba(15, 23, 42, 0.04)'
+      background: isScrolled ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 0.92)',
+      backdropFilter: isScrolled ? 'blur(20px)' : 'blur(14px)',
+      WebkitBackdropFilter: isScrolled ? 'blur(20px)' : 'blur(14px)',
+      borderBottom: isScrolled ? '1px solid rgba(197, 155, 39, 0.28)' : '1px solid #E2E8F0',
+      boxShadow: isScrolled ? '0 10px 30px -4px rgba(10, 37, 64, 0.10)' : '0 4px 20px -2px rgba(15, 23, 42, 0.04)',
+      transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
     }}>
       {/* Main Nav Bar */}
-      <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '74px' }}>
+      <div 
+        className="container" 
+        style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'space-between', 
+          height: isScrolled ? '64px' : '74px',
+          transition: 'height 0.35s cubic-bezier(0.16, 1, 0.3, 1)'
+        }}
+      >
         
         {/* Brand Logo: Institutional Wordmark */}
         <div 
@@ -162,15 +187,18 @@ export function Navbar({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div style={{
-          background: '#FFFFFF',
-          borderBottom: '2px solid #E2E8F0',
-          boxShadow: '0 16px 30px -10px rgba(15, 23, 42, 0.1)',
-          padding: '16px 18px',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '8px'
-        }}>
+        <div 
+          className="mobile-drawer-anim"
+          style={{
+            background: '#FFFFFF',
+            borderBottom: '2px solid #E2E8F0',
+            boxShadow: '0 20px 35px -10px rgba(15, 23, 42, 0.12)',
+            padding: '16px 18px',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '8px'
+          }}
+        >
           <a onClick={() => scrollTo('vitrine')} className="mobile-nav-card">
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
               <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -281,19 +309,33 @@ export function Navbar({
       )}
 
       <style>{`
+        @keyframes mobileDrawerSlide {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        .mobile-drawer-anim {
+          animation: mobileDrawerSlide 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
         .desktop-nav {
           display: none;
           align-items: center;
           gap: 6px;
           white-space: nowrap;
           flex-shrink: 0;
+          transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
         }
         .nav-item-link {
           font-size: 0.90rem;
           color: #334E68;
           font-weight: 600;
           cursor: pointer;
-          transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+          transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
           padding: 8px 12px;
           border-radius: 8px;
           display: inline-flex;
@@ -303,22 +345,30 @@ export function Navbar({
           flex-shrink: 0;
           user-select: none;
           line-height: 1;
+          position: relative;
         }
         .nav-item-link span {
           white-space: nowrap !important;
           line-height: 1;
+          transition: color 0.2s ease;
         }
         .nav-item-link svg {
           flex-shrink: 0;
           vertical-align: middle;
+          transition: transform 0.2s ease, stroke 0.2s ease;
         }
         .nav-item-link:hover {
           color: #876214;
-          background: rgba(197, 155, 39, 0.09);
-          transform: translateY(-1px);
+          background: rgba(197, 155, 39, 0.10);
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(197, 155, 39, 0.12);
         }
         .nav-item-link:hover svg {
           stroke: #876214 !important;
+          transform: scale(1.1);
+        }
+        .nav-item-link:active {
+          transform: translateY(0px) scale(0.98);
         }
         .nav-highlight {
           color: #876214 !important;
@@ -338,10 +388,16 @@ export function Navbar({
           border: 1px solid #E2E8F0;
           background: #FFFFFF;
           cursor: pointer;
-          transition: background 0.15s ease;
+          transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .mobile-nav-card:hover {
+          background: #F8FAFC;
+          border-color: rgba(197, 155, 39, 0.4);
+          transform: translateX(4px);
         }
         .mobile-nav-card:active {
-          background: #F8FAFC;
+          background: #F1F5F9;
+          transform: scale(0.98);
         }
         @media (min-width: 960px) {
           .desktop-nav { display: flex !important; }

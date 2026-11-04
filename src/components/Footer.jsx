@@ -274,223 +274,143 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
 
         </div>
 
-        {/* Legal Disclaimer & Corporate Registration Box */}
-        <div style={{
-          background: 'rgba(10, 14, 22, 0.85)',
-          border: '1px solid rgba(245, 158, 11, 0.22)',
-          borderRadius: '16px',
-          padding: '24px 26px',
-          marginBottom: '32px',
-          fontSize: '0.82rem',
-          lineHeight: 1.65,
-          color: '#94A3B8'
-        }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginBottom: '18px', paddingBottom: '16px', borderBottom: '1px solid rgba(255,255,255,0.08)' }}>
-            <div>
-              <span style={{ fontSize: '0.72rem', color: '#FBBF24', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.05em', display: 'block', marginBottom: '3px' }}>Razão Social</span>
-              <strong style={{ color: '#FFFFFF', fontSize: '0.88rem' }}>Rockfeller Solucoes Ltda</strong>
-            </div>
-            <div>
-              <span style={{ fontSize: '0.72rem', color: '#FBBF24', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.05em', display: 'block', marginBottom: '3px' }}>CNPJ</span>
-              <strong style={{ color: '#FFFFFF', fontSize: '0.88rem' }}>55.989.699/0001-56</strong>
-            </div>
-            <div>
-              <span style={{ fontSize: '0.72rem', color: '#FBBF24', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.05em', display: 'block', marginBottom: '3px' }}>Sócio / Gestão</span>
-              <strong style={{ color: '#FFFFFF', fontSize: '0.88rem' }}>Guilherme Mauricio da Silva</strong>
-            </div>
-            <div>
-              <span style={{ fontSize: '0.72rem', color: '#FBBF24', textTransform: 'uppercase', fontWeight: 800, letterSpacing: '0.05em', display: 'block', marginBottom: '3px' }}>CNAE Principal</span>
-              <span style={{ color: '#CBD5E1', fontSize: '0.82rem' }}>8211-3/00 (Apoio administrativo e escritório)</span>
-            </div>
-          </div>
-
-          <p style={{ margin: 0 }}>
-            <strong style={{ color: '#E2E8F0' }}>Aviso de Transparência, Ética e Segurança Jurídica:</strong> A <strong>Dom RockFeller</strong> (Rockfeller Solucoes Ltda) atua prestando apoio administrativo especializado em análise pericial contábil de contratos de financiamento, identificação de encargos abusivos e viabilização de defesas técnicas e acordos de quitação extrajudiciais e judiciais. Todos os clientes são orientados com absoluta clareza sobre os riscos de busca e apreensão (Decreto-Lei 911/69), priorizando sempre a segurança patrimonial e a redução do saldo devedor. Não somos banco nem realizamos concessão de empréstimos.
-          </p>
-        </div>
-
-        {/* Selos Oficiais de Certificado de Segurança e Conformidade */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          flexWrap: 'wrap',
-          gap: '12px',
-          padding: '16px 0 20px',
-          borderTop: '1px solid rgba(245, 158, 11, 0.15)',
-          borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
-          marginBottom: '20px'
-        }}>
-          {/* Selo 1: Certificado SSL 256-bit */}
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '10px',
-            padding: '9px 16px',
-            borderRadius: '12px',
-            background: 'rgba(16, 185, 129, 0.05)',
-            border: '1px solid rgba(16, 185, 129, 0.28)',
-            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)'
-          }}>
-            <div style={{
-              width: '28px',
-              height: '28px',
-              borderRadius: '8px',
-              background: 'rgba(16, 185, 129, 0.18)',
-              border: '1px solid #10B981',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#10B981',
-              boxShadow: '0 0 10px rgba(16, 185, 129, 0.35)',
-              flexShrink: 0
-            }}>
-              <Lock size={15} />
-            </div>
-            <div style={{ textAlign: 'left', lineHeight: 1.25 }}>
-              <div style={{ color: '#10B981', fontSize: '0.68rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                Certificado SSL 256-Bit
-              </div>
-              <div style={{ color: '#F8FAFC', fontSize: '0.78rem', fontWeight: 700 }}>
-                Conexão Criptografada TLS 1.3
-              </div>
-            </div>
-          </div>
-
-          {/* Selo 2: Google Safe Browsing */}
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '10px',
-            padding: '9px 16px',
-            borderRadius: '12px',
-            background: 'rgba(59, 130, 246, 0.05)',
-            border: '1px solid rgba(59, 130, 246, 0.28)',
-            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)'
-          }}>
-            <div style={{
-              width: '28px',
-              height: '28px',
-              borderRadius: '8px',
-              background: 'rgba(59, 130, 246, 0.18)',
-              border: '1px solid #3B82F6',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#60A5FA',
-              boxShadow: '0 0 10px rgba(59, 130, 246, 0.35)',
-              flexShrink: 0
-            }}>
-              <ShieldCheck size={16} />
-            </div>
-            <div style={{ textAlign: 'left', lineHeight: 1.25 }}>
-              <div style={{ color: '#60A5FA', fontSize: '0.68rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                Google Safe Browsing
-              </div>
-              <div style={{ color: '#F8FAFC', fontSize: '0.78rem', fontWeight: 700 }}>
-                Navegação 100% Segura
-              </div>
-            </div>
-          </div>
-
-          {/* Selo 3: Proteção LGPD */}
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '10px',
-            padding: '9px 16px',
-            borderRadius: '12px',
-            background: 'rgba(197, 155, 39, 0.05)',
-            border: '1px solid rgba(197, 155, 39, 0.28)',
-            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)'
-          }}>
-            <div style={{
-              width: '28px',
-              height: '28px',
-              borderRadius: '8px',
-              background: 'rgba(197, 155, 39, 0.18)',
-              border: '1px solid #C59B27',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#FBBF24',
-              boxShadow: '0 0 10px rgba(197, 155, 39, 0.35)',
-              flexShrink: 0
-            }}>
-              <Award size={15} />
-            </div>
-            <div style={{ textAlign: 'left', lineHeight: 1.25 }}>
-              <div style={{ color: '#FBBF24', fontSize: '0.68rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                Proteção LGPD &bull; Lei 13.709/18
-              </div>
-              <div style={{ color: '#F8FAFC', fontSize: '0.78rem', fontWeight: 700 }}>
-                Sigilo Bancário &amp; Privacidade
-              </div>
-            </div>
-          </div>
-
-          {/* Selo 4: Receita Federal & Regularidade */}
-          <div style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '10px',
-            padding: '9px 16px',
-            borderRadius: '12px',
-            background: 'rgba(255, 255, 255, 0.03)',
-            border: '1px solid rgba(255, 255, 255, 0.12)',
-            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)'
-          }}>
-            <div style={{
-              width: '28px',
-              height: '28px',
-              borderRadius: '8px',
-              background: 'rgba(255, 255, 255, 0.08)',
-              border: '1px solid rgba(255, 255, 255, 0.25)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              color: '#10B981',
-              flexShrink: 0
-            }}>
-              <CheckCircle2 size={15} />
-            </div>
-            <div style={{ textAlign: 'left', lineHeight: 1.25 }}>
-              <div style={{ color: '#94A3B8', fontSize: '0.68rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-                Receita Federal do Brasil
-              </div>
-              <div style={{ color: '#F8FAFC', fontSize: '0.78rem', fontWeight: 700 }}>
-                CNPJ 55.989.699/0001-56 &bull; Ativa
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Copyright & Unit Credits */}
+        {/* Bottom Copyright, Unit Credits & Compact Security Badges in the right corner */}
         <div style={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           flexWrap: 'wrap',
-          gap: '16px',
-          paddingTop: '20px',
-          borderTop: '1px solid rgba(245, 158, 11, 0.12)',
+          gap: '18px',
+          paddingTop: '26px',
+          borderTop: '1px solid rgba(245, 158, 11, 0.15)',
           fontSize: '0.82rem',
           color: '#64748B'
         }}>
-          <div>
-            &copy; 2026 <strong>Rockfeller Solucoes Ltda</strong> &bull; CNPJ: 55.989.699/0001-56 &bull; Sede: Rua Gerônimo Coelho, 280, Sala 1103, Centro, Florianópolis/SC.
+          {/* Left Side: Corporate Copyright & Unit Addresses */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            <div style={{ color: '#94A3B8', fontSize: '0.82rem', lineHeight: 1.5 }}>
+              &copy; 2026 <strong>Rockfeller Solucoes Ltda</strong> &bull; CNPJ: 55.989.699/0001-56 &bull; Sede: Rua Gerônimo Coelho, 280, Sala 1103, Centro, Florianópolis/SC.
+            </div>
+
+            <div style={{ display: 'flex', alignItems: 'center', gap: '14px', fontSize: '0.80rem' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#CBD5E1' }}>
+                <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#FBBF24', boxShadow: '0 0 6px #FBBF24' }} />
+                Florianópolis - SC (Sede Matriz)
+              </span>
+              <span style={{ color: 'rgba(245, 158, 11, 0.4)' }}>|</span>
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#CBD5E1' }}>
+                <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#F59E0B', boxShadow: '0 0 6px #F59E0B' }} />
+                Vitória - ES (Em Breve)
+              </span>
+            </div>
           </div>
 
-          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#FBBF24' }} />
-              Florianópolis - SC (Sede Matriz)
-            </span>
-            <span style={{ color: 'rgba(245, 158, 11, 0.3)' }}>|</span>
-            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-              <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#F59E0B' }} />
-              Vitória - ES (Em Breve)
-            </span>
+          {/* Right Corner (Cantinho Direito): Compact Security Certificate Icons & Symbols */}
+          <div 
+            style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '10px', 
+              flexWrap: 'wrap',
+              marginLeft: 'auto'
+            }}
+            aria-label="Certificados de Segurança do Site"
+          >
+            {/* SSL 256-Bit */}
+            <div 
+              title="Certificado SSL 256-Bit TLS 1.3 Ativo - Criptografia Bancária de Ponta a Ponta"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                padding: '6px 12px',
+                borderRadius: '8px',
+                background: 'rgba(16, 185, 129, 0.08)',
+                border: '1px solid rgba(16, 185, 129, 0.28)',
+                color: '#10B981',
+                fontSize: '0.74rem',
+                fontWeight: 700,
+                letterSpacing: '0.02em',
+                transition: 'all 0.2s ease',
+                cursor: 'default',
+                userSelect: 'none'
+              }}
+            >
+              <Lock size={13} color="#10B981" />
+              <span>SSL 256-Bit</span>
+            </div>
+
+            {/* Google Safe Browsing */}
+            <div 
+              title="Google Safe Browsing Verificado - Navegação 100% Segura contra Malwares e Phishing"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                padding: '6px 12px',
+                borderRadius: '8px',
+                background: 'rgba(59, 130, 246, 0.08)',
+                border: '1px solid rgba(59, 130, 246, 0.28)',
+                color: '#60A5FA',
+                fontSize: '0.74rem',
+                fontWeight: 700,
+                letterSpacing: '0.02em',
+                transition: 'all 0.2s ease',
+                cursor: 'default',
+                userSelect: 'none'
+              }}
+            >
+              <ShieldCheck size={14} color="#60A5FA" />
+              <span>Google Seguro</span>
+            </div>
+
+            {/* LGPD Compliant */}
+            <div 
+              title="Proteção de Dados & Sigilo Bancário Conforme LGPD (Lei 13.709/18)"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                padding: '6px 12px',
+                borderRadius: '8px',
+                background: 'rgba(245, 158, 11, 0.08)',
+                border: '1px solid rgba(245, 158, 11, 0.28)',
+                color: '#FBBF24',
+                fontSize: '0.74rem',
+                fontWeight: 700,
+                letterSpacing: '0.02em',
+                transition: 'all 0.2s ease',
+                cursor: 'default',
+                userSelect: 'none'
+              }}
+            >
+              <Award size={13} color="#FBBF24" />
+              <span>LGPD</span>
+            </div>
+
+            {/* CNPJ Verificado */}
+            <div 
+              title="Receita Federal do Brasil - CNPJ 55.989.699/0001-56 Regular e Ativo"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '6px',
+                padding: '6px 12px',
+                borderRadius: '8px',
+                background: 'rgba(255, 255, 255, 0.05)',
+                border: '1px solid rgba(255, 255, 255, 0.16)',
+                color: '#E2E8F0',
+                fontSize: '0.74rem',
+                fontWeight: 700,
+                letterSpacing: '0.02em',
+                transition: 'all 0.2s ease',
+                cursor: 'default',
+                userSelect: 'none'
+              }}
+            >
+              <CheckCircle2 size={13} color="#10B981" />
+              <span>CNPJ Regular</span>
+            </div>
           </div>
         </div>
 

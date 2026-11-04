@@ -240,8 +240,9 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }) {
           </p>
         </div>
 
-        {/* Segmented Control Tab Switcher */}
+        {/* Segmented Control Tab Switcher with Smooth Sliding Indicator */}
         <div style={{
+          position: 'relative',
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
           background: '#F1F5F9',
@@ -250,20 +251,37 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }) {
           marginBottom: '18px',
           border: '1px solid #E2E8F0'
         }}>
+          {/* Animated Background Pill */}
+          <div 
+            style={{
+              position: 'absolute',
+              top: '4px',
+              bottom: '4px',
+              left: mode === 'login' ? '4px' : 'calc(50% + 2px)',
+              width: 'calc(50% - 6px)',
+              background: '#FFFFFF',
+              borderRadius: '9px',
+              boxShadow: '0 2px 8px rgba(10, 37, 64, 0.12)',
+              transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+              zIndex: 1
+            }} 
+          />
+
           <button
             type="button"
             onClick={() => { setMode('login'); setErrorMsg(''); }}
             style={{
+              position: 'relative',
+              zIndex: 2,
               padding: '10px 14px',
               borderRadius: '9px',
               border: 'none',
-              background: mode === 'login' ? '#FFFFFF' : 'transparent',
+              background: 'transparent',
               color: mode === 'login' ? '#0A2540' : '#64748B',
               fontWeight: mode === 'login' ? 800 : 600,
               fontSize: '0.88rem',
               cursor: 'pointer',
-              boxShadow: mode === 'login' ? '0 2px 6px rgba(10, 37, 64, 0.08)' : 'none',
-              transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)'
+              transition: 'color 0.25s ease'
             }}
           >
             Acessar Conta
@@ -272,16 +290,17 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }) {
             type="button"
             onClick={() => { setMode('register'); setErrorMsg(''); }}
             style={{
+              position: 'relative',
+              zIndex: 2,
               padding: '10px 14px',
               borderRadius: '9px',
               border: 'none',
-              background: mode === 'register' ? '#FFFFFF' : 'transparent',
+              background: 'transparent',
               color: mode === 'register' ? '#0A2540' : '#64748B',
               fontWeight: mode === 'register' ? 800 : 600,
               fontSize: '0.88rem',
               cursor: 'pointer',
-              boxShadow: mode === 'register' ? '0 2px 6px rgba(10, 37, 64, 0.08)' : 'none',
-              transition: 'all 0.2s cubic-bezier(0.16, 1, 0.3, 1)'
+              transition: 'color 0.25s ease'
             }}
           >
             Criar Nova Conta
@@ -404,10 +423,11 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }) {
           </div>
         )}
 
-        {/* LOGIN FORM */}
-        {mode === 'login' ? (
-          <form onSubmit={handleLogin}>
-            <div className="form-group" style={{ marginBottom: '16px' }}>
+        {/* LOGIN / REGISTER FORM WITH SMOOTH SWITCH TRANSITION */}
+        <div key={mode} className="auth-form-animated">
+          {mode === 'login' ? (
+            <form onSubmit={handleLogin}>
+              <div className="form-group" style={{ marginBottom: '16px' }}>
               <label className="form-label" style={{ fontSize: '0.84rem', color: '#334E68', fontWeight: 700, marginBottom: '6px' }}>
                 <Mail size={15} color="#0A2540" /> E-mail de Acesso
               </label>
@@ -689,6 +709,7 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }) {
             </button>
           </form>
         )}
+        </div>
 
         {/* Security Footer Badges */}
         <div style={{
@@ -711,6 +732,22 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess }) {
             <ShieldCheck size={12} color="#047857" /> Proteção LGPD
           </span>
         </div>
+
+        <style>{`
+          @keyframes authFormSlideFade {
+            0% {
+              opacity: 0;
+              transform: translateY(10px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          .auth-form-animated {
+            animation: authFormSlideFade 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+          }
+        `}</style>
 
       </div>
     </div>

@@ -206,8 +206,14 @@ export function MobileBottomNav({
             display: none !important;
           }
         }
+        .mobile-app-nav-item {
+          transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .mobile-app-nav-item:hover {
+          transform: translateY(-2px);
+        }
         .mobile-app-nav-item:active {
-          transform: scale(0.92);
+          transform: scale(0.90);
         }
       `}</style>
     </>
