@@ -132,7 +132,7 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
             </div>
           </div>
 
-          {/* Column 2: Sede Florianópolis - SC (Ativa) */}
+          {/* Column 2: Estado Santa Catarina - SC (Ativa) */}
           <div 
             className="glass-card" 
             style={{ 
@@ -144,8 +144,8 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
           >
             <div style={{ fontWeight: 800, color: '#FFFFFF', fontSize: '1.02rem', marginBottom: '14px', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: '#60A5FA', display: 'inline-block', boxShadow: '0 0 10px #60A5FA' }} />
-              <span>Sede Florianópolis - SC</span>
-              <span style={{ fontSize: '0.68rem', color: '#60A5FA', border: '1px solid #3B82F6', padding: '2px 6px', borderRadius: '4px', textTransform: 'uppercase', fontWeight: 700 }}>Ativa</span>
+              <span>Estado Santa Catarina (SC)</span>
+              <span style={{ fontSize: '0.68rem', color: '#60A5FA', border: '1px solid #3B82F6', padding: '2px 6px', borderRadius: '4px', textTransform: 'uppercase', fontWeight: 700 }}>Matriz Ativa</span>
             </div>
 
             <p style={{ lineHeight: 1.55, color: '#CBD5E1', marginBottom: '16px', fontSize: '0.85rem' }}>
@@ -183,7 +183,7 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
             </div>
           </div>
 
-          {/* Column 3: Sede Vitória - ES (Inauguração em breve) */}
+          {/* Column 3: Estado Espírito Santo - ES (Inauguração em breve) */}
           <div 
             className="glass-card" 
             style={{ 
@@ -195,7 +195,7 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
           >
             <div style={{ fontWeight: 800, color: '#FFFFFF', fontSize: '1.02rem', marginBottom: '14px', display: 'flex', alignItems: 'center', gap: '8px' }}>
               <span style={{ width: '9px', height: '9px', borderRadius: '50%', background: '#F59E0B', display: 'inline-block', boxShadow: '0 0 10px #F59E0B' }} />
-              <span>Sede Vitória - ES</span>
+              <span>Estado Espírito Santo (ES)</span>
               <span style={{ fontSize: '0.68rem', color: '#FDE68A', border: '1px solid #F59E0B', padding: '2px 6px', borderRadius: '4px', textTransform: 'uppercase', fontWeight: 700 }}>Em Breve</span>
             </div>
 
@@ -295,12 +295,12 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
             <div style={{ display: 'flex', alignItems: 'center', gap: '14px', fontSize: '0.80rem' }}>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#CBD5E1' }}>
                 <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#FBBF24', boxShadow: '0 0 6px #FBBF24' }} />
-                Florianópolis - SC (Sede Matriz)
+                Florianópolis - SC (Estado Matriz)
               </span>
               <span style={{ color: 'rgba(245, 158, 11, 0.4)' }}>|</span>
               <span style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', color: '#CBD5E1' }}>
                 <span style={{ width: '7px', height: '7px', borderRadius: '50%', background: '#F59E0B', boxShadow: '0 0 6px #F59E0B' }} />
-                Vitória - ES (Em Breve)
+                Vitória - ES (Estado em Breve)
               </span>
             </div>
           </div>

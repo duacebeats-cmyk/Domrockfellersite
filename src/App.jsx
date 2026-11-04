@@ -14,6 +14,7 @@ import { ClientPortal } from './components/ClientPortal';
 import { AuthModal } from './components/AuthModal';
 import { CarShowcaseSlider } from './components/CarShowcaseSlider';
 import { MobileBottomNav } from './components/MobileBottomNav';
+import { CookieConsent } from './components/CookieConsent';
 import { CheckCircle2, ShieldCheck } from 'lucide-react';
 import { api } from './services/api';
 
@@ -136,6 +137,8 @@ export function App() {
             onOpenSimulator={() => scrollToSection('simulador')}
             onBackToSite={() => setActiveView('site')}
             onOpenChat={() => setIsChatOpen(true)}
+            onLogout={handleLogout}
+            onUpdateUser={setCurrentUser}
           />
         )}
       </main>
@@ -195,6 +198,9 @@ export function App() {
         setActiveView={setActiveView}
         activeView={activeView}
       />
+
+      {/* LGPD Cookie Consent Verification Banner */}
+      <CookieConsent />
 
     </div>
   );

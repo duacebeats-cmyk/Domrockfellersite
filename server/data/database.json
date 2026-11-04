@@ -43,6 +43,20 @@
       "cityUnit": "Florianópolis - SC",
       "isOnline": false,
       "createdAt": "2026-09-28T09:40:00Z"
+    },
+    {
+      "id": "usr-google-1793757987615",
+      "name": "Usuário Google",
+      "email": "usuario.google@gmail.com",
+      "password": "scrypt$b60fa9cf9548e7dd790861e4ca68dff3$4a37a71797bb237384d347192c19fd528777b095231fc4f07d6cc7f20bd326d4d942608341948bd19c07e1cc84ca0e3572d58976353af08d4f105e145a0653e9",
+      "phone": "",
+      "role": "cliente",
+      "cityUnit": "Vitória - ES",
+      "authProvider": "google",
+      "picture": null,
+      "socialId": null,
+      "isOnline": true,
+      "createdAt": "2026-11-04T02:06:27.655Z"
     }
   ],
   "chatQueue": [

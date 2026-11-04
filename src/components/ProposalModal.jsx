@@ -188,15 +188,15 @@ Gostaria de formalizar o estudo pericial gratuito e entender os passos da ação
               </div>
 
               <div className="form-group">
-                <label className="form-label"><Building2 size={15} color="#34D399" /> Sede de Preferência</label>
+                <label className="form-label"><Building2 size={15} color="#34D399" /> Estado de Atendimento</label>
                 <select
                   className="form-select"
                   value={cityUnit}
                   onChange={(e) => setCityUnit(e.target.value)}
                 >
-                  <option value="Florianópolis - SC">Sede Florianópolis - SC (Centro - Ativa)</option>
-                  <option value="Vitória - ES">Sede Vitória - ES (Inauguração em breve)</option>
-                  <option value="Atendimento Digital">Atendimento 100% Digital Brasil</option>
+                  <option value="Santa Catarina - SC">Estado Santa Catarina - SC (Florianópolis - Matriz)</option>
+                  <option value="Espírito Santo - ES">Estado Espírito Santo - ES (Vitória)</option>
+                  <option value="Atendimento Digital">Atendimento Digital (Demais Estados)</option>
                 </select>
               </div>
 
@@ -241,23 +241,24 @@ Gostaria de formalizar o estudo pericial gratuito e entender os passos da ação
               Solicitação Pericial Registrada!
             </h3>
             
-            <p style={{ color: '#94A3B8', fontSize: '0.98rem', maxWidth: '480px', margin: '0 auto 24px', lineHeight: 1.6 }}>
-              Olá, <strong>{name}</strong>! Seus dados foram encaminhados à assessoria jurídica e contábil da sede de <strong>{cityUnit}</strong> para emissão do laudo prévio e planejamento preventivo contra busca e apreensão.
+            <p style={{ color: '#0A2540', fontSize: '0.98rem', maxWidth: '480px', margin: '0 auto 24px', lineHeight: 1.6 }}>
+              Olá, <strong>{name}</strong>! Seus dados foram encaminhados à assessoria jurídica e contábil do Estado de <strong>{cityUnit}</strong> para emissão do laudo prévio e planejamento preventivo contra busca e apreensão.
             </p>
 
             <div style={{
-              background: 'rgba(255, 255, 255, 0.04)',
+              background: '#F8FAFC',
+              border: '1.5px solid #CBD5E1',
               borderRadius: '12px',
               padding: '18px',
               marginBottom: '26px',
               textAlign: 'left'
             }}>
-              <div style={{ fontSize: '0.85rem', color: '#94A3B8' }}>Potencial de redução revisional:</div>
-              <div style={{ fontSize: '1.4rem', fontWeight: 800, color: '#FBBF24', margin: '4px 0' }}>
+              <div style={{ fontSize: '0.85rem', color: '#475569', fontWeight: 700 }}>Potencial de redução revisional:</div>
+              <div style={{ fontSize: '1.4rem', fontWeight: 900, color: '#B45309', margin: '4px 0' }}>
                 R$ {data.estimatedSavings?.toLocaleString('pt-BR')} em encargos abusivos
               </div>
-              <div style={{ fontSize: '0.82rem', color: '#CBD5E1' }}>
-                Valor incontroverso / liquidação estimada: <strong>R$ {data.estimatedPayoff?.toLocaleString('pt-BR')}</strong> no banco {data.bank}.
+              <div style={{ fontSize: '0.84rem', color: '#1E293B', fontWeight: 600 }}>
+                Valor incontroverso / liquidação estimada: <strong style={{ color: '#047857' }}>R$ {data.estimatedPayoff?.toLocaleString('pt-BR')}</strong> no banco {data.bank}.
               </div>
             </div>
 
@@ -267,10 +268,10 @@ Gostaria de formalizar o estudo pericial gratuito e entender os passos da ação
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary btn-lg"
-                style={{ width: '100%' }}
+                style={{ width: '100%', fontWeight: 800 }}
               >
                 <MessageSquare size={20} />
-                <span>Conversar Agora no WhatsApp da Sede {cityUnit}</span>
+                <span>Conversar Agora no WhatsApp de {cityUnit}</span>
               </a>
 
               <button

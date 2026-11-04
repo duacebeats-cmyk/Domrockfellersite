@@ -93,7 +93,7 @@ export function Navbar({
           </a>
           <a onClick={() => scrollTo('sedes')} className="nav-item-link">
             <Building2 size={15} color="#475569" />
-            <span>Nossas Sedes</span>
+            <span>Nossos Estados</span>
           </a>
           <a onClick={() => scrollTo('casos')} className="nav-item-link">
             <Award size={15} color="#475569" />
@@ -234,7 +234,7 @@ export function Navbar({
               <div style={{ width: '32px', height: '32px', borderRadius: '8px', background: '#F1F5F9', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                 <Building2 size={18} color="#059669" />
               </div>
-              <span style={{ fontSize: '0.92rem', fontWeight: 600, color: '#1E293B' }}>Sedes Floripa &amp; Vitória</span>
+              <span style={{ fontSize: '0.92rem', fontWeight: 600, color: '#1E293B' }}>Estados Floripa &amp; Vitória</span>
             </div>
             <ChevronRight size={16} color="#94A3B8" />
           </a>

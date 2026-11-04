@@ -217,16 +217,16 @@ export function Simulator({ onCompleteSimulation }) {
                 {/* Headquarters Preference */}
                 <div className="form-group">
                   <label className="form-label">
-                    <Building2 size={16} color="#34D399" /> Unidade de Atendimento Mais Próxima
+                    <Building2 size={16} color="#34D399" /> Estado de Atendimento Mais Próximo
                   </label>
                   <select
                     className="form-select"
                     value={selectedUnit}
                     onChange={(e) => setSelectedUnit(e.target.value)}
                   >
-                    <option value="Florianópolis - SC">Sede Florianópolis - SC (Centro - Ativa)</option>
-                    <option value="Vitória - ES">Sede Vitória - ES (Inauguração em breve)</option>
-                    <option value="Atendimento Digital">Atendimento 100% Digital (Todo o Brasil)</option>
+                    <option value="Santa Catarina - SC">Estado Santa Catarina - SC (Florianópolis - Matriz Ativa)</option>
+                    <option value="Espírito Santo - ES">Estado Espírito Santo - ES (Vitória - Em breve)</option>
+                    <option value="Atendimento Digital">Atendimento Digital (Demais Estados)</option>
                   </select>
                 </div>
 
@@ -346,7 +346,7 @@ export function Simulator({ onCompleteSimulation }) {
                     <Check size={16} color="#C59B27" /> Transparência e defesa ativa contra risco de busca e apreensão
                   </div>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-                    <Check size={16} color="#C59B27" /> Atendimento presencial nas sedes de <strong>{selectedUnit}</strong>
+                    <Check size={16} color="#C59B27" /> Atendimento no Estado de <strong>{selectedUnit}</strong>
                   </div>
                 </div>
 
