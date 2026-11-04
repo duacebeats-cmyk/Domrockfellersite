@@ -309,6 +309,162 @@ export function Footer({ setActiveView, onOpenSimulator, onOpenAuth, onOpenChat 
           </p>
         </div>
 
+        {/* Selos Oficiais de Certificado de Segurança e Conformidade */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '12px',
+          padding: '16px 0 20px',
+          borderTop: '1px solid rgba(245, 158, 11, 0.15)',
+          borderBottom: '1px solid rgba(255, 255, 255, 0.05)',
+          marginBottom: '20px'
+        }}>
+          {/* Selo 1: Certificado SSL 256-bit */}
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '10px',
+            padding: '9px 16px',
+            borderRadius: '12px',
+            background: 'rgba(16, 185, 129, 0.05)',
+            border: '1px solid rgba(16, 185, 129, 0.28)',
+            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)'
+          }}>
+            <div style={{
+              width: '28px',
+              height: '28px',
+              borderRadius: '8px',
+              background: 'rgba(16, 185, 129, 0.18)',
+              border: '1px solid #10B981',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#10B981',
+              boxShadow: '0 0 10px rgba(16, 185, 129, 0.35)',
+              flexShrink: 0
+            }}>
+              <Lock size={15} />
+            </div>
+            <div style={{ textAlign: 'left', lineHeight: 1.25 }}>
+              <div style={{ color: '#10B981', fontSize: '0.68rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                Certificado SSL 256-Bit
+              </div>
+              <div style={{ color: '#F8FAFC', fontSize: '0.78rem', fontWeight: 700 }}>
+                Conexão Criptografada TLS 1.3
+              </div>
+            </div>
+          </div>
+
+          {/* Selo 2: Google Safe Browsing */}
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '10px',
+            padding: '9px 16px',
+            borderRadius: '12px',
+            background: 'rgba(59, 130, 246, 0.05)',
+            border: '1px solid rgba(59, 130, 246, 0.28)',
+            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)'
+          }}>
+            <div style={{
+              width: '28px',
+              height: '28px',
+              borderRadius: '8px',
+              background: 'rgba(59, 130, 246, 0.18)',
+              border: '1px solid #3B82F6',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#60A5FA',
+              boxShadow: '0 0 10px rgba(59, 130, 246, 0.35)',
+              flexShrink: 0
+            }}>
+              <ShieldCheck size={16} />
+            </div>
+            <div style={{ textAlign: 'left', lineHeight: 1.25 }}>
+              <div style={{ color: '#60A5FA', fontSize: '0.68rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                Google Safe Browsing
+              </div>
+              <div style={{ color: '#F8FAFC', fontSize: '0.78rem', fontWeight: 700 }}>
+                Navegação 100% Segura
+              </div>
+            </div>
+          </div>
+
+          {/* Selo 3: Proteção LGPD */}
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '10px',
+            padding: '9px 16px',
+            borderRadius: '12px',
+            background: 'rgba(197, 155, 39, 0.05)',
+            border: '1px solid rgba(197, 155, 39, 0.28)',
+            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)'
+          }}>
+            <div style={{
+              width: '28px',
+              height: '28px',
+              borderRadius: '8px',
+              background: 'rgba(197, 155, 39, 0.18)',
+              border: '1px solid #C59B27',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#FBBF24',
+              boxShadow: '0 0 10px rgba(197, 155, 39, 0.35)',
+              flexShrink: 0
+            }}>
+              <Award size={15} />
+            </div>
+            <div style={{ textAlign: 'left', lineHeight: 1.25 }}>
+              <div style={{ color: '#FBBF24', fontSize: '0.68rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                Proteção LGPD &bull; Lei 13.709/18
+              </div>
+              <div style={{ color: '#F8FAFC', fontSize: '0.78rem', fontWeight: 700 }}>
+                Sigilo Bancário &amp; Privacidade
+              </div>
+            </div>
+          </div>
+
+          {/* Selo 4: Receita Federal & Regularidade */}
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '10px',
+            padding: '9px 16px',
+            borderRadius: '12px',
+            background: 'rgba(255, 255, 255, 0.03)',
+            border: '1px solid rgba(255, 255, 255, 0.12)',
+            boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)'
+          }}>
+            <div style={{
+              width: '28px',
+              height: '28px',
+              borderRadius: '8px',
+              background: 'rgba(255, 255, 255, 0.08)',
+              border: '1px solid rgba(255, 255, 255, 0.25)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#10B981',
+              flexShrink: 0
+            }}>
+              <CheckCircle2 size={15} />
+            </div>
+            <div style={{ textAlign: 'left', lineHeight: 1.25 }}>
+              <div style={{ color: '#94A3B8', fontSize: '0.68rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+                Receita Federal do Brasil
+              </div>
+              <div style={{ color: '#F8FAFC', fontSize: '0.78rem', fontWeight: 700 }}>
+                CNPJ 55.989.699/0001-56 &bull; Ativa
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Bottom Copyright & Unit Credits */}
         <div style={{
           display: 'flex',
